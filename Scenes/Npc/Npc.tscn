@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c3ayn1x5fw3s4"]
+
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://assets/Velha.png" id="1_e8ev6"]
+
+[node name="Npc" type="Sprite3D" unique_id=677860046]
+pixel_size = 0.001
+billboard = 2
+texture = ExtResource("1_e8ev6")
