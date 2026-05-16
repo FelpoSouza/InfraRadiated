@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://c65vh17muw7w0"]
+
+[ext_resource type="Script" uid="uid://bkjf8tw6to64" path="res://Scripts/player.gd" id="1_4flbx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sh265"]
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="Player" type="Area3D" unique_id=1638247749]
+collision_layer = 2
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1118100705]
+shape = SubResource("BoxShape3D_sh265")
+
+[node name="ForwardRay" type="RayCast3D" parent="." unique_id=83420922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 5
+
+[node name="BackwardRay" type="RayCast3D" parent="." unique_id=340953039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+target_position = Vector3(0, 0, 2)
+collision_mask = 5
+
+[node name="LeftRay" type="RayCast3D" parent="." unique_id=897790456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+target_position = Vector3(-2, 0, 0)
+collision_mask = 5
+
+[node name="RightRay" type="RayCast3D" parent="." unique_id=1453963181]
+target_position = Vector3(2, -0.5, 0)
+collision_mask = 5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=806327685]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=958094750]
+offset_right = 1024.0
+offset_bottom = 760.0
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=50680186]
+size = Vector2i(1152, 648)
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=1225769366]
+
+[node name="GunContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1423783530]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7199986, 1)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="CanvasLayer/GunContainer" unique_id=1544104852]
+layout_mode = 2
+size_flags_vertical = 8
+text = " - EQUIP GUN -"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=112558081]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/VBoxContainer" unique_id=1984082206]
+layout_mode = 2
+columns = 5
+
+[node name="Button1" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" unique_id=2110466758]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" unique_id=792562205]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" unique_id=478031967]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button4" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" unique_id=774923079]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button5" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" unique_id=1086825154]
+layout_mode = 2
+text = "-> item"
