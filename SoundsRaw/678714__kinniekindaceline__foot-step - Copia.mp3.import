@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c21btv2i7sn2u"
+path="res://.godot/imported/678714__kinniekindaceline__foot-step - Copia.mp3-38e1e59c424350114ed23f7f261fdf3c.mp3str"
+
+[deps]
+
+source_file="res://SoundsRaw/678714__kinniekindaceline__foot-step - Copia.mp3"
+dest_files=["res://.godot/imported/678714__kinniekindaceline__foot-step - Copia.mp3-38e1e59c424350114ed23f7f261fdf3c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
