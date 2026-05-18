@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c3ayn1x5fw3s4"]
+
+[ext_resource type="Script" uid="uid://c0yhdria501q" path="res://Scenes/Objects/Npc/Npc.gd" id="1_u8pn6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u8pn6"]
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="Npc" type="Area3D" unique_id=743615918]
+collision_layer = 2
+script = ExtResource("1_u8pn6")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1400078812]
+pixel_size = 0.002
+billboard = 2
+alpha_cut = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1672213523]
+shape = SubResource("BoxShape3D_u8pn6")
+
+[node name="ForwardRay" type="RayCast3D" parent="." unique_id=1845947043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 5
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1503933679]
+max_distance = 50.0
+
+[node name="MovementTimer" type="Timer" parent="." unique_id=59765325]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]
