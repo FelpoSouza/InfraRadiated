@@ -2,9 +2,6 @@
 
 [ext_resource type="MeshLibrary" uid="uid://hys60531k5po" path="res://Models/BlockMeshLibrary.tres" id="1_6lgce"]
 [ext_resource type="PackedScene" uid="uid://c65vh17muw7w0" path="res://Scenes/Objects/Player/Player.tscn" id="2_vlr3l"]
-[ext_resource type="AudioStream" uid="uid://dgmn1t7p7i4jd" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard1.wav" id="3_42c34"]
-[ext_resource type="AudioStream" uid="uid://5yp250wgrf8a" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard2.wav" id="4_bt6he"]
-[ext_resource type="AudioStream" uid="uid://fojuutn1e6q3" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard3.wav" id="5_mldgs"]
 [ext_resource type="PackedScene" uid="uid://c3ayn1x5fw3s4" path="res://Scenes/Objects/Npc/Npc.tscn" id="6_0r50r"]
 [ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Velha.png" id="7_umtol"]
 
@@ -52,9 +49,7 @@ light_bake_mode = 1
 
 [node name="Player" parent="." unique_id=1638247749 instance=ExtResource("2_vlr3l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
-footstep_hard_sounds = Array[AudioStream]([ExtResource("3_42c34"), ExtResource("4_bt6he"), ExtResource("5_mldgs")])
 
 [node name="Npc" parent="." unique_id=677860046 instance=ExtResource("6_0r50r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 npc_texture = ExtResource("7_umtol")
-footstep_hard_sounds = Array[AudioStream]([ExtResource("3_42c34"), ExtResource("4_bt6he"), ExtResource("5_mldgs")])

@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://gaemqvwq46jj"]
 
-[ext_resource type="Material" uid="uid://covfc3mrcpy4w" path="res://Materials/groundTestMat.tres" id="1_6s2ed"]
-[ext_resource type="Texture2D" uid="uid://dfl0qhy633gt1" path="res://Materials/weathered_brown_planks_diff_4k.jpg" id="2_ncjes"]
+[ext_resource type="Material" uid="uid://covfc3mrcpy4w" path="res://Materials/BaseMaterials/groundTestMat.tres" id="1_6s2ed"]
+[ext_resource type="Shader" uid="uid://bi3ken02hgms7" path="res://Shaders/mesh_pixelazation.gdshader" id="1_ncjes"]
+[ext_resource type="Texture2D" uid="uid://dfl0qhy633gt1" path="res://Materials/BaseMaterials/weathered_brown_planks_diff_4k.jpg" id="2_ncjes"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h5kr1"]
+render_priority = 0
+shader = ExtResource("1_ncjes")
+shader_parameter/pixel_density = 32.0000014725
+shader_parameter/pixel_aspect_ratio = 1.0
+shader_parameter/colors_per_channel = 8.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_55fet"]
 size = Vector3(2, 1, 2)
@@ -21,6 +29,7 @@ size = Vector3(2, 1, 2)
 [node name="BlockLibrary" type="Node3D" unique_id=279275194]
 
 [node name="FloorMesh" type="MeshInstance3D" parent="." unique_id=1567381874]
+material_override = SubResource("ShaderMaterial_h5kr1")
 mesh = SubResource("BoxMesh_55fet")
 surface_material_override/0 = ExtResource("1_6s2ed")
 
@@ -31,6 +40,7 @@ shape = SubResource("BoxShape3D_1apkc")
 
 [node name="WallMesh" type="MeshInstance3D" parent="." unique_id=1709889060]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+material_override = SubResource("ShaderMaterial_h5kr1")
 mesh = SubResource("BoxMesh_2rqun")
 surface_material_override/0 = SubResource("StandardMaterial3D_kpmos")
 

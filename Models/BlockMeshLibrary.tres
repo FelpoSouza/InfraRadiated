@@ -1,10 +1,10 @@
 [gd_resource type="MeshLibrary" format=3 uid="uid://hys60531k5po"]
 
-[ext_resource type="Material" uid="uid://csel4o20tgr3q" path="res://Materials/wallTestMat.tres" id="1_kalf7"]
-[ext_resource type="Material" uid="uid://covfc3mrcpy4w" path="res://Materials/groundTestMat.tres" id="2_wswke"]
+[ext_resource type="Material" uid="uid://h702jgawoi2g" path="res://Materials/Pixelazation/FloorPixelizedMaterial.tres" id="1_m0uxr"]
+[ext_resource type="Material" uid="uid://crfpi4tuuxy4x" path="res://Materials/Pixelazation/WallPixelizedMaterial.tres" id="2_sspik"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wswke"]
-material = ExtResource("2_wswke")
+material = ExtResource("1_m0uxr")
 size = Vector3(2, 1, 2)
 
 [sub_resource type="Image" id="Image_m0uxr"]
@@ -23,7 +23,7 @@ image = SubResource("Image_m0uxr")
 size = Vector3(2, 1, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_411mi"]
-material = ExtResource("1_kalf7")
+material = ExtResource("2_sspik")
 size = Vector3(2, 1, 2)
 
 [sub_resource type="Image" id="Image_sspik"]

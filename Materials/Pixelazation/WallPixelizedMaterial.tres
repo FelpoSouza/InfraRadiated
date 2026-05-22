@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://crfpi4tuuxy4x"]
+
+[ext_resource type="Shader" uid="uid://bi3ken02hgms7" path="res://Shaders/mesh_pixelazation.gdshader" id="1_vm1ec"]
+[ext_resource type="Texture2D" uid="uid://dfl0qhy633gt1" path="res://Materials/BaseMaterials/weathered_brown_planks_diff_4k.jpg" id="2_16uda"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_vm1ec")
+shader_parameter/albedo_texture = ExtResource("2_16uda")
+shader_parameter/pixel_density = 512.0
+shader_parameter/pixel_aspect_ratio = 0.25

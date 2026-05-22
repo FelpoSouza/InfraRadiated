@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://h702jgawoi2g"]
+
+[ext_resource type="Shader" uid="uid://bi3ken02hgms7" path="res://Shaders/mesh_pixelazation.gdshader" id="1_15yjp"]
+[ext_resource type="Texture2D" uid="uid://dqqtjaul3upe8" path="res://Materials/BaseMaterials/old_wood_floor_diff_4k.jpg" id="2_cndmu"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_15yjp")
+shader_parameter/albedo_texture = ExtResource("2_cndmu")
+shader_parameter/pixel_density = 512.0
+shader_parameter/pixel_aspect_ratio = 0.25

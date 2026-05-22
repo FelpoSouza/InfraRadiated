@@ -5,17 +5,16 @@
 [ext_resource type="AudioStream" uid="uid://fojuutn1e6q3" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard3.wav" id="2_e8vge"]
 [ext_resource type="AudioStream" uid="uid://5yp250wgrf8a" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard2.wav" id="3_un2c2"]
 [ext_resource type="AudioStream" uid="uid://c1yy8dvfnrxu3" path="res://Assets/SFX/Player/Woosh5.wav" id="5_ay8ch"]
-[ext_resource type="Shader" uid="uid://lodk6470pmij" path="res://Shaders/screen_pixelazation_and_thermal.gdshader" id="6_ay8ch"]
+[ext_resource type="Shader" uid="uid://lodk6470pmij" path="res://Shaders/ThermalVision.gdshader" id="6_ay8ch"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sh265"]
 size = Vector3(1.5, 1.5, 1.5)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ay8ch"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_un2c2"]
 shader = ExtResource("6_ay8ch")
-shader_parameter/pixel_size = 6.0
-shader_parameter/colors_per_channel = 12.0
+shader_parameter/pixel_size = 8.0
+shader_parameter/colors_per_channel = 8.0
 shader_parameter/thermal_vision = false
-shader_parameter/heat_level = 0
 
 [node name="Player" type="Area3D" unique_id=1638247749]
 collision_layer = 2
@@ -60,7 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=806327685]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=958094750]
-material = SubResource("ShaderMaterial_ay8ch")
+material = SubResource("ShaderMaterial_un2c2")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

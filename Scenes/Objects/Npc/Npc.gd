@@ -14,14 +14,19 @@ var is_moving: bool #não interpolar em movimento atual
 @onready var sprite: Sprite3D = $Sprite3D
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
+const THERMAL_NPC_MATERIAL = preload("res://Materials/Thermal/ThermalNPCMaterial.tres")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("NPCs")
+	
 	target_position = global_position
 	is_moving = false
 	
 	if npc_texture != null:
 		sprite.texture = npc_texture
+		var mat = sprite.material_override
+		mat.set_shader_parameter("sprite_texture", sprite.texture)
 
 		
 func _physics_process(_delta: float) -> void:
@@ -81,4 +86,13 @@ func _on_movement_timer_timeout() -> void:
 		turn_left()
 	elif random_movement == 2:
 		turn_right()
+		
+
+func set_thermal_mode(is_active: bool) -> void:
+	if is_active:
+		var current_tex = sprite.texture
+		THERMAL_NPC_MATERIAL.set_shader_parameter("sprite_texture", current_tex)
+		sprite.material_override = THERMAL_NPC_MATERIAL
+	else:
+		sprite.material_override = null
 	
