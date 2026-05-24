@@ -4,13 +4,18 @@ extends Area3D
 @export var woosh_sound: AudioStream
 
 var move_distance: float = 2.0
+var peek_distance: float = 1.5
 var move_speed: float = 0.2
 var strafe_speed: float = 0.14
 var turn_speed: float = 0.1
+var peek_speed: float = 0.075
+var camera_offset: Vector3 = Vector3.ZERO
 var target_position: Vector3
 var target_rotation: float
 var is_moving: bool #não interpolar em movimento atual
-var is_strafing: bool # mvimento lateral e para trás é mais lento
+var is_strafing: bool # movimento lateral e para trás é mais lento
+var is_peeking: bool
+var shift_latch: bool
 var is_thermal_vision_on: bool
 
 @onready var backward_ray: RayCast3D = $BackwardRay
@@ -18,6 +23,7 @@ var is_thermal_vision_on: bool
 @onready var left_ray: RayCast3D = $LeftRay
 @onready var right_ray: RayCast3D = $RightRay
 @onready var camera: Camera3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D
+@onready var player: Area3D = $"."
 @onready var audio_stream_player_3d_bottom: AudioStreamPlayer3D = $AudioStreamPlayer3DBottom
 @onready var audio_stream_player_3d_left: AudioStreamPlayer3D = $AudioStreamPlayer3DLeft
 @onready var audio_stream_player_3d_right: AudioStreamPlayer3D = $AudioStreamPlayer3DRight
@@ -30,14 +36,38 @@ func _ready() -> void:
 	camera.global_transform = global_transform
 	is_moving = false
 	is_strafing = false
+	is_peeking = false
 	is_thermal_vision_on = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	camera.global_transform = global_transform
+	# acompanha posição do player
+	camera.global_position = camera.global_position.lerp(
+		global_position + camera_offset,
+		0.15
+		)
+
+	# acompanha apenas rotação Y do player
+	camera.rotation.y = rotation.y
+	
+	if  Input.is_key_pressed(KEY_SHIFT):
+		shift_latch = true
+	elif shift_latch:
+		shift_latch = false
+		look_forward()
 	
 	if not is_moving:
-		if Input.is_action_just_pressed("move_forward"):
+		if Input.is_action_just_pressed("heatvision") and shift_latch:
+			toggle_thermal_vision()
+		elif Input.is_action_just_pressed("look_down") and shift_latch:
+			look_down()	
+		elif Input.is_action_just_pressed("look_up") and shift_latch:
+			look_up()	
+		elif Input.is_action_just_pressed("look_left") and shift_latch:
+			look_left()	
+		elif Input.is_action_just_pressed("look_right") and shift_latch:
+			look_right()
+		elif Input.is_action_just_pressed("move_forward"):
 			move_forward()
 		elif Input.is_action_just_pressed("move_backward"):
 			move_backward()
@@ -50,8 +80,6 @@ func _process(_delta: float) -> void:
 		elif Input.is_action_just_pressed("turn_right"):
 			turn_right()
 	
-	if Input.is_action_just_pressed("heatvision"):
-		toggle_thermal_vision()
 		
 func _physics_process(_delta: float) -> void:
 	if is_moving:
@@ -66,12 +94,17 @@ func _physics_process(_delta: float) -> void:
 				global_position = target_position
 				is_moving = false
 				is_strafing = false
-		
-	
+				
 	if global_position.distance_to(target_position) < 0.05:
 		global_position = target_position
 		is_moving = false
 		is_strafing = false
+
+
+
+#-------------------------------------------------------------------------
+# ÁUDIO E SFX
+#-------------------------------------------------------------------------
 
 func play_sound_bottom(sound: AudioStream, randomize: bool):
 	audio_stream_player_3d_bottom.stream = sound
@@ -79,9 +112,33 @@ func play_sound_bottom(sound: AudioStream, randomize: bool):
 		audio_stream_player_3d_bottom.pitch_scale = randf_range(0.9, 1.15)
 	audio_stream_player_3d_bottom.play()
 
-func play_footstep_sound()	:
+func play_footstep_sound():
 	if footstep_hard_sounds.size() > 0:
 		play_sound_bottom(footstep_hard_sounds.pick_random(), true)
+
+func play_sound_left_ear(sound: AudioStream, randomize: bool):
+	if not sound: return
+	audio_stream_player_3d_left.stream = sound
+	if randomize:
+		audio_stream_player_3d_left.pitch_scale = randf_range(0.9, 1.15)
+	else:
+		audio_stream_player_3d_left.pitch_scale = 1.0
+	audio_stream_player_3d_left.play()
+		
+func play_sound_right_ear(sound: AudioStream, randomize: bool):
+	if not sound: return
+	audio_stream_player_3d_right.stream = sound
+	if randomize:
+		audio_stream_player_3d_right.pitch_scale = randf_range(0.9, 1.15)
+	else:
+		audio_stream_player_3d_right.pitch_scale = 1.0
+	audio_stream_player_3d_right.play()
+
+
+
+#-------------------------------------------------------------------------
+# MOVIMENTÇÃO
+#-------------------------------------------------------------------------
 	
 func move_forward():
 	#global_transform.basis.z -> onde é o z em relação a você?
@@ -110,25 +167,6 @@ func move_right():
 		is_moving = true
 		is_strafing = true
 		play_footstep_sound()
-		
-		
-func play_sound_left_ear(sound: AudioStream, randomize: bool):
-	if not sound: return
-	audio_stream_player_3d_left.stream = sound
-	if randomize:
-		audio_stream_player_3d_left.pitch_scale = randf_range(0.9, 1.15)
-	else:
-		audio_stream_player_3d_left.pitch_scale = 1.0
-	audio_stream_player_3d_left.play()
-		
-func play_sound_right_ear(sound: AudioStream, randomize: bool):
-	if not sound: return
-	audio_stream_player_3d_right.stream = sound
-	if randomize:
-		audio_stream_player_3d_right.pitch_scale = randf_range(0.9, 1.15)
-	else:
-		audio_stream_player_3d_right.pitch_scale = 1.0
-	audio_stream_player_3d_right.play()
 	
 func turn_left():
 	is_moving = true
@@ -149,6 +187,65 @@ func turn_right():
 	
 	play_sound_right_ear(woosh_sound, true)
 
+func look_down():
+	var check = camera.rotation.x # checa se não moveu camera nessa direção
+	if not is_peeking or check > 0.0:
+		is_moving = true
+		is_peeking = true
+		var cam_rotation = -PI/6.0
+		var tween = create_tween()
+		tween.tween_property(camera, "rotation:x", cam_rotation, peek_speed)
+		tween.finished.connect(func(): is_moving = false)
+		
+func look_up():
+	var check = camera.rotation.x # checa se não moveu camera nessa direção
+	if not is_peeking or check < 0.0:
+		is_moving = true
+		is_peeking = true
+		var cam_rotation = PI/6.0
+		var tween = create_tween()
+		tween.tween_property(camera, "rotation:x", cam_rotation, peek_speed)
+		tween.finished.connect(func(): is_moving = false)
+		
+func look_right():
+	if not right_ray.is_colliding():
+		var check = camera.rotation.z # checa se não moveu camera nessa direção
+		# + x 
+		if not is_peeking or check > 0.0:
+			is_moving = true
+			is_peeking = true
+			var cam_rotation = -PI/6.0
+			camera_offset = transform.basis.x.normalized() * peek_distance								
+			var tween = create_tween()
+			tween.tween_property(camera, "rotation:z", cam_rotation, peek_speed)
+			tween.finished.connect(func(): is_moving = false)
+
+		
+func look_left():
+	if not left_ray.is_colliding():
+		var check = camera.rotation.z # checa se não moveu camera nessa direção
+		if not is_peeking or check < 0.0:
+			is_moving = true
+			is_peeking = true
+			var cam_rotation = +PI/6.0
+			camera_offset = -transform.basis.x.normalized() * peek_distance								
+			var tween = create_tween()
+			tween.tween_property(camera, "rotation:z", cam_rotation, peek_speed)
+			tween.finished.connect(func(): is_moving = false)
+		
+func look_forward():
+	is_moving = true
+	var cam_rotation = 0.0
+	camera_offset = Vector3.ZERO								
+	var tween = create_tween()
+	tween.tween_property(camera, "rotation:z", cam_rotation, peek_speed)
+	tween.tween_property(camera, "rotation:x", cam_rotation, peek_speed)
+	tween.finished.connect(func(): is_moving = false)
+	tween.finished.connect(func(): is_peeking = false)	
+
+#-------------------------------------------------------------------------
+# VISÃO TÉRMICA
+#-------------------------------------------------------------------------
 
 func toggle_thermal_vision():
 	is_thermal_vision_on = !is_thermal_vision_on
