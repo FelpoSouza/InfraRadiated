@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bxqk7kg10g1hm"]
+
+[ext_resource type="PackedScene" uid="uid://qogxvegcd8vc" path="res://Models/parede longa tipo 3.glb" id="1_86awq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77hnv"]
+size = Vector3(4, 2, 0.5)
+
+[node name="longwall3" unique_id=225798606 instance=ExtResource("1_86awq")]
+
+[node name="parede longa tipo 3" parent="." index="0" unique_id=804176916]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=2127937019]
+shape = SubResource("BoxShape3D_77hnv")

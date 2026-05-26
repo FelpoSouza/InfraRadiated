@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cqc361haru1kr"]
+
+[ext_resource type="PackedScene" uid="uid://da84mgw88a1c8" path="res://Models/portaladostipo 1.glb" id="1_iitda"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iitda"]
+size = Vector3(0.49401855, 1.7164109, 0.49664307)
+
+[node name="portaladostipo 1" unique_id=1122881599 instance=ExtResource("1_iitda")]
+
+[node name="Cube_019" parent="." index="0" unique_id=1062928938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.25, 0.0034940243, 0, 0.0010416508)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2" unique_id=1322711570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7528762, -0.14255959, 0.0034983456)
+shape = SubResource("BoxShape3D_iitda")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="3" unique_id=2110333929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7456412, -0.14255959, 0.0034983456)
+shape = SubResource("BoxShape3D_iitda")

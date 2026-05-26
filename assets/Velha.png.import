@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://07ykwu1plx6f"
-path.s3tc="res://.godot/imported/Velha.png-fd0dc7dda5ea94f63193f6cded0323a0.s3tc.ctex"
+path.s3tc="res://.godot/imported/Velha.png-ed53dd3f3056a63e7c3bef50f726778b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Velha.png"
-dest_files=["res://.godot/imported/Velha.png-fd0dc7dda5ea94f63193f6cded0323a0.s3tc.ctex"]
+source_file="res://assets/Velha.png"
+dest_files=["res://.godot/imported/Velha.png-ed53dd3f3056a63e7c3bef50f726778b.s3tc.ctex"]
 
 [params]
 

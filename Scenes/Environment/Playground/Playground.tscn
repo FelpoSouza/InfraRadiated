@@ -2,8 +2,18 @@
 
 [ext_resource type="MeshLibrary" uid="uid://hys60531k5po" path="res://Models/BlockMeshLibrary.tres" id="1_6lgce"]
 [ext_resource type="PackedScene" uid="uid://c65vh17muw7w0" path="res://Scenes/Objects/Player/Player.tscn" id="2_vlr3l"]
+[ext_resource type="PackedScene" uid="uid://brbiud4i1id6d" path="res://Objects/Longwall2.tscn" id="5_ue7t3"]
 [ext_resource type="PackedScene" uid="uid://c3ayn1x5fw3s4" path="res://Scenes/Objects/Npc/Npc.tscn" id="6_0r50r"]
-[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Velha.png" id="7_umtol"]
+[ext_resource type="PackedScene" uid="uid://bxqk7kg10g1hm" path="res://Objects/Longwall3.tscn" id="6_pxtwo"]
+[ext_resource type="PackedScene" uid="uid://prcdmdd1gifk" path="res://Objects/longwall1.tscn" id="7_6lgce"]
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://assets/Velha.png" id="7_umtol"]
+[ext_resource type="PackedScene" uid="uid://bhfcbcivlgqqm" path="res://Objects/wall2.tscn" id="8_vlr3l"]
+[ext_resource type="PackedScene" uid="uid://3a6x7r53iq3n" path="res://Objects/wall1.tscn" id="9_42c34"]
+[ext_resource type="PackedScene" uid="uid://c8sjoysw55g1s" path="res://Objects/wall3.tscn" id="10_bt6he"]
+[ext_resource type="PackedScene" uid="uid://c5ydhmce86apm" path="res://Objects/Portacimatipo1.tscn" id="11_0r50r"]
+[ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="12_umtol"]
+[ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="13_umtol"]
+[ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
 
 [node name="Playground" type="Node3D" unique_id=654644380]
 
@@ -53,3 +63,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 [node name="Npc" parent="." unique_id=677860046 instance=ExtResource("6_0r50r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 npc_texture = ExtResource("7_umtol")
+
+[node name="longwall1" parent="." unique_id=102856207 instance=ExtResource("5_ue7t3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.522482, 4.765255, 17.98617)
+
+[node name="longwall3" parent="." unique_id=225798606 instance=ExtResource("6_pxtwo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.944243, 4.765, 17.986)
+
+[node name="parede longa tipo 23" parent="." unique_id=676841607 instance=ExtResource("7_6lgce")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.266726, 4.765, 17.986)
+
+[node name="parede tipo 12" parent="." unique_id=866267070 instance=ExtResource("8_vlr3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.998079, 4.765, 15.24428)
+
+[node name="parede tipo 22" parent="." unique_id=833217116 instance=ExtResource("9_42c34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4389305, 4.765, 15.244)
+
+[node name="parede tipo 32" parent="." unique_id=1574601179 instance=ExtResource("10_bt6he")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6410904, 4.765, 15.244)
+
+[node name="portacimatipo 1" parent="." unique_id=532225392 instance=ExtResource("11_0r50r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.790426, 4.765, 15.244)
+
+[node name="portaladostipo 1" parent="." unique_id=1122881599 instance=ExtResource("12_umtol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.790426, 4.765, 15.244)
+
+[node name="portacimatipo 3" parent="." unique_id=738279380 instance=ExtResource("13_umtol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746428, 4.765, 15.244)
+
+[node name="portaladostipo 3" parent="." unique_id=1591173517 instance=ExtResource("14_f24ur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746, 4.765, 15.244)

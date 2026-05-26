@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bs41y8ay5fxih"
-path="res://.godot/imported/GeigerCounter.wav-50720ecd51249d2bcdb68032c8975f54.sample"
+path="res://.godot/imported/GeigerCounter.wav-80aee89163ed35a4f15d3047a24b5448.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/Miscellaneous/GeigerCounter.wav"
-dest_files=["res://.godot/imported/GeigerCounter.wav-50720ecd51249d2bcdb68032c8975f54.sample"]
+source_file="res://assets/SFX/Miscellaneous/GeigerCounter.wav"
+dest_files=["res://.godot/imported/GeigerCounter.wav-80aee89163ed35a4f15d3047a24b5448.sample"]
 
 [params]
 
