@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bjwokm8q3335r"]
+
+[ext_resource type="Script" uid="uid://bjg7kpnd1mahq" path="res://Scenes/Objects/Characters/Player/Player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://ck04mh27ip2yl" path="res://Scenes/Objects/Characters/BaseCharacter.tscn" id="1_5dhau"]
+[ext_resource type="AudioStream" uid="uid://dgmn1t7p7i4jd" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard1.wav" id="2_ay8ch"]
+[ext_resource type="AudioStream" uid="uid://fojuutn1e6q3" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard3.wav" id="2_e8vge"]
+[ext_resource type="AudioStream" uid="uid://5yp250wgrf8a" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard2.wav" id="3_un2c2"]
+[ext_resource type="AudioStream" uid="uid://c1yy8dvfnrxu3" path="res://Assets/SFX/Player/Woosh5.wav" id="5_ay8ch"]
+[ext_resource type="Shader" uid="uid://lodk6470pmij" path="res://Shaders/screen_pixelazation_and_thermal.gdshader" id="6_ay8ch"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sqvhx"]
+shader = ExtResource("6_ay8ch")
+shader_parameter/pixel_size = 6.0
+shader_parameter/colors_per_channel = 12.0
+shader_parameter/thermal_vision = false
+shader_parameter/heat_level = 0
+
+[node name="Player" unique_id=1655873123 instance=ExtResource("1_5dhau")]
+script = ExtResource("1_4flbx")
+footstep_hard_sounds = Array[AudioStream]([ExtResource("2_ay8ch"), ExtResource("3_un2c2"), ExtResource("2_e8vge")])
+woosh_sound = ExtResource("5_ay8ch")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="10" unique_id=182584610]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" index="0" unique_id=2035327821]
+material = SubResource("ShaderMaterial_sqvhx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stretch = true
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" index="0" unique_id=141244522]
+handle_input_locally = false
+audio_listener_enable_3d = true
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport" index="0" unique_id=1320161195]
+
+[node name="AudioListener3D" type="AudioListener3D" parent="CanvasLayer/SubViewportContainer/SubViewport/Camera3D" index="0" unique_id=95465857]
+current = true
+
+[node name="GunContainer" type="HBoxContainer" parent="CanvasLayer" index="1" unique_id=590971521]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7199986, 1)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="CanvasLayer/GunContainer" index="0" unique_id=1756393565]
+layout_mode = 2
+size_flags_vertical = 8
+text = " - EQUIP GUN -"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" index="2" unique_id=277556197]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/VBoxContainer" index="0" unique_id=200498442]
+layout_mode = 2
+columns = 5
+
+[node name="Button1" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" index="0" unique_id=1866477713]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" index="1" unique_id=1303305899]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" index="2" unique_id=1173221296]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button4" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" index="3" unique_id=173136391]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button5" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer" index="4" unique_id=1433920128]
+layout_mode = 2
+text = "-> item"

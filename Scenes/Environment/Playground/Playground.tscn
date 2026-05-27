@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="12_umtol"]
 [ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="13_umtol"]
 [ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
+[ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Objects/Characters/Player/Player.tscn" id="2_vlr3l"]
+[ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Objects/Characters/Npc/Npc.tscn" id="3_px5p2"]
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Velha.png" id="7_umtol"]
 
 [node name="Playground" type="Node3D" unique_id=654644380]
 
@@ -57,10 +60,10 @@ light_volumetric_fog_energy = 2.079
 light_size = 0.175
 light_bake_mode = 1
 
-[node name="Player" parent="." unique_id=1638247749 instance=ExtResource("2_vlr3l")]
+[node name="Player" parent="." unique_id=1655873123 instance=ExtResource("2_vlr3l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 
-[node name="Npc" parent="." unique_id=677860046 instance=ExtResource("6_0r50r")]
+[node name="Npc" parent="." unique_id=1342848665 instance=ExtResource("3_px5p2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 npc_texture = ExtResource("7_umtol")
 

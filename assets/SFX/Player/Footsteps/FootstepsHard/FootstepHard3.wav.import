@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://fojuutn1e6q3"
-path="res://.godot/imported/FootstepHard3.wav-a6428c993d3b29910a216e78920ef234.sample"
+path="res://.godot/imported/FootstepHard3.wav-e35afa43cb0690f46a31bfab3464959c.sample"
 
 [deps]
 
-source_file="res://assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard3.wav"
-dest_files=["res://.godot/imported/FootstepHard3.wav-a6428c993d3b29910a216e78920ef234.sample"]
+source_file="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard3.wav"
+dest_files=["res://.godot/imported/FootstepHard3.wav-e35afa43cb0690f46a31bfab3464959c.sample"]
 
 [params]
 

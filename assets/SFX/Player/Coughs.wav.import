@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cltkyf7pv7o8f"
-path="res://.godot/imported/Coughs.wav-70fbc10fe96151c430856dc01c13632a.sample"
+path="res://.godot/imported/Coughs.wav-71d9e73214adffc235c195e990a27386.sample"
 
 [deps]
 
-source_file="res://assets/SFX/Player/Coughs.wav"
-dest_files=["res://.godot/imported/Coughs.wav-70fbc10fe96151c430856dc01c13632a.sample"]
+source_file="res://Assets/SFX/Player/Coughs.wav"
+dest_files=["res://.godot/imported/Coughs.wav-71d9e73214adffc235c195e990a27386.sample"]
 
 [params]
 
