@@ -1,0 +1,11 @@
+~ start
+if StoryState.has_met_npc(npc_id) == false
+    Velha: Quem é você?
+    
+    set StoryState.met_npcs[npc_id] = true
+    do StoryState.save_game()
+	
+else
+    Velha: Olá novamente!
+set is_talking = false
+=> END

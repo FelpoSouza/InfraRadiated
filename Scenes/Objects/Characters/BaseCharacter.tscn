@@ -4,13 +4,17 @@
 [ext_resource type="AudioStream" uid="uid://dgmn1t7p7i4jd" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard1.wav" id="2_2l40j"]
 [ext_resource type="AudioStream" uid="uid://fojuutn1e6q3" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard3.wav" id="2_mxidk"]
 [ext_resource type="AudioStream" uid="uid://5yp250wgrf8a" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard2.wav" id="3_65k0j"]
+[ext_resource type="AudioStream" uid="uid://bti3t8rh0x3bk" path="res://Assets/SFX/Player/Footsteps/FootestpsGrass/FootstepGrass1.wav" id="5_q7hc2"]
+[ext_resource type="AudioStream" uid="uid://dnxhxdeolq425" path="res://Assets/SFX/Player/Footsteps/FootestpsGrass/FootstepGrass2.wav" id="6_i3tsj"]
+[ext_resource type="AudioStream" uid="uid://blecmpoqty32l" path="res://Assets/SFX/Player/Footsteps/FootestpsGrass/FootstepGrass3.wav" id="7_kn5hb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n04rl"]
 size = Vector3(1.5, 1.5, 1.5)
 
 [node name="Character" type="Area3D" unique_id=1655873123]
 script = ExtResource("1_24qhx")
-footstep_hard_sounds = Array[AudioStream]([ExtResource("2_2l40j"), ExtResource("3_65k0j"), ExtResource("2_mxidk")])
+footstep_wood_sounds = Array[AudioStream]([ExtResource("2_2l40j"), ExtResource("3_65k0j"), ExtResource("2_mxidk")])
+footstep_grass_sounds = Array[AudioStream]([ExtResource("5_q7hc2"), ExtResource("6_i3tsj"), ExtResource("7_kn5hb")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=738751151]
 shape = SubResource("BoxShape3D_n04rl")
@@ -33,6 +37,9 @@ collision_mask = 5
 [node name="RightRay" type="RayCast3D" parent="." unique_id=1501752543]
 target_position = Vector3(2, -0.5, 0)
 collision_mask = 5
+
+[node name="BottomRay" type="RayCast3D" parent="." unique_id=475375486]
+target_position = Vector3(0, -2, 0)
 
 [node name="AudioStreamPlayer3DCenter" type="AudioStreamPlayer3D" parent="." unique_id=1010431533]
 

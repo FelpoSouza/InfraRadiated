@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmqa5u7d4b8ns"
+path="res://.godot/imported/Velha.dialogue-7332fa65bada88e6c93a8d829dced576.tres"
+
+[deps]
+
+source_file="res://Dialogues/Velha.dialogue"
+dest_files=["res://.godot/imported/Velha.dialogue-7332fa65bada88e6c93a8d829dced576.tres"]
+
+[params]
+
+defaults=true

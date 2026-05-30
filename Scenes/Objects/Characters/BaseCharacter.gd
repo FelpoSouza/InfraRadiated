@@ -1,10 +1,9 @@
 extends Area3D
 class_name BaseCharacter
 
-@export var footstep_hard_sounds: Array[AudioStream] = []
+@export var footstep_wood_sounds: Array[AudioStream] = []
+@export var footstep_grass_sounds: Array[AudioStream] = []
 @export var woosh_sound: AudioStream
-
-enum SoundDirections { CENTER, LEFT, RIGHT, TOP, BOTTOM }
 
 var move_distance: float = 2.0
 
@@ -21,11 +20,12 @@ var is_moving: bool = false
 @onready var forward_ray: RayCast3D = $ForwardRay
 @onready var left_ray: RayCast3D = $LeftRay
 @onready var right_ray: RayCast3D = $RightRay
-@onready var audio_stream_player_3d_center: AudioStreamPlayer3D = $AudioStreamPlayer3DCenter
-@onready var audio_stream_player_3d_left: AudioStreamPlayer3D = $AudioStreamPlayer3DLeft
-@onready var audio_stream_player_3d_right: AudioStreamPlayer3D = $AudioStreamPlayer3DRight
-@onready var audio_stream_player_3d_top: AudioStreamPlayer3D = $AudioStreamPlayer3DTop
-@onready var audio_stream_player_3d_bottom: AudioStreamPlayer3D = $AudioStreamPlayer3DBottom
+@onready var bottom_ray: RayCast3D = $BottomRay
+@onready var audio_center: AudioStreamPlayer3D = $AudioStreamPlayer3DCenter
+@onready var audio_left: AudioStreamPlayer3D = $AudioStreamPlayer3DLeft
+@onready var audio_right: AudioStreamPlayer3D = $AudioStreamPlayer3DRight
+@onready var audio_top: AudioStreamPlayer3D = $AudioStreamPlayer3DTop
+@onready var audio_bottom: AudioStreamPlayer3D = $AudioStreamPlayer3DBottom
 
 func _ready() -> void:
 	target_position = global_position
@@ -40,27 +40,57 @@ func _process(delta: float) -> void:
 #-------------------------------------------------------------------------
 
 func play_footstep_sound() -> void:
-	if not footstep_hard_sounds.is_empty():
-		play_sound(SoundDirections.BOTTOM, footstep_hard_sounds.pick_random(), true)
+	if not bottom_ray.is_colliding(): return
+	
+	var collider = bottom_ray.get_collider()
+	
+	# Checa se está pisando no GridMap
+	if collider is GridMap:
+		var gridmap: GridMap = collider
+		
+		# Pega o local exato da colisão do raio
+		var hit_point = bottom_ray.get_collision_point()
+		var hit_normal = bottom_ray.get_collision_normal()
+		
+		# Desloca o ponto de colisão um pouco para dentro do tile (evita erros de ponto flutante)
+		var target_inside_tile = hit_point - (hit_normal * 0.1)
+		
+		# Converte a posição 3D numa coordenada da grid (ex.: Vector3i(0, -1, 4))
+		var map_coords = gridmap.local_to_map(gridmap.to_local(target_inside_tile))
+		
+		# Pega o id numérico interno do tile naquela coordenada
+		var tile_id = gridmap.get_cell_item(map_coords)
+		
+		# Se for vazio, não toca nenhum som
+		if tile_id == GridMap.INVALID_CELL_ITEM: return
+		
+		# Busca o nome o tile
+		var tile_name = gridmap.mesh_library.get_item_name(tile_id)
+		
+		
+		match tile_name:
+			"GrassFloorMesh", "GrassTile":
+				if not footstep_grass_sounds.is_empty():
+					play_sound(audio_bottom, footstep_grass_sounds.pick_random(), true)
+			"FloorMesh", "WallMesh":
+				if not footstep_wood_sounds.is_empty():
+					play_sound(audio_bottom, footstep_wood_sounds.pick_random(), true)
+			_:
+				if not footstep_wood_sounds.is_empty():
+					play_sound(audio_bottom, footstep_wood_sounds.pick_random(), true)
+			
+	else:
+		# Fallback caso o raio atinga um StaticBody ao invvés do GridMap
+		if collider:
+			play_sound(audio_bottom, footstep_wood_sounds.pick_random(), true)
+			
 
-func play_sound(direction: SoundDirections, sound: AudioStream, make_random: bool = false) -> void:
+func play_sound(audio_player: AudioStreamPlayer3D, sound: AudioStream, make_random: bool = false) -> void:
 	if not sound: return
 	
-	var player: AudioStreamPlayer3D
-	if direction == SoundDirections.CENTER:
-		player = audio_stream_player_3d_center
-	elif direction == SoundDirections.LEFT:
-		player = audio_stream_player_3d_left
-	elif direction == SoundDirections.RIGHT:
-		player = audio_stream_player_3d_right
-	elif direction == SoundDirections.TOP:
-		player = audio_stream_player_3d_top
-	elif direction == SoundDirections.BOTTOM:
-		player = audio_stream_player_3d_bottom
-		
-	player.stream = sound
-	player.pitch_scale = randf_range(0.9, 1.15) if make_random else 1.0
-	player.play()
+	audio_player.stream = sound
+	audio_player.pitch_scale = randf_range(0.9, 1.15) if make_random else 1.0
+	audio_player.play()
 
 
 #-------------------------------------------------------------------------
@@ -103,7 +133,7 @@ func try_move_right() -> bool:
 		return true
 	return false
 	
-func turn(angle_offset: float, sound_direction: SoundDirections) -> void:
+func turn(angle_offset: float, audio_player: AudioStreamPlayer3D) -> void:
 	is_moving = true
 	rotation.y = target_rotation
 	target_rotation += angle_offset
@@ -116,13 +146,13 @@ func turn(angle_offset: float, sound_direction: SoundDirections) -> void:
 		target_rotation = rotation.y 
 		is_moving = false
 	)
-	play_sound(sound_direction, woosh_sound, true)
+	play_sound(audio_player, woosh_sound, true)
 
 func turn_left() -> void:
-	turn(PI/2.0, SoundDirections.LEFT)
+	turn(PI/2.0, audio_left)
 
 func turn_right() -> void:
-	turn(-PI/2.0, SoundDirections.RIGHT)
+	turn(-PI/2.0, audio_right)
 
 
 func _on_movement_timer_timeout() -> void:

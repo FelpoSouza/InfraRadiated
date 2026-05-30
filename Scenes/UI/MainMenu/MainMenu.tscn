@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://d2vxuegv0jsu1"]
+
+[ext_resource type="Script" uid="uid://diywuyjrgpea8" path="res://Scenes/UI/MainMenu/MainMenu.gd" id="1_7rqq1"]
+[ext_resource type="Theme" uid="uid://qncuq2ddgkcv" path="res://Themes/main_theme.tres" id="1_les83"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fe4vj"]
+font_size = 96
+
+[node name="MainMenu" type="Control" unique_id=784851417]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7rqq1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=247427499]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=218162179]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 182.0
+size_flags_vertical = 0
+text = "INFRA-RADIATED"
+label_settings = SubResource("LabelSettings_fe4vj")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2042366397]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -680.0
+offset_top = -120.0
+offset_right = -59.99951
+offset_bottom = 261.00037
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="LoadGameButton" type="Button" parent="VBoxContainer" unique_id=405946202]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_les83")
+text = "Load Game"
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer" unique_id=131357528]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_les83")
+text = "New Game"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=836661129]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_les83")
+text = "Quit Game"
+
+[connection signal="pressed" from="VBoxContainer/LoadGameButton" to="." method="_on_load_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

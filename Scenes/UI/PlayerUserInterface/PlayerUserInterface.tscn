@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dhobh86kvkhp2"]
+
+[node name="UserInterface" type="Control" unique_id=640953137]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GunContainer" type="HBoxContainer" parent="." unique_id=293071916]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7199986, 1)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="GunContainer" unique_id=586689084]
+layout_mode = 2
+size_flags_vertical = 8
+text = " - EQUIP GUN -"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=965117903]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=3573008]
+layout_mode = 2
+columns = 5
+
+[node name="Button1" type="Button" parent="VBoxContainer/GridContainer" unique_id=2094509798]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button2" type="Button" parent="VBoxContainer/GridContainer" unique_id=1559939811]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button3" type="Button" parent="VBoxContainer/GridContainer" unique_id=375163887]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button4" type="Button" parent="VBoxContainer/GridContainer" unique_id=989416764]
+layout_mode = 2
+text = "-> item"
+
+[node name="Button5" type="Button" parent="VBoxContainer/GridContainer" unique_id=113934320]
+layout_mode = 2
+text = "-> item"
+
+[node name="Crosshair" type="ColorRect" parent="." unique_id=2073899075]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0, 1)

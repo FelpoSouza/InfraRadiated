@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://d8sld5o4u7xo"]
 
 [ext_resource type="MeshLibrary" uid="uid://hys60531k5po" path="res://Models/BlockMeshLibrary.tres" id="1_6lgce"]
-[ext_resource type="PackedScene" uid="uid://c65vh17muw7w0" path="res://Scenes/Objects/Player/Player.tscn" id="2_vlr3l"]
+[ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Objects/Characters/Player/Player.tscn" id="2_vlr3l"]
+[ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Objects/Characters/Npc/Npc.tscn" id="3_px5p2"]
+[ext_resource type="Resource" uid="uid://cmqa5u7d4b8ns" path="res://Dialogues/Velha.dialogue" id="5_a6mrj"]
 [ext_resource type="PackedScene" uid="uid://brbiud4i1id6d" path="res://Objects/Longwall2.tscn" id="5_ue7t3"]
-[ext_resource type="PackedScene" uid="uid://c3ayn1x5fw3s4" path="res://Scenes/Objects/Npc/Npc.tscn" id="6_0r50r"]
 [ext_resource type="PackedScene" uid="uid://bxqk7kg10g1hm" path="res://Objects/Longwall3.tscn" id="6_pxtwo"]
 [ext_resource type="PackedScene" uid="uid://prcdmdd1gifk" path="res://Objects/longwall1.tscn" id="7_6lgce"]
-[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://assets/Velha.png" id="7_umtol"]
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Images/Velha.png" id="7_umtol"]
 [ext_resource type="PackedScene" uid="uid://bhfcbcivlgqqm" path="res://Objects/wall2.tscn" id="8_vlr3l"]
 [ext_resource type="PackedScene" uid="uid://3a6x7r53iq3n" path="res://Objects/wall1.tscn" id="9_42c34"]
 [ext_resource type="PackedScene" uid="uid://c8sjoysw55g1s" path="res://Objects/wall3.tscn" id="10_bt6he"]
@@ -14,13 +15,15 @@
 [ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="12_umtol"]
 [ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="13_umtol"]
 [ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
-[ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Objects/Characters/Player/Player.tscn" id="2_vlr3l"]
-[ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Objects/Characters/Npc/Npc.tscn" id="3_px5p2"]
-[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Velha.png" id="7_umtol"]
+[ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Objects/Characters/Monster/Monster.tscn" id="16_1i0fn"]
+[ext_resource type="Texture2D" uid="uid://dydce4dc4e30c" path="res://Assets/Images/Monster.jpg" id="17_akijn"]
+
+[sub_resource type="GDScript" id="GDScript_akijn"]
 
 [node name="Playground" type="Node3D" unique_id=654644380]
+script = SubResource("GDScript_akijn")
 
-[node name="GridMap" type="GridMap" parent="." unique_id=1970141981]
+[node name="GridMap" type="GridMap" parent="." unique_id=1970141981 groups=["GridMap"]]
 mesh_library = ExtResource("1_6lgce")
 cell_size = Vector3(2, 1, 2)
 data = {
@@ -61,11 +64,13 @@ light_size = 0.175
 light_bake_mode = 1
 
 [node name="Player" parent="." unique_id=1655873123 instance=ExtResource("2_vlr3l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 5.5)
 
 [node name="Npc" parent="." unique_id=1342848665 instance=ExtResource("3_px5p2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 npc_texture = ExtResource("7_umtol")
+npc_id = "Velha"
+dialogue_resource = ExtResource("5_a6mrj")
 
 [node name="longwall1" parent="." unique_id=102856207 instance=ExtResource("5_ue7t3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.522482, 4.765255, 17.98617)
@@ -96,3 +101,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746428, 4.765, 15.244)
 
 [node name="portaladostipo 3" parent="." unique_id=1591173517 instance=ExtResource("14_f24ur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746, 4.765, 15.244)
+
+[node name="Monster" parent="." unique_id=1994534437 instance=ExtResource("16_1i0fn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
+monster_texture = ExtResource("17_akijn")

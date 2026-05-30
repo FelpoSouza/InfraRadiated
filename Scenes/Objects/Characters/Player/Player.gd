@@ -8,21 +8,55 @@ var camera_offset: Vector3 = Vector3.ZERO
 
 var current_peeking: PeekingDirections = PeekingDirections.NONE
 var is_thermal_vision_on: bool = false
+var is_facing_npc: bool = false
 
 @onready var camera: Camera3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D
 @onready var shader_container: SubViewportContainer = $CanvasLayer/SubViewportContainer
+@onready var crosshair: ColorRect = $CanvasLayer/UserInterface/Crosshair
+@onready var forward_ray_for_areas: RayCast3D = $ForwardRayForAreas
+@onready var pause_menu: Control = $CanvasLayer/PauseMenu
 
 func _ready() -> void:
 	super._ready()
+	add_to_group(Constants.PLAYER_GROUP_NAME)
 	camera.global_transform = global_transform
-
+	
+	
 func _process(_delta: float) -> void:
 	super._process(_delta)
 	var smoothing_factor = 1.0 - exp(-15.0 * _delta)
 	camera.global_position = camera.global_position.lerp(global_position + camera_offset, smoothing_factor)
 	
 	camera.rotation.y = rotation.y
+		
+	check_crosshair_interaction()
+	
+#-------------------------------------------------------------------------
+# INTERAÇÃO
+#-------------------------------------------------------------------------
+func check_crosshair_interaction() -> void:
+	if forward_ray_for_areas.is_colliding():
+		var target = forward_ray_for_areas.get_collider()
+		
+		if target and target.is_in_group(Constants.NPC_GROUP_NAME): 
+			crosshair.color = Color(0.91, 0.766, 0.0, 1.0)
+			is_facing_npc = true
+			return
+	
+	is_facing_npc = false
+	crosshair.color = Color(1.0, 1.0, 1.0)
 
+func try_talk_to_npc() -> void:
+	print("DENTRO")
+	if forward_ray_for_areas.is_colliding():
+		var target = forward_ray_for_areas.get_collider()
+		
+		if target.is_in_group(Constants.NPC_GROUP_NAME) and target.has_method("show_dialog"):
+			target.show_dialog()
+
+#-------------------------------------------------------------------------
+# INPUT
+#-------------------------------------------------------------------------
 func _unhandled_input(event: InputEvent) -> void:
 	if is_moving: return
 	var is_shifting = Input.is_action_pressed("modifier")
@@ -52,6 +86,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			turn_left()
 		elif event.is_action_pressed("turn_right"):
 			turn_right()
+			
+		elif event.is_action_pressed("interact"):
+			if is_facing_npc:
+				print("FORA")
+				try_talk_to_npc()
 	
 	if current_peeking != PeekingDirections.NONE:
 		if (event.is_action_released("peek_down") or 
@@ -106,4 +145,11 @@ func peek_forward() -> void:
 func toggle_thermal_vision() -> void:
 	is_thermal_vision_on = not is_thermal_vision_on
 	shader_container.material.set_shader_parameter("thermal_vision", is_thermal_vision_on)
-	get_tree().call_group("NPCs", "set_thermal_mode", is_thermal_vision_on)
+	get_tree().call_group(Constants.NPC_GROUP_NAME, "set_thermal_mode", is_thermal_vision_on)
+	
+#-------------------------------------------------------------------------
+# DETEÇÃO DE MORTE
+#-------------------------------------------------------------------------
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	if area.is_in_group(Constants.MONSTER_GROUP_NAME):
+		queue_free()

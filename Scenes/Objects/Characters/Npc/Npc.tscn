@@ -13,13 +13,16 @@ shader_parameter/pixel_size = 8.0
 collision_layer = 4
 script = ExtResource("2_v45o3")
 npc_texture = null
+npc_id = ""
+dialogue_resource = null
+dialogue_start_node = "start"
 
-[node name="Sprite3D" type="Sprite3D" parent="." index="10" unique_id=1649848864]
+[node name="Sprite3D" type="Sprite3D" parent="." index="11" unique_id=1649848864]
 material_override = SubResource("ShaderMaterial_x8dhr")
 pixel_size = 0.002
 billboard = 2
 
-[node name="MovementTimer" type="Timer" parent="." index="11" unique_id=1884047272]
+[node name="MovementTimer" type="Timer" parent="." index="12" unique_id=1884047272]
 wait_time = 2.0
 autostart = true
 

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bgm3bn4n1okiv"]
+
+[ext_resource type="Theme" uid="uid://qncuq2ddgkcv" path="res://Themes/main_theme.tres" id="1_e4e6r"]
+[ext_resource type="Script" uid="uid://4223ls6f161l" path="res://Scenes/UI/PauseMenu/PauseMenu.gd" id="1_psikb"]
+
+[sub_resource type="Gradient" id="Gradient_psikb"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7g5nr"]
+gradient = SubResource("Gradient_psikb")
+
+[node name="PauseMenu" type="ColorRect" unique_id=1588672194]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49803922)
+script = ExtResource("1_psikb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1355768578]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_7g5nr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=2116126851]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.5
+offset_top = -36.0
+offset_right = 80.5
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="TextureRect/VBoxContainer" unique_id=1095311818]
+layout_mode = 2
+theme = ExtResource("1_e4e6r")
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="TextureRect/VBoxContainer" unique_id=596154803]
+layout_mode = 2
+theme = ExtResource("1_e4e6r")
+text = "Save and Quit"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
