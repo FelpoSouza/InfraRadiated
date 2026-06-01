@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ci0awb6o2rgnj"
-path="res://.godot/imported/591708__jim-bretherick__hairy-in-the-dark-step-rhythm - Copia.wav-2916c14a37e9d43abd5f5a4c449b294b.sample"
+path="res://.godot/imported/591708__jim-bretherick__hairy-in-the-dark-step-rhythm - Copia.wav-8d342843c5cce05ea06793a240451026.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/591708__jim-bretherick__hairy-in-the-dark-step-rhythm - Copia.wav"
-dest_files=["res://.godot/imported/591708__jim-bretherick__hairy-in-the-dark-step-rhythm - Copia.wav-2916c14a37e9d43abd5f5a4c449b294b.sample"]
+source_file="res://assets/SFX/SoundsRaw/591708__jim-bretherick__hairy-in-the-dark-step-rhythm - Copia.wav"
+dest_files=["res://.godot/imported/591708__jim-bretherick__hairy-in-the-dark-step-rhythm - Copia.wav-8d342843c5cce05ea06793a240451026.sample"]
 
 [params]
 

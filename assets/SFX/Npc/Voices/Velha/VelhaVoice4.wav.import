@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bw73otg8w8367"
-path="res://.godot/imported/VelhaVoice4.wav-673dca6595da07352716ad3edf8204a8.sample"
+path="res://.godot/imported/VelhaVoice4.wav-d4e18321f7e1cf09dbb0366dd825b3cf.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice4.wav"
-dest_files=["res://.godot/imported/VelhaVoice4.wav-673dca6595da07352716ad3edf8204a8.sample"]
+source_file="res://assets/SFX/Npc/Voices/Velha/VelhaVoice4.wav"
+dest_files=["res://.godot/imported/VelhaVoice4.wav-d4e18321f7e1cf09dbb0366dd825b3cf.sample"]
 
 [params]
 

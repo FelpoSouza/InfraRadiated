@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c4jgeani7tis1"
-path="res://.godot/imported/797718__colinleblancsound__darkambiance - Copia.wav-60206c22a248d90f7a4f00917aa39f14.sample"
+path="res://.godot/imported/797718__colinleblancsound__darkambiance - Copia.wav-907c0e0cdcf5ab583db7c997207e1e3e.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/797718__colinleblancsound__darkambiance - Copia.wav"
-dest_files=["res://.godot/imported/797718__colinleblancsound__darkambiance - Copia.wav-60206c22a248d90f7a4f00917aa39f14.sample"]
+source_file="res://assets/SFX/SoundsRaw/797718__colinleblancsound__darkambiance - Copia.wav"
+dest_files=["res://.godot/imported/797718__colinleblancsound__darkambiance - Copia.wav-907c0e0cdcf5ab583db7c997207e1e3e.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ddn3p3ii66p6d"
-path="res://.godot/imported/837040__gamexplosion__wasteland-noise - Copia.wav-0bbff08414e0732f569de05d9b2a170d.sample"
+path="res://.godot/imported/837040__gamexplosion__wasteland-noise - Copia.wav-d18846b1b98f1aa436c4b7a11c86377c.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/837040__gamexplosion__wasteland-noise - Copia.wav"
-dest_files=["res://.godot/imported/837040__gamexplosion__wasteland-noise - Copia.wav-0bbff08414e0732f569de05d9b2a170d.sample"]
+source_file="res://assets/SFX/SoundsRaw/837040__gamexplosion__wasteland-noise - Copia.wav"
+dest_files=["res://.godot/imported/837040__gamexplosion__wasteland-noise - Copia.wav-d18846b1b98f1aa436c4b7a11c86377c.sample"]
 
 [params]
 

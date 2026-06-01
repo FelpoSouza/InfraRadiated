@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://3wo68b6jw0oh"
-path="res://.godot/imported/Woosh4.wav-f44ad82ca0024944a3d6d5c679d8cc54.sample"
+path="res://.godot/imported/Woosh4.wav-5c3efb02deb48df38621f2ee5a0f40fe.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/Player/Woosh/Woosh4.wav"
-dest_files=["res://.godot/imported/Woosh4.wav-f44ad82ca0024944a3d6d5c679d8cc54.sample"]
+source_file="res://assets/SFX/Player/Woosh/Woosh4.wav"
+dest_files=["res://.godot/imported/Woosh4.wav-5c3efb02deb48df38621f2ee5a0f40fe.sample"]
 
 [params]
 

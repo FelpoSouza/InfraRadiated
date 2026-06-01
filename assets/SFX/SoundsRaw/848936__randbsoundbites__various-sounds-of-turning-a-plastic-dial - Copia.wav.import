@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://crc2bty82bwsc"
-path="res://.godot/imported/848936__randbsoundbites__various-sounds-of-turning-a-plastic-dial - Copia.wav-e717f3f43f784f1378885091f5668a73.sample"
+path="res://.godot/imported/848936__randbsoundbites__various-sounds-of-turning-a-plastic-dial - Copia.wav-fe169b622cb595cd8df30b556d28d5ed.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/848936__randbsoundbites__various-sounds-of-turning-a-plastic-dial - Copia.wav"
-dest_files=["res://.godot/imported/848936__randbsoundbites__various-sounds-of-turning-a-plastic-dial - Copia.wav-e717f3f43f784f1378885091f5668a73.sample"]
+source_file="res://assets/SFX/SoundsRaw/848936__randbsoundbites__various-sounds-of-turning-a-plastic-dial - Copia.wav"
+dest_files=["res://.godot/imported/848936__randbsoundbites__various-sounds-of-turning-a-plastic-dial - Copia.wav-fe169b622cb595cd8df30b556d28d5ed.sample"]
 
 [params]
 

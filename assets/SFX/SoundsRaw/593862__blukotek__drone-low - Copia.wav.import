@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dlhgjju05gfqv"
-path="res://.godot/imported/593862__blukotek__drone-low - Copia.wav-8e4cfa2f6a70afc7ad9fb48b0c09b989.sample"
+path="res://.godot/imported/593862__blukotek__drone-low - Copia.wav-65358b78b06cf2790673c1abc22b1bcd.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/593862__blukotek__drone-low - Copia.wav"
-dest_files=["res://.godot/imported/593862__blukotek__drone-low - Copia.wav-8e4cfa2f6a70afc7ad9fb48b0c09b989.sample"]
+source_file="res://assets/SFX/SoundsRaw/593862__blukotek__drone-low - Copia.wav"
+dest_files=["res://.godot/imported/593862__blukotek__drone-low - Copia.wav-65358b78b06cf2790673c1abc22b1bcd.sample"]
 
 [params]
 

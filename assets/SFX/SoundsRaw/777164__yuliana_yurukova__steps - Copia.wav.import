@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dnbglfstyfhcu"
-path="res://.godot/imported/777164__yuliana_yurukova__steps - Copia.wav-86de30ec9faffaf20ba740f907419c95.sample"
+path="res://.godot/imported/777164__yuliana_yurukova__steps - Copia.wav-b2f51440c9f4ba69b7c75469e7c13d1b.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/777164__yuliana_yurukova__steps - Copia.wav"
-dest_files=["res://.godot/imported/777164__yuliana_yurukova__steps - Copia.wav-86de30ec9faffaf20ba740f907419c95.sample"]
+source_file="res://assets/SFX/SoundsRaw/777164__yuliana_yurukova__steps - Copia.wav"
+dest_files=["res://.godot/imported/777164__yuliana_yurukova__steps - Copia.wav-b2f51440c9f4ba69b7c75469e7c13d1b.sample"]
 
 [params]
 
