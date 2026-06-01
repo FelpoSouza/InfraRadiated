@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gcocu7tuy6b4"
+path="res://.godot/imported/473846__lilmati__shotgun-shot-03 - Copia.wav-cca297ce26a8fd54a3460eef1c0f5040.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/SoundsRaw/473846__lilmati__shotgun-shot-03 - Copia.wav"
+dest_files=["res://.godot/imported/473846__lilmati__shotgun-shot-03 - Copia.wav-cca297ce26a8fd54a3460eef1c0f5040.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

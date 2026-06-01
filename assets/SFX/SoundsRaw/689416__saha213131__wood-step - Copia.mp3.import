@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://utf0pb2eycof"
+path="res://.godot/imported/689416__saha213131__wood-step - Copia.mp3-7da1cbf486d64f2d80ed0e0957b2c16e.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/SoundsRaw/689416__saha213131__wood-step - Copia.mp3"
+dest_files=["res://.godot/imported/689416__saha213131__wood-step - Copia.mp3-7da1cbf486d64f2d80ed0e0957b2c16e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://d1545thj8knef"]
+
+[ext_resource type="Shader" uid="uid://oy57f4dp0fr6" path="res://Resources/Shaders/billboard_sprite_pixelazation.gdshader" id="1_jg87j"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_jg87j")
+shader_parameter/pixel_size = 8.0

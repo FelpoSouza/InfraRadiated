@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bprgvomf5rvsb"]
+
+[ext_resource type="PackedScene" uid="uid://ck04mh27ip2yl" path="res://Scenes/Characters/BaseCharacter.tscn" id="1_3ewfm"]
+[ext_resource type="Script" uid="uid://ccyupdmup0gan" path="res://Scenes/Characters/Npc/Npc.gd" id="2_v45o3"]
+[ext_resource type="Shader" uid="uid://oy57f4dp0fr6" path="res://Resources/Shaders/billboard_sprite_pixelazation.gdshader" id="3_64hne"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x8dhr"]
+render_priority = 0
+shader = ExtResource("3_64hne")
+shader_parameter/pixel_size = 8.0
+
+[node name="Npc" unique_id=1655873123 instance=ExtResource("1_3ewfm")]
+collision_layer = 4
+script = ExtResource("2_v45o3")
+npc_texture = null
+npc_id = 0
+npc_dialogue_data = null
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="11" unique_id=1649848864]
+material_override = SubResource("ShaderMaterial_x8dhr")
+pixel_size = 0.002
+billboard = 2
+
+[node name="MovementTimer" type="Timer" parent="." index="12" unique_id=1884047272]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]

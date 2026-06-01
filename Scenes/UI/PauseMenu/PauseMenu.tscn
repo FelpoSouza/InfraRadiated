@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgm3bn4n1okiv"]
 
-[ext_resource type="Theme" uid="uid://qncuq2ddgkcv" path="res://Themes/main_theme.tres" id="1_e4e6r"]
+[ext_resource type="Theme" uid="uid://qncuq2ddgkcv" path="res://Resources/Themes/main_theme.tres" id="1_e4e6r"]
 [ext_resource type="Script" uid="uid://4223ls6f161l" path="res://Scenes/UI/PauseMenu/PauseMenu.gd" id="1_psikb"]
 
 [sub_resource type="Gradient" id="Gradient_psikb"]
