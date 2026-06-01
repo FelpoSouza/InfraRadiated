@@ -47,7 +47,6 @@ func check_crosshair_interaction() -> void:
 	crosshair.color = Color(1.0, 1.0, 1.0)
 
 func try_talk_to_npc() -> void:
-	print("DENTRO")
 	if forward_ray_for_areas.is_colliding():
 		var target = forward_ray_for_areas.get_collider()
 		
@@ -88,8 +87,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			turn_right()
 			
 		elif event.is_action_pressed("interact"):
-			if is_facing_npc:
-				print("FORA")
+			if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
 				try_talk_to_npc()
 	
 	if current_peeking != PeekingDirections.NONE:

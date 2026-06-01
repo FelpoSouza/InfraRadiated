@@ -13,9 +13,8 @@ shader_parameter/pixel_size = 8.0
 collision_layer = 4
 script = ExtResource("2_v45o3")
 npc_texture = null
-npc_id = ""
-dialogue_resource = null
-dialogue_start_node = "start"
+npc_id = 0
+npc_dialogue_data = null
 
 [node name="Sprite3D" type="Sprite3D" parent="." index="11" unique_id=1649848864]
 material_override = SubResource("ShaderMaterial_x8dhr")

@@ -31,5 +31,5 @@ func load_game() -> bool:
 			
 	return false
 	
-func has_met_npc(npc_id: String):
+func has_met_npc(npc_id: Constants.NPC_IDS):
 	return met_npcs.get(npc_id, false)

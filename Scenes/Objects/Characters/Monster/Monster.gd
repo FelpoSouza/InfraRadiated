@@ -87,12 +87,12 @@ func _on_movement_timer_timeout() -> void:
 	var chase_path = astar_grid.get_id_path(monster_grid_pos, player_grid_pos)
 	
 	if chase_path.is_empty():
-		# No path was found
+		# Nenhum caminho foi encontrado
 		return
 	
 	if chase_path.size() == 1:
-		# The player is on top of the Monster
-		print("KILL PLAYER")
+		# O monstro está em cima do jogador
+		# A detecção de morte está no script do jogador
 		return
 		
 	var direction = chase_path[1] - chase_path[0]

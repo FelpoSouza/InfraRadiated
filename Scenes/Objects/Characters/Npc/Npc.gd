@@ -1,14 +1,16 @@
 extends BaseCharacter
 
 @export var npc_texture: Texture2D
-@export var npc_id: String = ""
-@export var dialogue_resource: DialogueResource
-@export var dialogue_start_node: String = "start"
+@export var npc_id: Constants.NPC_IDS
+@export var npc_dialogue_data: NpcDialogueData
 
 const THERMAL_NPC_MATERIAL = preload("res://Materials/Thermal/ThermalNPCMaterial.tres")
 
+var npc_name: String = Constants.NPC_IDS.keys()[npc_id]
 var is_player_near: bool = false
 var is_talking: bool = false
+
+var default_unique_material: Material
 
 @onready var sprite: Sprite3D = $Sprite3D
 
@@ -20,8 +22,12 @@ func _ready() -> void:
 	
 	if npc_texture != null:
 		sprite.texture = npc_texture
-		var mat = sprite.material_override
-		mat.set_shader_parameter("sprite_texture", sprite.texture)
+		
+		default_unique_material = sprite.material_override.duplicate()
+		default_unique_material.set_shader_parameter("sprite_texture", sprite.texture)
+		sprite.material_override = default_unique_material
+	
+	DialogueSystemManager.register_npc_data(npc_id, npc_dialogue_data)
 
 func pick_random_movement():
 	return [
@@ -42,15 +48,11 @@ func _on_movement_timer_timeout() -> void:
 
 func set_thermal_mode(is_active: bool) -> void:
 	if is_active:
-		var current_tex = sprite.texture
-		THERMAL_NPC_MATERIAL.set_shader_parameter("sprite_texture", current_tex)
-		sprite.material_override = THERMAL_NPC_MATERIAL
+		var unique_thermal = THERMAL_NPC_MATERIAL.duplicate()
+		unique_thermal.set_shader_parameter("sprite_texture", sprite.texture)
+		sprite.material_override = unique_thermal
 	else:
-		sprite.material_override = null
+		sprite.material_override = default_unique_material
 
 func show_dialog() -> void:
-	if dialogue_resource != null:
-		is_talking = true
-		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_start_node, [self])
-	else:
-		push_warning("NPC has no dialogue resource assigned.")
+	DialogueSystemManager.show_dialog(npc_dialogue_data, self)

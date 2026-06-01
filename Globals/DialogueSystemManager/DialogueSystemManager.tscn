@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c4l3fff4r60h7"]
+
+[ext_resource type="Script" uid="uid://65bfysfuwx2i" path="res://Globals/DialogueSystemManager/DialogueSystemManager.gd" id="1_aysr6"]
+[ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice1.wav" id="3_2g5g8"]
+
+[node name="DialogueSystemManager" type="Node" unique_id=1504836783]
+script = ExtResource("1_aysr6")
+default_voice_sfx = ExtResource("3_2g5g8")
