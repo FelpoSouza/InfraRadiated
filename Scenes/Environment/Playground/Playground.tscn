@@ -12,8 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c8sjoysw55g1s" path="res://Objects/wall3.tscn" id="10_bt6he"]
 [ext_resource type="PackedScene" uid="uid://c5ydhmce86apm" path="res://Objects/Portacimatipo1.tscn" id="11_0r50r"]
 [ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="12_umtol"]
-[ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="13_umtol"]
-[ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
+[ext_resource type="PackedScene" uid="uid://bo4koudyrnwh0" path="res://Models/portaladostipo 3.glb" id="13_umtol"]
 
 [node name="Playground" type="Node3D" unique_id=654644380]
 
@@ -88,8 +87,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.790426, 4.765, 15.244)
 [node name="portaladostipo 1" parent="." unique_id=1122881599 instance=ExtResource("12_umtol")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.790426, 4.765, 15.244)
 
-[node name="portacimatipo 3" parent="." unique_id=738279380 instance=ExtResource("13_umtol")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746428, 4.765, 15.244)
-
-[node name="portaladostipo 3" parent="." unique_id=1591173517 instance=ExtResource("14_f24ur")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746, 4.765, 15.244)
+[node name="portaladostipo 3" parent="." unique_id=319385660 instance=ExtResource("13_umtol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.037569, 4.1640806, 17.698793)

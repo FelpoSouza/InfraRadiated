@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d08d08hrwuewb"]
+
+[ext_resource type="PackedScene" uid="uid://prcdmdd1gifk" path="res://Objects/longwall1.tscn" id="1_evart"]
+[ext_resource type="PackedScene" uid="uid://brbiud4i1id6d" path="res://Objects/Longwall2.tscn" id="2_yda0w"]
+[ext_resource type="PackedScene" uid="uid://bxqk7kg10g1hm" path="res://Objects/Longwall3.tscn" id="3_to721"]
+[ext_resource type="PackedScene" uid="uid://c5ydhmce86apm" path="res://Objects/Portacimatipo1.tscn" id="4_5syoi"]
+[ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="5_qcpb4"]
+[ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="6_5p1nc"]
+[ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="7_ounit"]
+[ext_resource type="PackedScene" uid="uid://3a6x7r53iq3n" path="res://Objects/wall1.tscn" id="8_73ng5"]
+[ext_resource type="PackedScene" uid="uid://bhfcbcivlgqqm" path="res://Objects/wall2.tscn" id="9_pfj7w"]
+[ext_resource type="PackedScene" uid="uid://c8sjoysw55g1s" path="res://Objects/wall3.tscn" id="10_g4djb"]
+
+[node name="Node3D" type="Node3D" unique_id=228686803]
+
+[node name="parede longa tipo 22" parent="." unique_id=676841607 instance=ExtResource("1_evart")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1641169, -1.1920929e-07, 1.4236742)
+
+[node name="longwall2" parent="." unique_id=102856207 instance=ExtResource("2_yda0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.797607, -1.1920929e-07, 1.4236742)
+
+[node name="longwall3" parent="." unique_id=225798606 instance=ExtResource("3_to721")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.407541, -1.1920929e-07, 1.4236742)
+
+[node name="portacimatipo 1" parent="." unique_id=532225392 instance=ExtResource("4_5syoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9067597, -1.1920929e-07, 1.4236742)
+
+[node name="portacimatipo 3" parent="." unique_id=738279380 instance=ExtResource("5_qcpb4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7093071, -1.1920929e-07, 1.4236742)
+
+[node name="portaladostipo 1" parent="." unique_id=1122881599 instance=ExtResource("6_5p1nc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8882213, -1.1920929e-07, 1.4236742)
+
+[node name="portaladostipo 3" parent="." unique_id=1591173517 instance=ExtResource("7_ounit")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5199084, -1.1920929e-07, 1.4236742)
+
+[node name="parede tipo 22" parent="." unique_id=833217116 instance=ExtResource("8_73ng5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.29782, -1.1920929e-07, 1.4236742)
+
+[node name="parede tipo 12" parent="." unique_id=866267070 instance=ExtResource("9_pfj7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.785744, -1.1920929e-07, 1.4236742)
+
+[node name="parede tipo 32" parent="." unique_id=1574601179 instance=ExtResource("10_g4djb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7132955, -1.1920929e-07, 1.4236742)
