@@ -45,7 +45,9 @@ void fragment() {
     ALBEDO = vec3(1.0, 0.0, 1.0) * alpha_blur;
     ALPHA = alpha_blur;
     
-    if (ALPHA < 0.01) {
+    if (ALPHA < 0.5) {
         discard;
+    } else {
+        ALPHA = 1.0;
     }
 }

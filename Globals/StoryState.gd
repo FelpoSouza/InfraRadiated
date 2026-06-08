@@ -1,35 +1,26 @@
 extends Node
 
-const SAVE_PATH = "user://savegame.data"
+var current_scene: String
+var met_npcs = {}
 
-var met_npcs: Dictionary = {}
 
-func save_game() -> void:
-	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-	if file:
-		var json_string = JSON.stringify(met_npcs)
-		file.store_line(json_string)
-		file.close()
-		print("Game Saved Successfully!")
+func _ready() -> void:
+	add_to_group(Constants.DATA_PERSISTENCE_GROUP_NAME)
 
-func load_game() -> bool:
-	if not FileAccess.file_exists(SAVE_PATH):
-		return false
-		
-	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
-	if file:
-		var json_string = file.get_line()
-		file.close()
-		
-		var json = JSON.new()
-		var parse_result = json.parse(json_string)
-		
-		if parse_result == OK:
-			met_npcs = json.get_data()
-			print("Game Loaded Successfully!")
-			return true
-			
-	return false
-	
+
 func has_met_npc(npc_id: Constants.NPC_IDS):
-	return met_npcs.get(npc_id, false)
+	return met_npcs.get(str(npc_id), false)
+	
+func mark_npc_as_met(npc_id):
+	met_npcs[str(npc_id)] = true
+	
+
+#-------------------------------------------------------------------------
+# FUNÇÕES DE PERSISTÊNCIA DE DADOS
+#-------------------------------------------------------------------------
+func save_to_state(state: Dictionary) -> void:
+	state["current_scene"] = get_tree().current_scene.scene_file_path
+	state["met_npcs"] = met_npcs
+	
+func load_from_state(state: Dictionary) -> void:
+	met_npcs = state.get("met_npcs", {})

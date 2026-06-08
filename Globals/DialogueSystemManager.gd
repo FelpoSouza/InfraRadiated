@@ -9,11 +9,12 @@ const DIALOGUE_BALLOON = preload("res://Dialogues/DialogueBalloon/DialogueBalloo
 var is_dialogue_active: bool = false
 
 
+## Função usada por NPC.gd para registrar os dados dos diálogos, de forma que fiquem acessíveis nesta classe Global de forma centralizada
 func register_npc_data(npc_id: Constants.NPC_IDS, data: NpcDialogueData) -> void:
 	if data == null: 
 		return
 	
-	# Only add it if it's not already cached (prevents the level-reload memory leak!)
+	# Só adiciona se não estiver no dicionário
 	if not npc_dialogue_data_dict.has(npc_id):
 		npc_dialogue_data_dict[npc_id] = data
 
