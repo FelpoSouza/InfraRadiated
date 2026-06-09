@@ -19,6 +19,7 @@ var is_facing_npc: bool = false
 func _ready() -> void:
 	super._ready()
 	add_to_group(Constants.PLAYER_GROUP_NAME)
+	add_to_group(Constants.DATA_PERSISTENCE_GROUP_NAME)
 	camera.global_transform = global_transform
 	
 	
@@ -57,7 +58,7 @@ func try_talk_to_npc() -> void:
 # INPUT
 #-------------------------------------------------------------------------
 func _unhandled_input(event: InputEvent) -> void:
-	if is_moving: return
+	if is_moving or is_turning: return
 	var is_shifting = Input.is_action_pressed("modifier")
 	
 	if is_shifting:
@@ -91,10 +92,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				try_talk_to_npc()
 	
 	if current_peeking != PeekingDirections.NONE:
-		if (event.is_action_released("peek_down") or 
-			event.is_action_released("peek_up") or 
-			event.is_action_released("peek_left") or 
-			event.is_action_released("peek_right") or 
+		if ((current_peeking == PeekingDirections.DOWN and event.is_action_released("peek_down")) or 
+			(current_peeking == PeekingDirections.UP and event.is_action_released("peek_up")) or 
+			(current_peeking == PeekingDirections.LEFT and event.is_action_released("peek_left")) or 
+			(current_peeking == PeekingDirections.RIGHT and event.is_action_released("peek_right")) or 
 			event.is_action_released("modifier")):
 				peek_forward()
 
@@ -151,3 +152,19 @@ func toggle_thermal_vision() -> void:
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group(Constants.MONSTER_GROUP_NAME):
 		queue_free()
+
+
+#-------------------------------------------------------------------------
+# FUNÇÕES DE PERSISTÊNCIA DE DADOS
+#-------------------------------------------------------------------------
+func save_to_state(state: Dictionary) -> void:
+	var player_state: Dictionary = get_base_character_dict()
+	
+	state["Player"] = player_state
+	
+func load_from_state(state: Dictionary) -> void:
+	print(state)
+	var player_state: Dictionary = state.get("Player", {})
+	set_attributes_from_dict(player_state)
+	
+	camera.global_position = global_position

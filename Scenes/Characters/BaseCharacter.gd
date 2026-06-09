@@ -15,6 +15,7 @@ var target_position: Vector3
 var target_rotation: float
 
 var is_moving: bool = false
+var is_turning: bool = false
 
 @onready var backward_ray: RayCast3D = $BackwardRay
 @onready var forward_ray: RayCast3D = $ForwardRay
@@ -134,7 +135,7 @@ func try_move_right() -> bool:
 	return false
 	
 func turn(angle_offset: float, audio_player: AudioStreamPlayer3D) -> void:
-	is_moving = true
+	is_turning = true
 	rotation.y = target_rotation
 	target_rotation += angle_offset
 	
@@ -144,7 +145,7 @@ func turn(angle_offset: float, audio_player: AudioStreamPlayer3D) -> void:
 		rotation.y = wrapf(rotation.y, -PI, PI)
 		rotation.y = snapped(rotation.y , PI/2.0)
 		target_rotation = rotation.y 
-		is_moving = false
+		is_turning = false
 	)
 	play_sound(audio_player, woosh_sound, true)
 
@@ -155,5 +156,78 @@ func turn_right() -> void:
 	turn(-PI/2.0, audio_right)
 
 
-func _on_movement_timer_timeout() -> void:
-	pass # Replace with function body.
+#-------------------------------------------------------------------------
+# PERSISTÊNCIA DE DADOS
+#-------------------------------------------------------------------------
+func get_base_character_dict() -> Dictionary:
+	var base_char_state: Dictionary = {
+		"position": [global_position.x, global_position.y, global_position.z],
+		"rotation": [global_rotation.x, global_rotation.y, global_rotation.z],
+		
+		"is_moving": is_moving,
+		"is_turning": is_turning,
+		"target_position": [target_position.x, target_position.y, target_position.z],
+		"target_rotation": target_rotation
+	}
+	return base_char_state
+	
+func set_attributes_from_dict(char_state: Dictionary) -> void:
+	is_moving = char_state.get("is_moving", false)
+	is_turning = char_state.get("is_turning", false)
+	
+	if char_state.has("position"):
+		var p = char_state["position"]
+		global_position = Vector3(p[0], p[1], p[2])
+		
+	if char_state.has("rotation"):
+		var r = char_state["rotation"]
+		global_rotation = Vector3(r[0], r[1], r[2])
+		
+	if char_state.has("target_position"):
+		var tp = char_state["target_position"]
+		target_position = Vector3(tp[0], tp[1], tp[2])
+	
+	target_rotation = char_state.get("target_rotation", 0.0)
+	
+	_defer_interrupted_tweens()
+
+## Espera um tempo para garantir que a cena foi devidamente carreagada, evitando stutter
+func _defer_interrupted_tweens() -> void:
+	if not is_inside_tree(): return
+	
+	await get_tree().process_frame
+	if not is_inside_tree(): return
+	
+	await get_tree().process_frame
+	if not is_inside_tree(): return
+	
+	if is_moving:
+		resume_interrupted_movement()
+	elif is_turning:
+		resume_interrupted_turning()
+
+func resume_interrupted_movement() -> void:
+	var distance_left = global_position.distance_to(target_position)
+	var time_left = (distance_left / Constants.GRID_MAP_TILE_WIDTH) * move_duration
+	
+	var tween = create_tween()
+	tween.tween_property(self, "global_position", target_position, time_left).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.finished.connect(func(): is_moving = false)
+	
+func resume_interrupted_turning() -> void:
+	var angle_left = abs(wrapped_angle_difference(rotation.y, target_rotation))
+	var time_left = (angle_left / (PI / 2.0)) * turn_duration
+	print(time_left)
+	
+	var tween = create_tween()
+	tween.tween_property(self, "rotation:y", target_rotation, time_left)
+	tween.finished.connect(func(): 
+		rotation.y = wrapf(rotation.y, -PI, PI)
+		rotation.y = snapped(rotation.y , PI/2.0)
+		target_rotation = rotation.y 
+		is_turning = false
+	)
+
+# Função para achar o menor ângulo
+func wrapped_angle_difference(from: float, to: float) -> float:
+	return fposmod(to - from + PI, PI * 2.0) - PI

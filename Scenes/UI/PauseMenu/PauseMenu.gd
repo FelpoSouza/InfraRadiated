@@ -1,6 +1,6 @@
 extends Control
 
-const MAIN_MENU_SCENE_NAME = "res://Scenes/UI/MainMenu/MainMenu.tscn"
+const MAIN_MENU_SCENE_PATH = "res://Scenes/UI/MainMenu/MainMenu.tscn"
 
 func _ready() -> void:
 	hide()
@@ -15,14 +15,14 @@ func toggle_pause() -> void:
 	var is_paused = get_tree().paused
 	
 	if is_paused:
-		print("Was Paused")
 		resume_game()
 	else:
-		print("Wasn't Paused")
 		pause_game()
 
 
 func pause_game() -> void:
+	if DialogueSystemManager.is_dialogue_active:
+		return
 	get_tree().paused = true
 	show()
 
@@ -37,6 +37,9 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_quit_button_pressed() -> void:
+	SaveLoadManager.save_game()
+	
 	# Despausa antes the trocar de cena, senão o Menu Principal fica congelado
 	get_tree().paused = false
-	get_tree().change_scene_to_file(MAIN_MENU_SCENE_NAME)
+	
+	ScenesManager.change_scene(MAIN_MENU_SCENE_PATH)

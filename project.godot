@@ -17,10 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SignalHub="*uid://c0o4pjbda4vvm"
 StoryState="*uid://dxxi0nuieufiv"
 DialogueManager="*uid://c3rodes2l3gxb"
-DialogueSystemManager="*uid://c4l3fff4r60h7"
+SaveLoadManager="*uid://d0niir2by4axh"
+DialogueSystemManager="*uid://65bfysfuwx2i"
+ScenesManager="*uid://da08r74vierm"
 
 [dialogue_manager]
 

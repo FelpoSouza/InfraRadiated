@@ -2,8 +2,7 @@
 if StoryState.has_met_npc(npc_id) == false
     {{npc_name}}: Quem é você?
     
-    set StoryState.met_npcs[npc_id] = true
-    do StoryState.save_game()
+    set StoryState.mark_npc_as_met(npc_id)
 	
 else
     {{npc_name}}: [speed=5]Olá novamente!

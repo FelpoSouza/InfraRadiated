@@ -4,9 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Characters/Player/Player.tscn" id="2_vlr3l"]
 [ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Characters/Npc/Npc.tscn" id="3_px5p2"]
 [ext_resource type="Resource" uid="uid://cmqa5u7d4b8ns" path="res://Dialogues/Ana.dialogue" id="5_a6mrj"]
+[ext_resource type="Script" uid="uid://dvhhe0yq64rhi" path="res://Classes/RandomNoiseData.gd" id="5_sba2m"]
 [ext_resource type="PackedScene" uid="uid://brbiud4i1id6d" path="res://Objects/Longwall2.tscn" id="5_ue7t3"]
-[ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Assets/SFX/Player/Classes/NpcsDialogueData.gd" id="6_e6pjy"]
+[ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Classes/NpcsDialogueData.gd" id="6_e6pjy"]
 [ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice1.wav" id="6_ideo0"]
+[ext_resource type="AudioStream" uid="uid://cltkyf7pv7o8f" path="res://Assets/SFX/Player/Coughs.wav" id="6_o8fte"]
 [ext_resource type="PackedScene" uid="uid://bxqk7kg10g1hm" path="res://Objects/Longwall3.tscn" id="6_pxtwo"]
 [ext_resource type="PackedScene" uid="uid://prcdmdd1gifk" path="res://Objects/longwall1.tscn" id="7_6lgce"]
 [ext_resource type="AudioStream" uid="uid://bhhivfocswwce" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice2.wav" id="7_e6pjy"]
@@ -25,6 +27,11 @@
 [ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
 
 [sub_resource type="GDScript" id="GDScript_akijn"]
+
+[sub_resource type="Resource" id="Resource_ee0fq"]
+script = ExtResource("5_sba2m")
+random_noise = ExtResource("6_o8fte")
+metadata/_custom_type_script = "uid://dvhhe0yq64rhi"
 
 [sub_resource type="Resource" id="Resource_myy5i"]
 script = ExtResource("6_e6pjy")
@@ -88,12 +95,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 5.5)
 [node name="Ana" parent="." unique_id=1342848665 instance=ExtResource("3_px5p2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 npc_texture = ExtResource("7_umtol")
+random_noise_data = Array[ExtResource("5_sba2m")]([SubResource("Resource_ee0fq")])
 npc_dialogue_data = SubResource("Resource_myy5i")
 
 [node name="Beatriz" parent="." unique_id=860079154 instance=ExtResource("3_px5p2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 npc_texture = ExtResource("12_myy5i")
 npc_id = 1
+random_noise_data = Array[ExtResource("5_sba2m")]([])
 npc_dialogue_data = SubResource("Resource_1xj74")
 
 [node name="longwall1" parent="." unique_id=102856207 instance=ExtResource("5_ue7t3")]
