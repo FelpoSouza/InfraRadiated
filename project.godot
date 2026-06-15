@@ -46,6 +46,10 @@ naming/script_name_casing=1
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [graph_dialogs]
 
 general/input/continue_input_action="dialogs_continue_action"
