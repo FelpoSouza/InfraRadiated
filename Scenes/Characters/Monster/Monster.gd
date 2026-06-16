@@ -1,6 +1,5 @@
+class_name Monster
 extends BaseCharacter
-
-@export var monster_texture: Texture2D
 
 const MONSTER_CHASE_RADIUS: int = 16
 const MINIMUM_MOVEMENT_TIMER_WAIT_TIME: float = 0.5
@@ -21,12 +20,7 @@ func _ready() -> void:
 	
 	player_ref = get_tree().get_first_node_in_group(Constants.PLAYER_GROUP_NAME)
 	grid_map_ref = get_tree().get_first_node_in_group(Constants.GRIDMAP_GROUP_NAME)
-	
-	if monster_texture != null:
-		sprite.texture = monster_texture
-		var mat = sprite.material_override
-		mat.set_shader_parameter("sprite_texture", sprite.texture)
-	
+		
 	astar_grid = AStarGrid2D.new()
 	
 	astar_grid.region = Rect2i(-50, -50, 100, 100) 
@@ -34,13 +28,28 @@ func _ready() -> void:
 	astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 	astar_grid.update()
 	
-	global_rotation = Vector3.ZERO
-	
 	bake_grid_map_to_astar()
 	
 	movement_timer.start()
 	speed_up_timer.start()
 
+func initialize(global_transf: Transform3D, pos: Vector3, rot: float, monster_tex: Texture2D):
+	global_transform = global_transf
+	target_position = pos
+	target_rotation = rot
+	
+	if sprite == null:
+		sprite = $Sprite3D
+	
+	sprite.texture = monster_tex
+	if sprite.material_override:
+		sprite.material_override = sprite.material_override.duplicate()
+		sprite.material_override.set_shader_parameter("sprite_texture", sprite.texture)
+
+
+#-------------------------------------------------------------------------
+# TRANSFORMA O GRIDMAP DO JOGO NUM MAPA ESPECÍFICO PARA O ALGORITMO A*
+#-------------------------------------------------------------------------
 func bake_grid_map_to_astar() -> void:
 	await get_tree().process_frame
 	
@@ -50,8 +59,6 @@ func bake_grid_map_to_astar() -> void:
 	
 	# Pega um array de cada coordanada usada no mapa
 	var used_cells = grid_map_ref.get_used_cells()
-	
-
 	
 	for cell in used_cells:
 		# cell é um Vector3i (x, y, z) represntando os espaços da grid
@@ -70,6 +77,9 @@ func bake_grid_map_to_astar() -> void:
 			astar_grid.set_point_solid(Vector2i(grid_x, grid_z), true)
 		
 
+#-------------------------------------------------------------------------
+# MOVIMENTAÇÃO
+#-------------------------------------------------------------------------
 func _on_movement_timer_timeout() -> void:
 	if not is_instance_valid(player_ref):
 		return
@@ -114,3 +124,9 @@ func _on_movement_timer_timeout() -> void:
 func _on_speed_up_timer_timeout() -> void:
 	var new_time = movement_timer.wait_time - SPEED_UP_FACTOR
 	movement_timer.wait_time = max(MINIMUM_MOVEMENT_TIMER_WAIT_TIME, new_time)
+
+#-------------------------------------------------------------------------
+# É ATIRADO PELO PLAYER
+#-------------------------------------------------------------------------
+func react_to_being_shot():
+	queue_free()

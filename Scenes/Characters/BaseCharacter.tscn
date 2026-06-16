@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://ck04mh27ip2yl"]
 
 [ext_resource type="Script" uid="uid://difqq1hwo60j1" path="res://Scenes/Characters/BaseCharacter.gd" id="1_24qhx"]
-[ext_resource type="AudioStream" uid="uid://dgmn1t7p7i4jd" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard1.wav" id="2_2l40j"]
-[ext_resource type="AudioStream" uid="uid://fojuutn1e6q3" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard3.wav" id="2_mxidk"]
-[ext_resource type="AudioStream" uid="uid://5yp250wgrf8a" path="res://Assets/SFX/Player/Footsteps/FootstepsHard/FootstepHard2.wav" id="3_65k0j"]
-[ext_resource type="AudioStream" uid="uid://bti3t8rh0x3bk" path="res://Assets/SFX/Player/Footsteps/FootestpsGrass/FootstepGrass1.wav" id="5_q7hc2"]
-[ext_resource type="AudioStream" uid="uid://dnxhxdeolq425" path="res://Assets/SFX/Player/Footsteps/FootestpsGrass/FootstepGrass2.wav" id="6_i3tsj"]
-[ext_resource type="AudioStream" uid="uid://blecmpoqty32l" path="res://Assets/SFX/Player/Footsteps/FootestpsGrass/FootstepGrass3.wav" id="7_kn5hb"]
+[ext_resource type="AudioStream" uid="uid://dgmn1t7p7i4jd" path="res://Assets/SFX/Character/Footsteps/FootstepsHard/FootstepHard1.wav" id="2_2l40j"]
+[ext_resource type="AudioStream" uid="uid://fojuutn1e6q3" path="res://Assets/SFX/Character/Footsteps/FootstepsHard/FootstepHard3.wav" id="2_mxidk"]
+[ext_resource type="AudioStream" uid="uid://5yp250wgrf8a" path="res://Assets/SFX/Character/Footsteps/FootstepsHard/FootstepHard2.wav" id="3_65k0j"]
+[ext_resource type="AudioStream" uid="uid://bti3t8rh0x3bk" path="res://Assets/SFX/Character/Footsteps/FootestpsGrass/FootstepGrass1.wav" id="5_q7hc2"]
+[ext_resource type="AudioStream" uid="uid://dnxhxdeolq425" path="res://Assets/SFX/Character/Footsteps/FootestpsGrass/FootstepGrass2.wav" id="6_i3tsj"]
+[ext_resource type="AudioStream" uid="uid://blecmpoqty32l" path="res://Assets/SFX/Character/Footsteps/FootestpsGrass/FootstepGrass3.wav" id="7_kn5hb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n04rl"]
 size = Vector3(1.5, 1.5, 1.5)

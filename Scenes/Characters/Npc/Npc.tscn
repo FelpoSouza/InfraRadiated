@@ -17,6 +17,9 @@ npc_texture = null
 npc_id = 0
 random_noise_data = Array[ExtResource("3_6yu4a")]([])
 npc_dialogue_data = null
+is_monster = false
+monster_scene = null
+monster_texture = null
 
 [node name="Sprite3D" type="Sprite3D" parent="." index="11" unique_id=1649848864]
 material_override = SubResource("ShaderMaterial_x8dhr")
@@ -30,5 +33,10 @@ one_shot = true
 [node name="RandomNoiseTimer" type="Timer" parent="." index="13" unique_id=1957112723]
 autostart = true
 
+[node name="TransformToMonsterTimer" type="Timer" parent="." index="14" unique_id=309198708]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]
 [connection signal="timeout" from="RandomNoiseTimer" to="." method="_on_random_noise_timer_timeout"]
+[connection signal="timeout" from="TransformToMonsterTimer" to="." method="_on_transform_to_monster_timer_timeout"]

@@ -146,6 +146,15 @@ func apply_dialogue_line() -> void:
 	# DIALOGUE SYSTEM MANAGER:
 	voice_sfxs = DialogueSystemManager.get_voice_sfxs_for_character(dialogue_line.character)
 	dialogue_label.seconds_per_step = DialogueSystemManager.get_seconds_per_step_for_character(dialogue_line.character)
+	
+	if dialogue_line:
+		var character_name = dialogue_line.character
+		
+		var emotion = dialogue_line.get_tag_value("emotion")
+		if emotion:
+			DialogueSystemManager.set_npc_emotion(character_name, emotion)
+		else:
+			DialogueSystemManager.set_npc_emotion(character_name, Constants.EMOTIONS.Neutral)
 	# =====================================================================
 
 	dialogue_label.hide()
