@@ -2,24 +2,38 @@ extends BaseCharacter
 
 enum PeekingDirections { NONE, LEFT, RIGHT, UP, DOWN }
 
+const thermal_vision_on_battery_decay = 0.2
+const thermal_vision_off_battery_decay = 0.02
+
 var peek_distance: float = 1.5
 var peek_duration: float = 0.1
 var camera_offset: Vector3 = Vector3.ZERO
+var thermal_vision_battery: float = 1.0
+var ammo_amount: int = 1
 
 var current_peeking: PeekingDirections = PeekingDirections.NONE
 var is_thermal_vision_on: bool = false
 var is_facing_npc: bool = false
+var is_gun_active: bool = false
 
 @onready var camera: Camera3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D
 @onready var shader_container: SubViewportContainer = $CanvasLayer/SubViewportContainer
-@onready var crosshair: ColorRect = $CanvasLayer/UserInterface/Crosshair
 @onready var forward_ray_for_areas: RayCast3D = $ForwardRayForAreas
 @onready var pause_menu: Control = $CanvasLayer/PauseMenu
+@onready var gun: Node3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D/Gun
+
+@onready var crosshair: ColorRect = $CanvasLayer/UserInterface/Crosshair
+@onready var thermal_battery_label: Label = $CanvasLayer/UserInterface/ThermalBatteryLabel
+@onready var ammo_label: Label = $CanvasLayer/UserInterface/AmmoHBoxContainer/AmmoLabel
+
 
 func _ready() -> void:
 	super._ready()
 	add_to_group(Constants.PLAYER_GROUP_NAME)
 	add_to_group(Constants.DATA_PERSISTENCE_GROUP_NAME)
+	
+	ammo_label.text = "%d" % ammo_amount
+	
 	camera.global_transform = global_transform
 	
 	
@@ -29,8 +43,10 @@ func _process(_delta: float) -> void:
 	camera.global_position = camera.global_position.lerp(global_position + camera_offset, smoothing_factor)
 	
 	camera.rotation.y = rotation.y
-		
+	
 	check_crosshair_interaction()
+	
+	decrease_thermal_vision_battery(_delta)
 	
 #-------------------------------------------------------------------------
 # INTERAÇÃO
@@ -64,6 +80,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_shifting:
 		if event.is_action_pressed("heatvision"):
 			toggle_thermal_vision()
+		elif event.is_action_pressed("gun"):
+			toggle_gun()
 		elif event.is_action_pressed("peek_down"):
 			peek_down()
 		elif event.is_action_pressed("peek_up"):
@@ -88,7 +106,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			turn_right()
 			
 		elif event.is_action_pressed("interact"):
-			if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
+			if is_gun_active:
+				fire_gun()
+			elif is_facing_npc and not DialogueSystemManager.is_dialogue_active:
 				try_talk_to_npc()
 	
 	if current_peeking != PeekingDirections.NONE:
@@ -143,9 +163,32 @@ func peek_forward() -> void:
 #-------------------------------------------------------------------------
 func toggle_thermal_vision() -> void:
 	is_thermal_vision_on = not is_thermal_vision_on
+	if thermal_vision_battery <= 0.0:
+		is_thermal_vision_on = false
 	shader_container.material.set_shader_parameter("thermal_vision", is_thermal_vision_on)
 	get_tree().call_group(Constants.NPC_GROUP_NAME, "set_thermal_mode", is_thermal_vision_on)
 	
+	if is_thermal_vision_on:
+		thermal_battery_label.show()
+	else:
+		thermal_battery_label.hide()
+
+func decrease_thermal_vision_battery(delta: float) -> void:
+	if thermal_vision_battery > 0.0:
+		if is_thermal_vision_on:
+			thermal_vision_battery -= thermal_vision_on_battery_decay * delta
+		else:
+			thermal_vision_battery -= thermal_vision_off_battery_decay * delta
+		
+		thermal_vision_battery = max(0.0, thermal_vision_battery)
+		
+		if thermal_vision_battery <= 0.0:
+			if is_thermal_vision_on:
+				toggle_thermal_vision()
+			SignalHub.emit_player_is_at_risk()
+
+	thermal_battery_label.text = "%.1f%%" % thermal_vision_battery
+
 #-------------------------------------------------------------------------
 # DETEÇÃO DE MORTE
 #-------------------------------------------------------------------------
@@ -153,6 +196,26 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group(Constants.MONSTER_GROUP_NAME):
 		queue_free()
 
+#-------------------------------------------------------------------------
+# ARMA
+#-------------------------------------------------------------------------
+func toggle_gun() -> void:
+	is_gun_active = !is_gun_active
+	if is_gun_active:
+		gun.show()
+	else:
+		gun.hide()
+	
+func fire_gun() -> void:
+	if ammo_amount <= 0:
+		return
+	
+	gun.shoot()
+	ammo_amount -= 1
+	ammo_label.text = "%d" % ammo_amount
+	
+	if ammo_amount <= 0:
+		SignalHub.emit_player_is_at_risk()
 
 #-------------------------------------------------------------------------
 # FUNÇÕES DE PERSISTÊNCIA DE DADOS
@@ -160,11 +223,32 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 func save_to_state(state: Dictionary) -> void:
 	var player_state: Dictionary = get_base_character_dict()
 	
+	player_state["thermal_battery"] = thermal_vision_battery
+	player_state["thermal_on"] = is_thermal_vision_on
+	player_state["ammo_amount"] = ammo_amount
+	player_state["is_gun_active"] = is_gun_active
+	
 	state["Player"] = player_state
 	
 func load_from_state(state: Dictionary) -> void:
-	print(state)
 	var player_state: Dictionary = state.get("Player", {})
 	set_attributes_from_dict(player_state)
+	
+	thermal_vision_battery = player_state.get("thermal_battery", 100.0)
+	is_thermal_vision_on = player_state.get("thermal_on", false)
+	
+	if is_thermal_vision_on:
+		thermal_battery_label.show()
+	else:
+		thermal_battery_label.hide()
+		
+	shader_container.material.set_shader_parameter("thermal_vision", is_thermal_vision_on)
+	get_tree().call_group(Constants.NPC_GROUP_NAME, "set_thermal_mode", is_thermal_vision_on)
+	
+	ammo_amount = player_state.get("ammo_amount", 1)
+	is_gun_active = player_state.get("is_gun_active", false)
+	gun.visible = is_gun_active
+	ammo_label.text = "%d" % ammo_amount
+	thermal_battery_label.visible = is_thermal_vision_on
 	
 	camera.global_position = global_position

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dl6sl5becmp5b"
-path="res://.godot/imported/CrekCrekCrek.wav-0e39b9bbf233f1edb1819499d47b82db.sample"
+path="res://.godot/imported/CrekCrekCrek.wav-b8aa52455a97d5b85983d00d389e53a7.sample"
 
 [deps]
 
-source_file="res://assets/SFX/Miscellaneous/CrekCrekCrek.wav"
-dest_files=["res://.godot/imported/CrekCrekCrek.wav-0e39b9bbf233f1edb1819499d47b82db.sample"]
+source_file="res://Assets/SFX/Miscellaneous/CrekCrekCrek.wav"
+dest_files=["res://.godot/imported/CrekCrekCrek.wav-b8aa52455a97d5b85983d00d389e53a7.sample"]
 
 [params]
 

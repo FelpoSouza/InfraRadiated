@@ -22,6 +22,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 SaveLoadManager="*uid://d0niir2by4axh"
 DialogueSystemManager="*uid://65bfysfuwx2i"
 ScenesManager="*uid://da08r74vierm"
+SignalHub="*uid://bhxvce1ohce2g"
 
 [dialogue_manager]
 

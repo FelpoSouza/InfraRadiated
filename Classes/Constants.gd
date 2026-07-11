@@ -13,3 +13,10 @@ enum NPC_IDS {
 	Beatriz,
 	Clara
 }
+
+const EMOTIONS = {
+	Neutral = "neutral",
+	Happy = "happy",
+	Sad = "sad",
+	Angry = "angry"
+}

@@ -5,6 +5,6 @@ if StoryState.has_met_npc(npc_id) == false
     set StoryState.mark_npc_as_met(npc_id)
 	
 else
-    {{npc_name}}: [speed=5]Olá novamente!
+    {{npc_name}}: [speed=5]Olá novamente! [#emotion=happy]
 set is_talking = false
 => END

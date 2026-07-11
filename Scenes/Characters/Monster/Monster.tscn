@@ -12,9 +12,6 @@ shader_parameter/pixel_size = 8.0
 [node name="Monster" unique_id=1655873123 instance=ExtResource("1_k1ibd")]
 collision_layer = 8
 script = ExtResource("2_r3iva")
-monster_texture = null
-footstep_wood_sounds = Array[AudioStream]([])
-footstep_grass_sounds = Array[AudioStream]([])
 
 [node name="Sprite3D" type="Sprite3D" parent="." index="11" unique_id=1742778927]
 material_override = SubResource("ShaderMaterial_uv5yn")
