@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cblt0ivhtb781"]
+
+[ext_resource type="Script" uid="uid://hgtaew2peakv" path="res://Scenes/Environment/Playground/Door.gd" id="1_3hd3p"]
+[ext_resource type="Script" uid="uid://bhx80f0gr54mh" path="res://Scenes/Environment/Playground/Switch.gd" id="2_a2ook"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cx7lr"]
+size = Vector3(2, 2, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wg38q"]
+size = Vector3(2, 2, 0.5)
+
+[node name="Node3D" type="Node3D" unique_id=1113936729]
+
+[node name="Door" type="CharacterBody3D" parent="." unique_id=1803450398 node_paths=PackedStringArray("door_switch")]
+script = ExtResource("1_3hd3p")
+door_switch = NodePath("../Switch")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Door" unique_id=181667719]
+mesh = SubResource("BoxMesh_cx7lr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=113653654]
+shape = SubResource("BoxShape3D_wg38q")
+
+[node name="Switch" type="StaticBody3D" parent="." unique_id=2047685118]
+collision_layer = 16
+script = ExtResource("2_a2ook")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Switch" unique_id=1000903342]
+shape = SubResource("BoxShape3D_wg38q")
