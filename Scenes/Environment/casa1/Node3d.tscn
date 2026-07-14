@@ -1,6 +1,41 @@
 [gd_scene format=3 uid="uid://s7tvdo8j3ptd"]
 
 [ext_resource type="MeshLibrary" uid="uid://6022qugin2i1" path="res://Scenes/Objects/BlockLibrary/teste.tres" id="1_k6cl3"]
+[ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Characters/Npc/Npc.tscn" id="2_siw6g"]
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Images/Velha.png" id="3_23aw5"]
+[ext_resource type="Resource" uid="uid://b7vawc48rbhbt" path="res://Dialogues/Marcinha.dialogue" id="4_feqqg"]
+[ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Classes/NpcsDialogueData.gd" id="5_c3sq0"]
+[ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice1.wav" id="6_yspgp"]
+[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://Assets/Images/Ricardo.png" id="7_c3sq0"]
+[ext_resource type="Resource" uid="uid://c55yqnrfw4pk0" path="res://Dialogues/Ricardo.dialogue" id="8_qoh4h"]
+[ext_resource type="AudioStream" uid="uid://bhhivfocswwce" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice2.wav" id="9_t3xxd"]
+[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://Assets/Images/Louco.png" id="10_yspgp"]
+[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice3.wav" id="11_23aw5"]
+[ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco.dialogue" id="11_c3sq0"]
+[ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="11_mxo26"]
+[ext_resource type="Texture2D" uid="uid://dydce4dc4e30c" path="res://Assets/Images/Monster.jpg" id="12_prdl4"]
+[ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Characters/Player/Player.tscn" id="14_feqqg"]
+
+[sub_resource type="Resource" id="Resource_mvprb"]
+script = ExtResource("5_c3sq0")
+dialogue_resource = ExtResource("4_feqqg")
+voice_sfxs = Array[AudioStream]([ExtResource("6_yspgp")])
+seconds_per_step = 0.04
+metadata/_custom_type_script = "uid://bcdht27so0doc"
+
+[sub_resource type="Resource" id="Resource_2dthr"]
+script = ExtResource("5_c3sq0")
+dialogue_resource = ExtResource("8_qoh4h")
+voice_sfxs = Array[AudioStream]([ExtResource("9_t3xxd")])
+seconds_per_step = 0.03
+metadata/_custom_type_script = "uid://bcdht27so0doc"
+
+[sub_resource type="Resource" id="Resource_feqqg"]
+script = ExtResource("5_c3sq0")
+dialogue_resource = ExtResource("11_c3sq0")
+voice_sfxs = Array[AudioStream]([ExtResource("11_23aw5")])
+seconds_per_step = 0.01
+metadata/_custom_type_script = "uid://bcdht27so0doc"
 
 [node name="Node3D" type="Node3D" unique_id=1234331050]
 
@@ -11,3 +46,89 @@ data = {
 "cells": PackedInt32Array(65535, 1, 2, 65534, 1, 131078, 65533, 1, 131078, 65533, 0, 1441795, 65533, 65534, 1441795, 65535, 65533, 131074, 0, 65533, 524294, 1, 65533, 524294, 65534, 65533, 524294, 65533, 65533, 524294, -1, 0, 131082, -1, 65534, 131082, -3, 0, 524298, -3, 65534, 524298, 2, 65533, 6, 2, 1, 1310726, 3, 1, 524291, 4, 1, 6, 5, 1, 6, 5, 65533, 6, 5, 0, 1441795, 5, 65534, 1441795, -65535, 0, 131082, -65535, 65534, 131082, -65533, 0, 1310729, -65533, 65534, 1310729, -65531, 65534, 1310729, -65531, 0, 1310729, 0, 65531, 655362, 3, 65531, 2, 6, 65531, 2, 6, 65533, 3, 8, 65533, 3, -2, 65532, 655370, -65536, 65532, 655370, -65534, 65532, 655370, -65532, 65532, 655370, -65530, 65532, 655370, -65528, 65532, 655370, -65530, 65530, 655369, -65530, 65528, 655369, -65528, 65528, 655369, -65528, 65530, 655369, -65536, 65530, 655370, -2, 65530, 655370, -2, 65528, 655370, -65536, 65528, 655370, -65534, 65528, 655370, -65532, 65528, 655370, -65532, 65530, 655370, -65534, 65530, 655370, 2, 65535, 1048582, 2, 65534, 1441795, 131077, 65534, 1048579, 131077, 0, 1048579, 131074, 0, 1048579, 131074, 65534, 1048579, 131075, 1, 3, 131077, 1, 3, 131073, 1, 3, 196607, 1, 3, 196605, 1, 3, 196605, 0, 1441795, 196605, 65534, 1441795, 196606, 65533, 655363, 131072, 65533, 655363, 131074, 65533, 655363, 131076, 65533, 655363, 2, 0, 1048578, 196605, 65532, 1048580, 196605, 65530, 1048580, 196605, 65528, 1048580, 196606, 65527, 4, 131072, 65527, 4, 131074, 65527, 4, 131076, 65527, 4, 131078, 65527, 4, 131080, 65527, 4, 131080, 65528, 1441796, 131080, 65530, 1441796, 131080, 65532, 1441796, 131077, 65528, 1441796, 131077, 65530, 1441796, 131073, 65528, 1441796, 196606, 65531, 655364, 131072, 65531, 655364, 131074, 65531, 655364, 131076, 65531, 655364, 131078, 65533, 655363, 131080, 65533, 655363, 0, 1, 655366, 4, 65531, 14, 5, 65531, 14, 65533, 65532, 1048589, 65535, 65531, 14, 65534, 65531, 13, 1, 65531, 14, 2, 65531, 14, 65533, 65530, 1441805, 65533, 65528, 1441805, 65534, 65527, 655373, 0, 65527, 655373, 1, 65530, 1048589, 1, 65528, 1048589, 2, 65527, 13, 4, 65527, 13, 5, 65528, 1441805, 5, 65530, 1441805, 8, 65528, 1441805, 7, 65527, 655373, 6, 65527, 655373, 7, 65531, 655374, 8, 65531, 655374, 8, 65532, 1048589, 8, 65530, 1441805, 131078, 65531, 655364, 131080, 65531, 655364, 1, 1, 655363, 3, 65533, 655362, 4, 65533, 655366, 11, 65520, 655365, -65530, 65523, 10, -65532, 65523, 10, -65534, 65523, 10, -65534, 65521, 10, -65532, 65521, 10, -65530, 65521, 10, -65528, 65523, 10, -65528, 65521, 10, -65526, 65521, 10, -65526, 65523, 10, 131073, 65530, 1441796, 5, 65524, 524293, 3, 65524, 524293, 1, 65523, 1179653, 1, 65521, 1179653, 4, 65523, 1179653, 4, 65521, 1048588, 4, 65522, 1441818, 4, 65520, 1048602, 3, 65520, 655378, 2, 65520, 655378, 5, 65520, 655365, 7, 65520, 655365, 9, 65520, 655365, 11, 65521, 1048581, 11, 65523, 1048581, 7, 65524, 12, 6, 65524, 655386, 8, 65524, 26, 9, 65524, 5, 11, 65524, 5, 8, 65523, 1441797, 9, 65522, 655372, 8, 65522, 655386, 10, 65522, 655368, 11, 65522, 655368, 131074, 65520, 5, 131076, 65520, 5, 131078, 65520, 5, 131080, 65520, 5, 131082, 65520, 5, 131083, 65521, 1441797, 131083, 65523, 1441797, 131082, 65524, 655365, 131080, 65524, 655365, 131078, 65524, 655365, 131073, 65521, 1048581, 131073, 65523, 1048581, 131076, 65523, 1048581, 131076, 65521, 1048581, 131080, 65523, 1048581, 131081, 65522, 5, 131082, 65522, 131098, 131083, 65522, 26, 1, 65524, 5, 131076, 65524, 5, 131074, 65524, 5)
 }
 metadata/_editor_floor_ = Vector3(0, 2, 0)
+
+[node name="NPCs" type="Node" parent="." unique_id=1801186964]
+
+[node name="Marcinha" parent="NPCs" unique_id=1655873123 instance=ExtResource("2_siw6g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, -15.001)
+npc_texture = ExtResource("3_23aw5")
+npc_dialogue_data = SubResource("Resource_mvprb")
+
+[node name="Ricardo" parent="NPCs" unique_id=2062291184 instance=ExtResource("2_siw6g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.5, -11)
+npc_texture = ExtResource("7_c3sq0")
+npc_id = 1
+npc_dialogue_data = SubResource("Resource_2dthr")
+
+[node name="Louco" parent="NPCs" unique_id=1463969807 instance=ExtResource("2_siw6g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.5, -1)
+npc_texture = ExtResource("10_yspgp")
+npc_id = 2
+npc_dialogue_data = SubResource("Resource_feqqg")
+is_monster = true
+monster_scene = ExtResource("11_mxo26")
+monster_texture = ExtResource("12_prdl4")
+
+[node name="Player" parent="." unique_id=1624986993 instance=ExtResource("14_feqqg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.75, 1)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=215747373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -0.756)
+light_color = Color(1, 0.9647059, 0.8745098, 1)
+light_energy = 8.0
+light_indirect_energy = 4.0
+light_volumetric_fog_energy = 6.0
+light_size = 1.0
+omni_range = 6.5
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1455764666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3.5, -13)
+light_color = Color(1, 0.9647059, 0.8745098, 1)
+light_energy = 8.0
+light_indirect_energy = 4.0
+light_volumetric_fog_energy = 6.0
+light_size = 1.0
+omni_range = 6.5
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=853841728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3.5, -1)
+light_color = Color(1, 0.9647059, 0.8745098, 1)
+light_energy = 8.0
+light_indirect_energy = 4.0
+light_volumetric_fog_energy = 6.0
+light_size = 1.0
+omni_range = 6.5
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=2145799985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 3.5, -13)
+light_color = Color(1, 0.9647059, 0.8745098, 1)
+light_energy = 8.0
+light_indirect_energy = 4.0
+light_volumetric_fog_energy = 6.0
+light_size = 1.0
+omni_range = 6.5
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=475745131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 3.5, -13)
+light_color = Color(1, 0.9647059, 0.8745098, 1)
+light_energy = 8.0
+light_indirect_energy = 4.0
+light_volumetric_fog_energy = 6.0
+light_size = 1.0
+omni_range = 6.5
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=1512300007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3.5, -7)
+light_color = Color(1, 0.9647059, 0.8745098, 1)
+light_energy = 6.5
+light_indirect_energy = 4.0
+light_volumetric_fog_energy = 6.0
+light_size = 1.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=1177372108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3.5, -7)
+light_color = Color(1, 0.9647059, 0.8745098, 1)
+light_energy = 6.5
+light_indirect_energy = 4.0
+light_volumetric_fog_energy = 6.0
+light_size = 1.0

@@ -3,50 +3,50 @@
 [ext_resource type="MeshLibrary" uid="uid://hys60531k5po" path="res://Models/BlockMeshLibrary.tres" id="1_6lgce"]
 [ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Characters/Player/Player.tscn" id="2_vlr3l"]
 [ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Characters/Npc/Npc.tscn" id="3_px5p2"]
-[ext_resource type="Resource" uid="uid://cmqa5u7d4b8ns" path="res://Dialogues/Ana.dialogue" id="5_a6mrj"]
-[ext_resource type="Script" uid="uid://dvhhe0yq64rhi" path="res://Classes/RandomNoiseData.gd" id="5_sba2m"]
 [ext_resource type="PackedScene" uid="uid://brbiud4i1id6d" path="res://Objects/Longwall2.tscn" id="5_ue7t3"]
 [ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Classes/NpcsDialogueData.gd" id="6_e6pjy"]
 [ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice1.wav" id="6_ideo0"]
-[ext_resource type="AudioStream" uid="uid://cltkyf7pv7o8f" path="res://Assets/SFX/Character/Coughs.wav" id="6_o8fte"]
 [ext_resource type="PackedScene" uid="uid://bxqk7kg10g1hm" path="res://Objects/Longwall3.tscn" id="6_pxtwo"]
 [ext_resource type="PackedScene" uid="uid://prcdmdd1gifk" path="res://Objects/longwall1.tscn" id="7_6lgce"]
 [ext_resource type="AudioStream" uid="uid://bhhivfocswwce" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice2.wav" id="7_e6pjy"]
+[ext_resource type="Resource" uid="uid://b7vawc48rbhbt" path="res://Dialogues/Marcinha.dialogue" id="7_ttcng"]
 [ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Images/Velha.png" id="7_umtol"]
 [ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice3.wav" id="8_myy5i"]
-[ext_resource type="Texture2D" uid="uid://d2h6i361f1ifb" path="res://Assets/Images/happy.png" id="8_ttcng"]
+[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://Assets/Images/Ricardo.png" id="8_o8fte"]
 [ext_resource type="PackedScene" uid="uid://bhfcbcivlgqqm" path="res://Objects/wall2.tscn" id="8_vlr3l"]
-[ext_resource type="AudioStream" uid="uid://bw73otg8w8367" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice4.wav" id="9_1xj74"]
 [ext_resource type="PackedScene" uid="uid://3a6x7r53iq3n" path="res://Objects/wall1.tscn" id="9_42c34"]
+[ext_resource type="Resource" uid="uid://c55yqnrfw4pk0" path="res://Dialogues/Ricardo.dialogue" id="9_ee0fq"]
 [ext_resource type="PackedScene" uid="uid://c8sjoysw55g1s" path="res://Objects/wall3.tscn" id="10_bt6he"]
-[ext_resource type="AudioStream" uid="uid://dx1sim3ox4wu7" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice5.wav" id="10_sba2m"]
 [ext_resource type="PackedScene" uid="uid://c5ydhmce86apm" path="res://Objects/Portacimatipo1.tscn" id="11_0r50r"]
+[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://Assets/Images/Louco.png" id="11_ee0fq"]
 [ext_resource type="Texture2D" uid="uid://dydce4dc4e30c" path="res://Assets/Images/Monster.jpg" id="12_myy5i"]
 [ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="12_umtol"]
-[ext_resource type="Resource" uid="uid://dx0diav75m7y" path="res://Dialogues/Beatriz.dialogue" id="13_1xj74"]
 [ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="13_umtol"]
 [ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="14_ee0fq"]
 [ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
+[ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco.dialogue" id="17_ebfwc"]
 
 [sub_resource type="GDScript" id="GDScript_akijn"]
 
-[sub_resource type="Resource" id="Resource_ee0fq"]
-script = ExtResource("5_sba2m")
-random_noise = ExtResource("6_o8fte")
-metadata/_custom_type_script = "uid://dvhhe0yq64rhi"
-
-[sub_resource type="Resource" id="Resource_myy5i"]
+[sub_resource type="Resource" id="Resource_ebfwc"]
 script = ExtResource("6_e6pjy")
-dialogue_resource = ExtResource("5_a6mrj")
-voice_sfxs = Array[AudioStream]([ExtResource("6_ideo0"), ExtResource("7_e6pjy"), ExtResource("8_myy5i"), ExtResource("9_1xj74"), ExtResource("10_sba2m")])
-seconds_per_step = 0.05
-happy = ExtResource("8_ttcng")
+dialogue_resource = ExtResource("7_ttcng")
+voice_sfxs = Array[AudioStream]([ExtResource("6_ideo0")])
+seconds_per_step = 0.04
 metadata/_custom_type_script = "uid://bcdht27so0doc"
 
-[sub_resource type="Resource" id="Resource_1xj74"]
+[sub_resource type="Resource" id="Resource_y6p06"]
 script = ExtResource("6_e6pjy")
-dialogue_resource = ExtResource("13_1xj74")
+dialogue_resource = ExtResource("9_ee0fq")
+voice_sfxs = Array[AudioStream]([ExtResource("7_e6pjy")])
+seconds_per_step = 0.03
+metadata/_custom_type_script = "uid://bcdht27so0doc"
+
+[sub_resource type="Resource" id="Resource_vjt7h"]
+script = ExtResource("6_e6pjy")
+dialogue_resource = ExtResource("17_ebfwc")
 voice_sfxs = Array[AudioStream]([ExtResource("8_myy5i")])
+seconds_per_step = 0.01
 metadata/_custom_type_script = "uid://bcdht27so0doc"
 
 [node name="Playground" type="Node3D" unique_id=654644380]
@@ -95,20 +95,25 @@ light_bake_mode = 1
 [node name="Player" parent="." unique_id=1655873123 instance=ExtResource("2_vlr3l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 5.5)
 
-[node name="Ana" parent="." unique_id=1342848665 instance=ExtResource("3_px5p2")]
+[node name="Marcinha" parent="." unique_id=221141199 instance=ExtResource("3_px5p2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
 npc_texture = ExtResource("7_umtol")
-random_noise_data = Array[ExtResource("5_sba2m")]([SubResource("Resource_ee0fq")])
-npc_dialogue_data = SubResource("Resource_myy5i")
+npc_dialogue_data = SubResource("Resource_ebfwc")
+
+[node name="Ricardo" parent="." unique_id=102763535 instance=ExtResource("3_px5p2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2, 1.5)
+npc_texture = ExtResource("8_o8fte")
+npc_id = 1
+npc_dialogue_data = SubResource("Resource_y6p06")
+
+[node name="Louco" parent="." unique_id=128017345 instance=ExtResource("3_px5p2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 2, 1.5)
+npc_texture = ExtResource("11_ee0fq")
+npc_id = 2
+npc_dialogue_data = SubResource("Resource_vjt7h")
 is_monster = true
 monster_scene = ExtResource("14_ee0fq")
 monster_texture = ExtResource("12_myy5i")
-
-[node name="Beatriz" parent="." unique_id=860079154 instance=ExtResource("3_px5p2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
-npc_texture = ExtResource("12_myy5i")
-npc_id = 1
-npc_dialogue_data = SubResource("Resource_1xj74")
 
 [node name="longwall1" parent="." unique_id=102856207 instance=ExtResource("5_ue7t3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.522482, 4.765255, 17.98617)

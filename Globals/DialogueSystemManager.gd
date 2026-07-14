@@ -1,7 +1,8 @@
 extends Node
 
 const default_voice_sfx: AudioStream = preload("res://Assets/SFX/Npc/Voices/Velha/VelhaVoice1.wav")
-const default_seconds_per_step: float = 0.02
+const player_seconds_per_step: float = 0.05
+const default_seconds_per_step: float = 0.05
 var npc_dialogue_data_dict: Dictionary[Constants.NPC_IDS, NpcDialogueData] = {}
 var active_npc_nodes: Dictionary = {}
 
@@ -69,6 +70,9 @@ func get_voice_sfxs_for_character(character_name: String) -> Array[AudioStream]:
 
 
 func get_seconds_per_step_for_character(character_name: String) -> float:
+	if character_name == Constants.PLAYER_NAME:
+		return player_seconds_per_step
+	
 	var enum_id = _get_enum_from_string(character_name)
 	var data = get_data_for_id(enum_id)
 	

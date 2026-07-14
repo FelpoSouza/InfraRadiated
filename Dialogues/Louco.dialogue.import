@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cah505vxmsl1y"
+path="res://.godot/imported/Louco.dialogue-0e238a969f9aa51f3096ba7c3377d769.tres"
+
+[deps]
+
+source_file="res://Dialogues/Louco.dialogue"
+dest_files=["res://.godot/imported/Louco.dialogue-0e238a969f9aa51f3096ba7c3377d769.tres"]
+
+[params]
+
+defaults=true

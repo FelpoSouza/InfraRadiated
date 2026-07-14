@@ -1,0 +1,13 @@
+~ start
+{{npc_name}}: Ah não, mais uma boca nessa casa?! Já não tava ruim antes pra ocê, sinhô?
+{{Constants.PLAYER_NAME}}: Não se preocupe senhora, sou militar do Depar-
+{{npc_name}}: E É UM MILITAR?! Oh Deusinho, ocê me fala pra cuida do outro mais só põe desgraça na frente…
+{{Constants.PLAYER_NAME}}: ... Departamento da Ordem Radiativa, e estou aqui apenas para verificar a existência de irradiados na região e resgatar civis para proteção no bunker
+{{npc_name}}: É? Ah, Deus sorriu para mim então, num guento mais ficar indo de casa em casa dependendo da bondade dos outros. Vamo indo moço, só chama o povo e pega a panela aqui e-
+{{Constants.PLAYER_NAME}}: Espere, como disse preciso confirmar a presença de irradiados no local, talvez demore um pouco. Também tenho que garantir que a senhora não seja um deles.
+{{npc_name}}: O quê!? Tá dizendo que eu sou uma dessas obras do Satanás!? Nunca! Eu sou temente a Deus, ele me protege! Um sete pele desses sumiria perante o nome do sinhô!
+{{Constants.PLAYER_NAME}}: Se eles realmente tem tanto medo de Deus como você disse, por que você se descreveu como temente a Deus?
+{{npc_name}}: Mas o- Como ousa! ocê sabe muito bem o que eu queria dizer! Não venha com suas palavras ardilosas para cima de mim!
+{{Constants.PLAYER_NAME}}: Tá, eu sei o que queria dizer. Apenas verificando como parte do trabalho, senhora. Agora que sei que você é Deus, eu acho que ele não ficaria muito feliz em você mentir, certo?
+{{npc_name}}: Hmph. Sem problemas, sou inocente e Deus é minha testemunha, diga!
+=> END

@@ -1,0 +1,12 @@
+~ start
+{{npc_name}}: ... quem é você?
+{{Constants.PLAYER_NAME}}: Olá, cidadão. Sou do Departamento da Ordem Radiativa e vim para exterminar um irradiado que se encontra neste recinto.
+{{npc_name}}: Tá.
+{{Constants.PLAYER_NAME}}: Você não está preocupado?
+{{npc_name}}: Com o que?
+{{Constants.PLAYER_NAME}}: Com o fato de haver um irradiado entre vocês…
+{{npc_name}}: O que é irradiado?
+{{Constants.PLAYER_NAME}}: Irradiados são seres q-
+{{npc_name}}: Hmm, quer saber? Ligo não. Só faz seu trabalho aí. Ah, e vê se conserta a internet também.
+{{Constants.PLAYER_NAME}}: [shake rate=5.0 level=2][color=gray]Que folgado…[/color][/shake]
+=> END
