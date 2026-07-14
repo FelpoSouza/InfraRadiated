@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7wsoluc6wqrj"
+path="res://.godot/imported/206043__thefrohman__ambiant-1 - Copia.mp3-b2e4aeb7e918df9dd83a1bac9e9c2256.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/SoundsRaw/206043__thefrohman__ambiant-1 - Copia.mp3"
+dest_files=["res://.godot/imported/206043__thefrohman__ambiant-1 - Copia.mp3-b2e4aeb7e918df9dd83a1bac9e9c2256.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

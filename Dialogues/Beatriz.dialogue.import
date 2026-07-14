@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dx0diav75m7y"
+path="res://.godot/imported/Beatriz.dialogue-c7d64b2d3a495218bdda3f24d3c85435.tres"
+
+[deps]
+
+source_file="res://Dialogues/Beatriz.dialogue"
+dest_files=["res://.godot/imported/Beatriz.dialogue-c7d64b2d3a495218bdda3f24d3c85435.tres"]
+
+[params]
+
+defaults=true

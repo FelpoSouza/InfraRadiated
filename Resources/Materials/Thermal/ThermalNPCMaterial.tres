@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b2iinvsqrvjvd"]
+
+[ext_resource type="Shader" uid="uid://dos1uwsthial5" path="res://Resources/Shaders/heat_signature.gdshader" id="1_a5844"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_a5844")
+shader_parameter/border_multiplier = 10.0

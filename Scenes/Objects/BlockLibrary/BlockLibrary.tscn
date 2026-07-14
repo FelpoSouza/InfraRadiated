@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://gaemqvwq46jj"]
 
-[ext_resource type="Material" uid="uid://covfc3mrcpy4w" path="res://Materials/BaseMaterials/groundTestMat.tres" id="1_6s2ed"]
-[ext_resource type="Shader" uid="uid://bi3ken02hgms7" path="res://Shaders/mesh_pixelazation.gdshader" id="1_ncjes"]
-[ext_resource type="Texture2D" uid="uid://dfl0qhy633gt1" path="res://Materials/BaseMaterials/weathered_brown_planks_diff_4k.jpg" id="2_ncjes"]
+[ext_resource type="Material" uid="uid://covfc3mrcpy4w" path="res://Resources/Materials/BaseMaterials/groundTestMat.tres" id="1_6s2ed"]
+[ext_resource type="Shader" uid="uid://bi3ken02hgms7" path="res://Resources/Shaders/mesh_pixelazation.gdshader" id="1_ncjes"]
+[ext_resource type="Texture2D" uid="uid://dfl0qhy633gt1" path="res://Resources/Materials/BaseMaterials/weathered_brown_planks_diff_4k.jpg" id="2_ncjes"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h5kr1"]
 render_priority = 0

@@ -1,0 +1,63 @@
+[gd_resource type="Theme" format=3 uid="uid://qncuq2ddgkcv"]
+
+[sub_resource type="Gradient" id="Gradient_o2ta1"]
+offsets = PackedFloat32Array(0, 0.90654206)
+colors = PackedColorArray(0, 0, 1, 0.7490196, 0, 0.6117647, 0.3647059, 0.19607843)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jg5j1"]
+gradient = SubResource("Gradient_o2ta1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f3ak"]
+texture = SubResource("GradientTexture2D_jg5j1")
+
+[sub_resource type="Gradient" id="Gradient_8cjo3"]
+offsets = PackedFloat32Array(0, 0.9392523)
+colors = PackedColorArray(0, 0.6117647, 0.3647059, 1, 0.7483166, 0.74831647, 3.85046e-07, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ybks7"]
+gradient = SubResource("Gradient_8cjo3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2ta1"]
+texture = SubResource("GradientTexture2D_ybks7")
+
+[sub_resource type="Gradient" id="Gradient_j4s34"]
+offsets = PackedFloat32Array(0, 0.9205607)
+colors = PackedColorArray(0, 0, 1, 1, 0, 0.6121539, 0.36416504, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8cjo3"]
+gradient = SubResource("Gradient_j4s34")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8cjo3"]
+texture = SubResource("GradientTexture2D_8cjo3")
+
+[sub_resource type="Gradient" id="Gradient_ybks7"]
+offsets = PackedFloat32Array(0, 0.9205608)
+colors = PackedColorArray(1, 0, 0, 1, 0.7490196, 0.7490196, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o2ta1"]
+gradient = SubResource("Gradient_ybks7")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg5j1"]
+texture = SubResource("GradientTexture2D_o2ta1")
+
+[resource]
+Button/colors/font_outline_color = Color(0, 0, 1, 1)
+Button/font_sizes/font_size = 24
+Button/fonts/font = null
+Button/styles/disabled = SubResource("StyleBoxTexture_2f3ak")
+Button/styles/focus = SubResource("StyleBoxTexture_o2ta1")
+Button/styles/hover = SubResource("StyleBoxTexture_o2ta1")
+Button/styles/normal = SubResource("StyleBoxTexture_8cjo3")
+Button/styles/pressed = SubResource("StyleBoxTexture_jg5j1")

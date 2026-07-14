@@ -1,7 +1,7 @@
 [gd_resource type="MeshLibrary" format=3 uid="uid://hys60531k5po"]
 
-[ext_resource type="Material" uid="uid://h702jgawoi2g" path="res://Materials/Pixelazation/FloorPixelizedMaterial.tres" id="1_m0uxr"]
-[ext_resource type="Material" uid="uid://crfpi4tuuxy4x" path="res://Materials/Pixelazation/WallPixelizedMaterial.tres" id="2_sspik"]
+[ext_resource type="Material" uid="uid://h702jgawoi2g" path="res://Resources/Materials/Pixelazation/FloorPixelizedMaterial.tres" id="1_m0uxr"]
+[ext_resource type="Material" uid="uid://crfpi4tuuxy4x" path="res://Resources/Materials/Pixelazation/WallPixelizedMaterial.tres" id="2_sspik"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wswke"]
 material = ExtResource("1_m0uxr")
