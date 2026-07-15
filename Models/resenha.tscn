@@ -8,19 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://b4i1bboaen481" path="res://Models/casa_Wood_Floor_012_basecolor.jpg" id="6_mdnti"]
 [ext_resource type="Texture2D" uid="uid://dsh42f0ejvkn4" path="res://Models/casa_Wood_Floor_009_basecolor.jpg" id="7_nfg1i"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thdbj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mnah"]
 resource_name = "wall 1 v1.004"
 cull_mode = 2
 albedo_texture = ExtResource("1_semvo")
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yj6t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2neom"]
 resource_name = "wall 1 v1"
 cull_mode = 2
 albedo_texture = ExtResource("1_semvo")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cskgn"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_k36an"]
 _surfaces = [{
 "aabb": AABB(-1, -0.99589986, -0.25, 2, 1.7077587, 0.5),
 "format": 34896613377,
@@ -52,7 +52,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 72,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
-"material": SubResource("StandardMaterial3D_thdbj"),
+"material": SubResource("StandardMaterial3D_5mnah"),
 "name": "wall 1 v1.004",
 "primitive": 3,
 "uv_scale": Vector4(1.9403116, 2, 0, 0),
@@ -64,7 +64,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_7yj6t"),
+"material": SubResource("StandardMaterial3D_2neom"),
 "name": "wall 1 v1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -72,24 +72,24 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////wAA/78AAP//////vwAA//8AAP+//////////78AAP//////v///AAD///+/AAAAAP///7//////////vwAAAAAAAFTVAAD/////VNUAAAAA//9U1QAA//8AAFTV/////wAA//8AAAAAAAD/////AAAAAP//AAD//wAA/////wAA//9U1f////8AAFTV//8AAAAAVNX///////9U1QAAAAD///////8AAAAA//8AAAAAAAD/////AAD/////////f////3////9/////f/9//3//f/9//3//f/9//39UVaqqVFWqqlRVqqpUVaqq/z//v/8//7//P/+//z//v6qqVFWqqlRVqqpUVaqqVFX/f/8//3//P/9//z//f/8/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_cskgn")
+shadow_mesh = SubResource("ArrayMesh_k36an")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_semvo"]
 size = Vector3(0.51, 1.993, 0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2eooh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4n5iv"]
 resource_name = "wall wood"
 cull_mode = 2
 albedo_texture = ExtResource("2_6lqkw")
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngo1j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kka2d"]
 resource_name = "wall wood.003"
 cull_mode = 2
 albedo_texture = ExtResource("3_julpa")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_uqw61"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ucjnj"]
 _surfaces = [{
 "aabb": AABB(-1, -0.99979293, -0.25, 2, 1.7077587, 0.5),
 "format": 34896613377,
@@ -121,7 +121,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 72,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
-"material": SubResource("StandardMaterial3D_2eooh"),
+"material": SubResource("StandardMaterial3D_4n5iv"),
 "name": "wall wood",
 "primitive": 3,
 "uv_scale": Vector4(3.5469472, 2.1164598, 0, 0),
@@ -133,7 +133,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_ngo1j"),
+"material": SubResource("StandardMaterial3D_kka2d"),
 "name": "wall wood.003",
 "primitive": 3,
 "uv_scale": Vector4(2.917612, 1.997998, 0, 0),
@@ -141,9 +141,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////wAA/z8AAP//////PwAA//8AAP8//////////z8AAP////8AAP//AAD//wAAAAAAAP//AAD///////8AAAAAAAAAAP8/AAD//////z8AAAAA////PwAA//8AAP8//////wAAAAAAAAAAAAAAAP//AAAAAAAAAAD//wAAAAD//wAA////P/////8AAP8///8AAAAA/z//////////PwAAAAD//6oq//8AAAAAqioAAAAAAACqKv//AAD//6oq////f////3////9/////f/9//3//f/9//3//f/9//3//f/7//3/+//9//v//f////3/+//9/////f/7//3////9/AAD/fwAA/38AAP9/AACqKlTVqipU1aoqVNWqKlTV")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_uqw61")
+shadow_mesh = SubResource("ArrayMesh_ucjnj")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfpmj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10b8l"]
 resource_name = "wall 1 v1.001"
 cull_mode = 2
 albedo_texture = ExtResource("1_semvo")
@@ -171,7 +171,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_qfpmj"),
+"material": SubResource("StandardMaterial3D_10b8l"),
 "name": "wall 1 v1.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -184,7 +184,7 @@ shadow_mesh = SubResource("ArrayMesh_wd0vd")
 [sub_resource type="BoxShape3D" id="BoxShape3D_6lqkw"]
 size = Vector3(1.7591858, 1, 0.24580383)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rmno"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ql4ff"]
 resource_name = "wall 1 v2.001"
 cull_mode = 2
 albedo_texture = ExtResource("4_ksoih")
@@ -212,7 +212,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_8rmno"),
+"material": SubResource("StandardMaterial3D_ql4ff"),
 "name": "wall 1 v2.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -222,13 +222,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ro5oq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgjah"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7joam"]
 resource_name = "wall 1 v2.003"
 cull_mode = 2
 albedo_texture = ExtResource("4_ksoih")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_tmdnc"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bearn"]
 _surfaces = [{
 "aabb": AABB(-2, -1, -0.25, 4, 2, 0.5),
 "format": 34896613377,
@@ -250,7 +250,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_cgjah"),
+"material": SubResource("StandardMaterial3D_7joam"),
 "name": "wall 1 v2.003",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -258,7 +258,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP////8AAP//////////////////AAAAAP////8AAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_tmdnc")
+shadow_mesh = SubResource("ArrayMesh_bearn")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_062p0"]
 resource_name = "wall wood.001"
@@ -298,7 +298,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0idas")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4q2j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5joq"]
 resource_name = "wall 1 v1.002"
 cull_mode = 2
 albedo_texture = ExtResource("1_semvo")
@@ -326,7 +326,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_l4q2j"),
+"material": SubResource("StandardMaterial3D_h5joq"),
 "name": "wall 1 v1.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -339,7 +339,7 @@ shadow_mesh = SubResource("ArrayMesh_a30kf")
 [sub_resource type="BoxShape3D" id="BoxShape3D_julpa"]
 size = Vector3(1, 1, 0.25195313)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wt2wj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkygn"]
 resource_name = "wall 1 v2.002"
 cull_mode = 2
 albedo_texture = ExtResource("4_ksoih")
@@ -367,7 +367,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_wt2wj"),
+"material": SubResource("StandardMaterial3D_nkygn"),
 "name": "wall 1 v2.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -377,7 +377,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kcpll")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_shc67"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_sbtlf"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -0.25, 2, 2, 0.5),
 "format": 34896613377,
@@ -399,7 +399,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_wt2wj"),
+"material": SubResource("StandardMaterial3D_nkygn"),
 "name": "wall 1 v2.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -407,7 +407,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP////8AAP//////////////////AAAAAP////8AAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_shc67")
+shadow_mesh = SubResource("ArrayMesh_sbtlf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cebdv"]
 resource_name = "wall wood.002"
@@ -488,13 +488,13 @@ shadow_mesh = SubResource("ArrayMesh_2f4my")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ksoih"]
 size = Vector3(2.0097656, 0.24609375, 1.9969482)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84y72"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7s05c"]
 resource_name = "chao2"
 cull_mode = 2
 albedo_texture = ExtResource("6_mdnti")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_5v4yu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_6arka"]
 _surfaces = [{
 "aabb": AABB(-2, -0.25, -2, 4, 0.5, 4),
 "format": 34896613377,
@@ -516,7 +516,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_84y72"),
+"material": SubResource("StandardMaterial3D_7s05c"),
 "name": "chao2",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -524,15 +524,15 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP////8AAP//////////////////AAAAAP////8AAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3/+//9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_5v4yu")
+shadow_mesh = SubResource("ArrayMesh_6arka")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ql5j1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r2b6w"]
 resource_name = "teto"
 cull_mode = 2
 albedo_texture = ExtResource("7_nfg1i")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_7k5li"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_41hpf"]
 _surfaces = [{
 "aabb": AABB(-2, -0.25, -2, 4, 0.5, 4),
 "format": 34896613377,
@@ -554,7 +554,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_ql5j1"),
+"material": SubResource("StandardMaterial3D_r2b6w"),
 "name": "teto",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -562,9 +562,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP////8AAP//////////////////AAAAAP////8AAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3/+//9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_7k5li")
+shadow_mesh = SubResource("ArrayMesh_41hpf")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_c3hfj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qxxar"]
 _surfaces = [{
 "aabb": AABB(-1.7499998, -1, -0.25, 3.4999995, 2, 0.5),
 "format": 34896613377,
@@ -586,7 +586,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_qfpmj"),
+"material": SubResource("StandardMaterial3D_10b8l"),
 "name": "wall 1 v1.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -594,9 +594,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP////8AAP//////////////////AAAAAP////8AAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f/7//3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_c3hfj")
+shadow_mesh = SubResource("ArrayMesh_qxxar")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_8btrs"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_n3wf5"]
 _surfaces = [{
 "aabb": AABB(-1.7499998, -1, -0.25, 3.4999995, 2, 0.5),
 "format": 34896613377,
@@ -618,7 +618,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_8rmno"),
+"material": SubResource("StandardMaterial3D_ql4ff"),
 "name": "wall 1 v2.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -626,9 +626,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP////8AAP//////////////////AAAAAP////8AAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9//v//f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_8btrs")
+shadow_mesh = SubResource("ArrayMesh_n3wf5")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_kqshj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jfblf"]
 _surfaces = [{
 "aabb": AABB(-1.75, -1, -0.25, 3.5, 2, 0.5),
 "format": 34896613377,
@@ -650,7 +650,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_cgjah"),
+"material": SubResource("StandardMaterial3D_7joam"),
 "name": "wall 1 v2.003",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -658,7 +658,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP////8AAP//////////////////AAAAAP////8AAAAAAAD/////AAD///////8AAAAA//8AAAAA//////////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//v/9//7//f/+//3//v/9//3//f/9//3//f/9//3//f/9//z//f/8//3//P/9//z////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_kqshj")
+shadow_mesh = SubResource("ArrayMesh_jfblf")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vdgu3"]
 _surfaces = [{
@@ -692,7 +692,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vdgu3")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_1fyjv"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_is3aq"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -0.25, 1, 2, 0.5),
 "format": 34896613377,
@@ -714,7 +714,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_l4q2j"),
+"material": SubResource("StandardMaterial3D_h5joq"),
 "name": "wall 1 v1.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -722,7 +722,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAA////v/////////+///8AAP///78AAP//////v///AAAAAP//////////////////AAD/////AAD/////////////VNUAAP//AABU1f////8AAFTVAAD/////VNUAAP//AAD/////AAAAAP///////wAA//8AAAAAAAD//wAAAAD//1TV//8AAAAAVNUAAAAAAABU1f//AAD//1TV/z//f/8//3//P/9//z//f/9//3//f/9//3//f/9//3//v/9//7//f/+//3//v/9/VNWqKlTVqipU1aoqVNWqKv8//7//P/+//z//v/8//7+qKlTVqipU1aoqVNWqKlTV")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_1fyjv")
+shadow_mesh = SubResource("ArrayMesh_is3aq")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p42s2"]
 size = Vector3(0.99938965, 2.0023804, 0.5036621)
@@ -749,7 +749,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_8rmno"),
+"material": SubResource("StandardMaterial3D_ql4ff"),
 "name": "wall 1 v2.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -759,7 +759,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mpbur")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_64mid"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_r0md6"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -0.25, 1, 2, 0.5),
 "format": 34896613377,
@@ -781,7 +781,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_wt2wj"),
+"material": SubResource("StandardMaterial3D_nkygn"),
 "name": "wall 1 v2.002",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -789,7 +789,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//8AAAAA////v/////////+///8AAP///78AAP//////v///AAAAAP//////////////////AAD/////AAD/////////////VNUAAP//AABU1f////8AAFTVAAD/////VNUAAP//AAD/////AAAAAP///////wAA//8AAAAAAAD//wAAAAD//1TV//8AAAAAVNUAAAAAAABU1f//AAD//1TV/z//f/8//3//P/9//z//f/9//3//f/9//3//f/9//3//v/9//7//f/+//3//v/9/VNWqKlTVqipU1aoqVNWqKv8//7//P/+//z//v/8//7+qKlTVqipU1aoqVNWqKlTV")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_64mid")
+shadow_mesh = SubResource("ArrayMesh_r0md6")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_puskv"]
 _surfaces = [{
@@ -813,7 +813,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_2eooh"),
+"material": SubResource("StandardMaterial3D_4n5iv"),
 "name": "wall wood",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -825,199 +825,199 @@ shadow_mesh = SubResource("ArrayMesh_puskv")
 
 [node name="casa" type="Node3D" unique_id=1285045099]
 
-[node name="Cube_017" type="StaticBody3D" parent="." unique_id=2044894532]
-
-[node name="Cube_017" type="MeshInstance3D" parent="Cube_017" unique_id=1565446379]
+[node name="Cube_018" type="MeshInstance3D" parent="." unique_id=1565446379]
 mesh = SubResource("ArrayMesh_en4ia")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_017" unique_id=550863693]
+[node name="Cube_017" type="StaticBody3D" parent="Cube_018" unique_id=2044894532]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_018/Cube_017" unique_id=550863693]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7506714, -0.0049057007, 0)
 shape = SubResource("BoxShape3D_semvo")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube_017" unique_id=948301531]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube_018/Cube_017" unique_id=948301531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7459943, -0.0049057007, 0)
 shape = SubResource("BoxShape3D_semvo")
 
-[node name="Cube_023" type="StaticBody3D" parent="." unique_id=1917730982]
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Cube_023" unique_id=1812875130]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7506714, -0.0049057007, 0)
-shape = SubResource("BoxShape3D_semvo")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Cube_023" unique_id=1027464809]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7459943, -0.0049057007, 0)
-shape = SubResource("BoxShape3D_semvo")
-
-[node name="Cube_023" type="MeshInstance3D" parent="Cube_023" unique_id=1391129684]
+[node name="Cube_024" type="MeshInstance3D" parent="." unique_id=1391129684]
 mesh = SubResource("ArrayMesh_vdd2m")
 
-[node name="parede longa tipo 1_001" type="StaticBody3D" parent="." unique_id=777948285]
+[node name="Cube_023" type="StaticBody3D" parent="Cube_024" unique_id=1917730982]
 
-[node name="parede longa tipo 1_001" type="MeshInstance3D" parent="parede longa tipo 1_001" unique_id=68311388]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Cube_024/Cube_023" unique_id=1812875130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7506714, -0.0049057007, 0)
+shape = SubResource("BoxShape3D_semvo")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Cube_024/Cube_023" unique_id=1027464809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7459943, -0.0049057007, 0)
+shape = SubResource("BoxShape3D_semvo")
+
+[node name="parede longa tipo 1_002" type="MeshInstance3D" parent="." unique_id=68311388]
 mesh = SubResource("ArrayMesh_31f3q")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="parede longa tipo 1_001" unique_id=197756895]
+[node name="parede longa tipo 1_001" type="StaticBody3D" parent="parede longa tipo 1_002" unique_id=777948285]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parede longa tipo 1_002/parede longa tipo 1_001" unique_id=197756895]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="parede longa tipo 2_001" type="StaticBody3D" parent="." unique_id=1575492265]
-
-[node name="parede longa tipo 2_001" type="MeshInstance3D" parent="parede longa tipo 2_001" unique_id=1513823905]
+[node name="parede longa tipo 2_003" type="MeshInstance3D" parent="." unique_id=1513823905]
 mesh = SubResource("ArrayMesh_10vds")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="parede longa tipo 2_001" unique_id=2060680087]
+[node name="parede longa tipo 2_001" type="StaticBody3D" parent="parede longa tipo 2_003" unique_id=1575492265]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="parede longa tipo 2_003/parede longa tipo 2_001" unique_id=2060680087]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="parede longa tipo 2_002" type="StaticBody3D" parent="." unique_id=220206671]
-
-[node name="parede longa tipo 2_002" type="MeshInstance3D" parent="parede longa tipo 2_002" unique_id=489493342]
+[node name="parede longa tipo 2_004" type="MeshInstance3D" parent="." unique_id=489493342]
 mesh = SubResource("ArrayMesh_rf17s")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="parede longa tipo 2_002" unique_id=1847980468]
+[node name="parede longa tipo 2_002" type="StaticBody3D" parent="parede longa tipo 2_004" unique_id=220206671]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="parede longa tipo 2_004/parede longa tipo 2_002" unique_id=1847980468]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="parede longa tipo 3_001" type="StaticBody3D" parent="." unique_id=1091497167]
-
-[node name="parede longa tipo 3_001" type="MeshInstance3D" parent="parede longa tipo 3_001" unique_id=557055500]
+[node name="parede longa tipo 3_002" type="MeshInstance3D" parent="." unique_id=557055500]
 mesh = SubResource("ArrayMesh_12fj1")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="parede longa tipo 3_001" unique_id=2031555632]
+[node name="parede longa tipo 3_001" type="StaticBody3D" parent="parede longa tipo 3_002" unique_id=1091497167]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="parede longa tipo 3_002/parede longa tipo 3_001" unique_id=2031555632]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="parede tipo 1_001" type="StaticBody3D" parent="." unique_id=1091716704]
-
-[node name="parede tipo 1_001" type="MeshInstance3D" parent="parede tipo 1_001" unique_id=1233963494]
+[node name="parede tipo 1_003" type="MeshInstance3D" parent="." unique_id=1233963494]
 mesh = SubResource("ArrayMesh_xduc7")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="parede tipo 1_001" unique_id=598177063]
+[node name="parede tipo 1_001" type="StaticBody3D" parent="parede tipo 1_003" unique_id=1091716704]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parede tipo 1_003/parede tipo 1_001" unique_id=598177063]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_julpa")
 
-[node name="parede tipo 1_002" type="StaticBody3D" parent="." unique_id=184669204]
-
-[node name="parede tipo 2_001" type="MeshInstance3D" parent="parede tipo 1_002" unique_id=429060380]
+[node name="parede tipo 2_001" type="MeshInstance3D" parent="." unique_id=429060380]
 mesh = SubResource("ArrayMesh_tnhqd")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="parede tipo 1_002" unique_id=1506182027]
+[node name="parede tipo 1_002" type="StaticBody3D" parent="parede tipo 2_001" unique_id=184669204]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="parede tipo 2_001/parede tipo 1_002" unique_id=1506182027]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_julpa")
 
-[node name="parede tipo 2_002" type="StaticBody3D" parent="." unique_id=1385733284]
-
-[node name="parede tipo 2_002" type="MeshInstance3D" parent="parede tipo 2_002" unique_id=1426491960]
+[node name="parede tipo 2_003" type="MeshInstance3D" parent="." unique_id=1426491960]
 mesh = SubResource("ArrayMesh_cpcy1")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="parede tipo 2_002" unique_id=2093869016]
+[node name="parede tipo 2_002" type="StaticBody3D" parent="parede tipo 2_003" unique_id=1385733284]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="parede tipo 2_003/parede tipo 2_002" unique_id=2093869016]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_julpa")
 
-[node name="parede tipo 3_001" type="StaticBody3D" parent="." unique_id=1903911319]
-
-[node name="parede tipo 3_001" type="MeshInstance3D" parent="parede tipo 3_001" unique_id=465718905]
+[node name="parede tipo 3_002" type="MeshInstance3D" parent="." unique_id=465718905]
 mesh = SubResource("ArrayMesh_ksif7")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="parede tipo 3_001" unique_id=1061197888]
+[node name="parede tipo 3_001" type="StaticBody3D" parent="parede tipo 3_002" unique_id=1903911319]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="parede tipo 3_002/parede tipo 3_001" unique_id=1061197888]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_julpa")
 
-[node name="chao" type="StaticBody3D" parent="." unique_id=1436318868]
-
-[node name="chao" type="MeshInstance3D" parent="chao" unique_id=1740912438]
+[node name="chao2" type="MeshInstance3D" parent="." unique_id=1740912438]
 mesh = SubResource("ArrayMesh_0sdby")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="chao" unique_id=1831592299]
+[node name="chao" type="StaticBody3D" parent="chao2" unique_id=1436318868]
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="chao2/chao" unique_id=1831592299]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.005859375, 0.0057373047)
 shape = SubResource("BoxShape3D_ksoih")
 
-[node name="chao_001" type="StaticBody3D" parent="." unique_id=16014953]
-
-[node name="chao_001" type="MeshInstance3D" parent="chao_001" unique_id=700701329]
+[node name="chao_003" type="MeshInstance3D" parent="." unique_id=700701329]
 mesh = SubResource("ArrayMesh_6jrdb")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="chao_001" unique_id=355989989]
+[node name="chao_001" type="StaticBody3D" parent="chao_003" unique_id=16014953]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="chao_003/chao_001" unique_id=355989989]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.005859375, 0.0057373047)
 shape = SubResource("BoxShape3D_ksoih")
 
-[node name="chao_002" type="StaticBody3D" parent="." unique_id=2058485821]
-
-[node name="chao_002" type="MeshInstance3D" parent="chao_002" unique_id=583062108]
+[node name="chao_004" type="MeshInstance3D" parent="." unique_id=583062108]
 mesh = SubResource("ArrayMesh_v3cpr")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="chao_002" unique_id=949969116]
+[node name="chao_002" type="StaticBody3D" parent="chao_004" unique_id=2058485821]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="chao_004/chao_002" unique_id=949969116]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.005859375, 0.0057373047)
 shape = SubResource("BoxShape3D_ksoih")
 
-[node name="parede quarto tipo1" type="StaticBody3D" parent="." unique_id=334738501]
-
-[node name="parede quarto tipo1" type="MeshInstance3D" parent="parede quarto tipo1" unique_id=857816985]
+[node name="parede quarto tipo3" type="MeshInstance3D" parent="." unique_id=857816985]
 mesh = SubResource("ArrayMesh_wh47s")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="parede quarto tipo1" unique_id=1053000468]
+[node name="parede quarto tipo1" type="StaticBody3D" parent="parede quarto tipo3" unique_id=334738501]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="parede quarto tipo3/parede quarto tipo1" unique_id=1053000468]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="parede quarto tipo2" type="StaticBody3D" parent="." unique_id=1684796291]
-
-[node name="parede quarto tipo2" type="MeshInstance3D" parent="parede quarto tipo2" unique_id=638371711]
+[node name="parede quarto tipo4" type="MeshInstance3D" parent="." unique_id=638371711]
 mesh = SubResource("ArrayMesh_6d21q")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="parede quarto tipo2" unique_id=840618800]
+[node name="parede quarto tipo2" type="StaticBody3D" parent="parede quarto tipo4" unique_id=1684796291]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="parede quarto tipo4/parede quarto tipo2" unique_id=840618800]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="parede quarto tipo 2" type="StaticBody3D" parent="." unique_id=672648386]
-
-[node name="parede quarto tipo 2" type="MeshInstance3D" parent="parede quarto tipo 2" unique_id=1748414110]
+[node name="parede quarto tipo 3" type="MeshInstance3D" parent="." unique_id=1748414110]
 mesh = SubResource("ArrayMesh_hsoop")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="parede quarto tipo 2" unique_id=146521507]
+[node name="parede quarto tipo 2" type="StaticBody3D" parent="parede quarto tipo 3" unique_id=672648386]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="parede quarto tipo 3/parede quarto tipo 2" unique_id=146521507]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="parede quarto tipo 4" type="StaticBody3D" parent="." unique_id=1361698200]
-
-[node name="parede quarto tipo 3" type="MeshInstance3D" parent="parede quarto tipo 4" unique_id=815103060]
+[node name="parede quarto tipo 5" type="MeshInstance3D" parent="." unique_id=815103060]
 mesh = SubResource("ArrayMesh_lhkdl")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="parede quarto tipo 4" unique_id=1755371000]
+[node name="parede quarto tipo 4" type="StaticBody3D" parent="parede quarto tipo 5" unique_id=1361698200]
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="parede quarto tipo 5/parede quarto tipo 4" unique_id=1755371000]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
 shape = SubResource("BoxShape3D_6lqkw")
 
-[node name="pilar tipo 2" type="StaticBody3D" parent="." unique_id=793281123]
-
-[node name="pilar tipo 1" type="MeshInstance3D" parent="pilar tipo 2" unique_id=1994097519]
+[node name="pilar tipo 1" type="MeshInstance3D" parent="." unique_id=1994097519]
 mesh = SubResource("ArrayMesh_7n7ii")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pilar tipo 2" unique_id=808098884]
+[node name="pilar tipo 2" type="StaticBody3D" parent="pilar tipo 1" unique_id=793281123]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pilar tipo 1/pilar tipo 2" unique_id=808098884]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")
 
-[node name="PILAR TIPO 2" type="StaticBody3D" parent="." unique_id=868923454]
-
-[node name="PILAR TIPO 2" type="MeshInstance3D" parent="PILAR TIPO 2" unique_id=1101120075]
+[node name="PILAR TIPO 3" type="MeshInstance3D" parent="." unique_id=1101120075]
 mesh = SubResource("ArrayMesh_vcbdc")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PILAR TIPO 2" unique_id=529559200]
+[node name="PILAR TIPO 2" type="StaticBody3D" parent="PILAR TIPO 3" unique_id=868923454]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PILAR TIPO 3/PILAR TIPO 2" unique_id=529559200]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")
 
-[node name="PILAR TIPO 2_001" type="StaticBody3D" parent="." unique_id=1548476983]
-
-[node name="PILAR TIPO 2_001" type="MeshInstance3D" parent="PILAR TIPO 2_001" unique_id=372017124]
+[node name="PILAR TIPO 2_002" type="MeshInstance3D" parent="." unique_id=372017124]
 mesh = SubResource("ArrayMesh_vbh8c")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="PILAR TIPO 2_001" unique_id=1585741076]
+[node name="PILAR TIPO 2_001" type="StaticBody3D" parent="PILAR TIPO 2_002" unique_id=1548476983]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="PILAR TIPO 2_002/PILAR TIPO 2_001" unique_id=1585741076]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")
 
-[node name="pilar tipo 1_001" type="StaticBody3D" parent="." unique_id=1481921853]
-
-[node name="pilar tipo 1_001" type="MeshInstance3D" parent="pilar tipo 1_001" unique_id=1101118447]
+[node name="pilar tipo 1_002" type="MeshInstance3D" parent="." unique_id=1101118447]
 mesh = SubResource("ArrayMesh_b73qu")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="pilar tipo 1_001" unique_id=1659399821]
+[node name="pilar tipo 1_001" type="StaticBody3D" parent="pilar tipo 1_002" unique_id=1481921853]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="pilar tipo 1_002/pilar tipo 1_001" unique_id=1659399821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")
