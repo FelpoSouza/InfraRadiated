@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cblt0ivhtb781"]
 
-[ext_resource type="Script" uid="uid://hgtaew2peakv" path="res://Scenes/Environment/Playground/Door.gd" id="1_3hd3p"]
-[ext_resource type="Script" uid="uid://bhx80f0gr54mh" path="res://Scenes/Environment/Playground/Switch.gd" id="2_a2ook"]
+[ext_resource type="Script" uid="uid://hgtaew2peakv" path="res://Scenes/Objects/Door.gd" id="1_3hd3p"]
+[ext_resource type="Script" uid="uid://bhx80f0gr54mh" path="res://Scenes/Objects/Switch.gd" id="2_a2ook"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cx7lr"]
 size = Vector3(2, 2, 0.5)

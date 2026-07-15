@@ -15,3 +15,19 @@ metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="Player" parent="." unique_id=1655873123 instance=ExtResource("2_55v7b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1652767976]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, -1.8210065, 3.0380027, 0)
+light_energy = 16.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=33314148]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 1.8196084, 3.0380027, 0)
+light_energy = 16.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=34600141]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 8.286304, 3.0380027, 0.7625761)
+light_energy = 16.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=366913391]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 8.286304, 3.0380027, -2.0075188)
+light_energy = 16.0

@@ -27,8 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="13_umtol"]
 [ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="14_ee0fq"]
 [ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
-[ext_resource type="Script" uid="uid://hgtaew2peakv" path="res://Scenes/Environment/Playground/Door.gd" id="28_ebfwc"]
-[ext_resource type="Script" uid="uid://bhx80f0gr54mh" path="res://Scenes/Environment/Playground/Switch.gd" id="29_y6p06"]
+[ext_resource type="Script" uid="uid://hgtaew2peakv" path="res://Scenes/Objects/Door.gd" id="28_ebfwc"]
+[ext_resource type="Script" uid="uid://bhx80f0gr54mh" path="res://Scenes/Objects/Switch.gd" id="29_y6p06"]
 [ext_resource type="PackedScene" uid="uid://cblt0ivhtb781" path="res://Scenes/Objects/Door/FullDoor.tscn" id="30_vjt7h"]
 
 [sub_resource type="GDScript" id="GDScript_akijn"]
