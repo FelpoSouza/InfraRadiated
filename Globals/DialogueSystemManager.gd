@@ -5,6 +5,7 @@ const player_seconds_per_step: float = 0.05
 const default_seconds_per_step: float = 0.05
 var npc_dialogue_data_dict: Dictionary[Constants.NPC_IDS, NpcDialogueData] = {}
 var active_npc_nodes: Dictionary = {}
+var balloon = null
 
 const DIALOGUE_BALLOON = preload("res://Dialogues/DialogueBalloon/DialogueBalloon.tscn")
 
@@ -34,14 +35,19 @@ func show_dialog(data: NpcDialogueData, caller_node: Node) -> void:
 	if "is_talking" in caller_node:
 		caller_node.is_talking = true
 		
-	var balloon = DIALOGUE_BALLOON.instantiate()
+	balloon = DIALOGUE_BALLOON.instantiate()
 	get_tree().current_scene.add_child(balloon)
 	
 	balloon.start(data.dialogue_resource, data.dialogue_start_node, [caller_node])
 	balloon.tree_exited.connect(_on_balloon_closed.bind(caller_node))
+	
+func force_close_dialog():
+	if is_instance_valid(balloon):
+		balloon.queue_free()
 
 
 func _on_balloon_closed(caller_node: Node) -> void:
+	balloon = null
 	is_dialogue_active = false
 	
 	if is_instance_valid(caller_node):
