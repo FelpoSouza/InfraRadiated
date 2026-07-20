@@ -1,7 +1,7 @@
 extends Node
 
 const SAVE_PATH = "user://savegame.data"
-
+const BEGINNING_SCENE_PATH = "res://Scenes/Environment/Playground/Playground.tscn"
 
 func _ready() -> void:
 	# Escuta o sinal de quando ScenesManager termina de criar a cena
@@ -17,7 +17,7 @@ func save_game() -> void:
 		file.close()
 		print("Game Saved Successfully!")
 
-func load_game(beggining_scene_path: String) -> bool:
+func load_game() -> bool:
 	if not FileAccess.file_exists(SAVE_PATH):
 		return false
 		
@@ -32,12 +32,16 @@ func load_game(beggining_scene_path: String) -> bool:
 		if parse_result == OK:
 			var game_state = json.get_data()
 			
-			var saved_scene = game_state.get("current_scene", beggining_scene_path)
+			var saved_scene = game_state.get("current_scene", BEGINNING_SCENE_PATH)
 			
 			ScenesManager.change_scene_then_load_data(saved_scene, game_state)
 			return true
 			
 	return false
+
+func start_new_game() -> void:
+	StoryState.reset_state()	
+	ScenesManager.change_scene(BEGINNING_SCENE_PATH)
 
 func game_save_exists() -> bool:
 	if FileAccess.file_exists(SAVE_PATH):
@@ -65,7 +69,24 @@ func capture_game_state() -> Dictionary:
 # Aplica dados salvos para os nodes instanciados
 func apply_game_state(state: Dictionary) -> void:
 	var data = state.get("data", {})
+	var dynamic_entities = data.get("dynamic_entities", {})
 	
 	for node in get_tree().get_nodes_in_group(Constants.DATA_PERSISTENCE_GROUP_NAME):
 		if node.has_method("load_from_state"):
 			node.load_from_state(data)
+			
+	for entity_name in dynamic_entities.keys():
+		var entity_data = dynamic_entities[entity_name]
+		var scene_path = entity_data.get("scene_filepath", "")
+		
+		
+		if scene_path != "":
+			var packed_scene = load(scene_path)
+			if packed_scene:
+				var new_entity = packed_scene.instantiate()
+				new_entity.name = entity_name
+				
+				get_tree().current_scene.add_child(new_entity)
+				
+				if new_entity.has_method("load_from_state"):
+					new_entity.load_from_state(entity_data)

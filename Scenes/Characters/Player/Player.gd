@@ -2,6 +2,8 @@ extends BaseCharacter
 
 enum PeekingDirections { NONE, LEFT, RIGHT, UP, DOWN }
 
+const GAME_OVER = "res://Scenes/UI/GameOver/GameOver.tscn"
+
 const thermal_vision_on_battery_decay = 0.2
 const thermal_vision_off_battery_decay = 0.02
 
@@ -10,6 +12,8 @@ var peek_duration: float = 0.1
 var camera_offset: Vector3 = Vector3.ZERO
 var thermal_vision_battery: float = 1.0
 var ammo_amount: int = 1
+var camera_basis_before_dialogue: Basis
+var is_camera_locked_on_npc: bool = false
 
 var current_peeking: PeekingDirections = PeekingDirections.NONE
 var is_thermal_vision_on: bool = false
@@ -42,7 +46,8 @@ func _process(_delta: float) -> void:
 	var smoothing_factor = 1.0 - exp(-15.0 * _delta)
 	camera.global_position = camera.global_position.lerp(global_position + camera_offset, smoothing_factor)
 	
-	camera.rotation.y = rotation.y
+	if not is_camera_locked_on_npc:
+		camera.rotation.y = rotation.y
 	
 	check_crosshair_interaction()
 	
@@ -63,18 +68,52 @@ func check_crosshair_interaction() -> void:
 	is_facing_npc = false
 	crosshair.color = Color(1.0, 1.0, 1.0)
 
+func look_at_npc_face(npc_node: Node3D) -> void:
+	var target_pos: Vector3 = npc_node.global_position
+	var head_marker = npc_node.get_node_or_null("HeadMarker3D")
+	
+	if head_marker:
+		# Pega aonde o NPC vai estar no mapa e soma com a altura da cabeça dele.
+		# Não usa head_marker.global_position porque o player pode iniciar uma conversa quando o NPC está se movendo. Se usar head_marker.global_position, a câmera olhará 
+		target_pos = Vector3(
+			npc_node.target_position.x, 
+			head_marker.global_position.y, 
+			npc_node.target_position.z
+		)
+	
+	var target_transform = camera.global_transform.looking_at(target_pos, Vector3.UP)
+	
+	var tween = create_tween()
+	tween.tween_property(camera, "global_transform:basis", target_transform.basis, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)	
+
 func try_talk_to_npc() -> void:
 	if forward_ray_for_areas.is_colliding():
 		var target = forward_ray_for_areas.get_collider()
 		
 		if target.is_in_group(Constants.NPC_GROUP_NAME) and target.has_method("show_dialog"):
+			var forward_dir: Vector3 = -camera.global_transform.basis.z
+			forward_dir.y = 0.0
+			forward_dir = forward_dir.normalized()
+			
+			camera_basis_before_dialogue = Basis.looking_at(forward_dir, Vector3.UP)
+			
+			is_camera_locked_on_npc = true
+			
+			look_at_npc_face(target)
 			target.show_dialog()
 
+func on_balloon_closed() -> void:
+	var tween = create_tween()
+	tween.tween_property(camera, "global_transform:basis", camera_basis_before_dialogue, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+	tween.tween_callback(func(): is_camera_locked_on_npc = false)
+	
 #-------------------------------------------------------------------------
 # INPUT
 #-------------------------------------------------------------------------
 func _unhandled_input(event: InputEvent) -> void:
 	if is_moving or is_turning: return
+	
 	var is_shifting = Input.is_action_pressed("modifier")
 	
 	if is_shifting:
@@ -106,10 +145,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			turn_right()
 			
 		elif event.is_action_pressed("interact"):
-			if is_gun_active:
-				fire_gun()
-			elif is_facing_npc and not DialogueSystemManager.is_dialogue_active:
+			if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
 				try_talk_to_npc()
+			elif is_gun_active:
+				fire_gun()
 	
 	if current_peeking != PeekingDirections.NONE:
 		if ((current_peeking == PeekingDirections.DOWN and event.is_action_released("peek_down")) or 
@@ -195,6 +234,7 @@ func decrease_thermal_vision_battery(delta: float) -> void:
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group(Constants.MONSTER_GROUP_NAME):
 		DialogueSystemManager.force_close_dialog()
+		ScenesManager.change_scene(GAME_OVER)
 		queue_free()
 
 #-------------------------------------------------------------------------

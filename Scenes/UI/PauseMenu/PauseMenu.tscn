@@ -8,6 +8,9 @@
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7g5nr"]
 gradient = SubResource("Gradient_psikb")
 
+[sub_resource type="LabelSettings" id="LabelSettings_psikb"]
+font_size = 96
+
 [node name="PauseMenu" type="ColorRect" unique_id=1588672194]
 process_mode = 3
 anchors_preset = 15
@@ -18,7 +21,41 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.49803922)
 script = ExtResource("1_psikb")
 
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2116126851]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -130.0
+offset_right = 200.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer" unique_id=1095311818]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_e4e6r")
+text = "Resume"
+
+[node name="SaveButton" type="Button" parent="VBoxContainer" unique_id=1706264885]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_e4e6r")
+text = "Save"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=596154803]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_e4e6r")
+text = "Save and Quit"
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1355768578]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,29 +71,18 @@ grow_vertical = 2
 pivot_offset = Vector2(0.5, 0.5)
 texture = SubResource("GradientTexture2D_7g5nr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=2116126851]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -80.5
-offset_top = -36.0
-offset_right = 80.5
-offset_bottom = 36.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TitleLabel" type="Label" parent="." unique_id=137163283]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 182.0
+size_flags_vertical = 0
+text = "INFRA-RADIATED"
+label_settings = SubResource("LabelSettings_psikb")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ResumeButton" type="Button" parent="TextureRect/VBoxContainer" unique_id=1095311818]
-layout_mode = 2
-theme = ExtResource("1_e4e6r")
-text = "Resume"
-
-[node name="QuitButton" type="Button" parent="TextureRect/VBoxContainer" unique_id=596154803]
-layout_mode = 2
-theme = ExtResource("1_e4e6r")
-text = "Save and Quit"
-
-[connection signal="pressed" from="TextureRect/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="TextureRect/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

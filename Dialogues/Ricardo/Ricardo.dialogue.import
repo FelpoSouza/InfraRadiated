@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c55yqnrfw4pk0"
+path="res://.godot/imported/Ricardo.dialogue-4ff912f2e9cf3d3e52e8c930bdd4b731.tres"
+
+[deps]
+
+source_file="res://Dialogues/Ricardo/Ricardo.dialogue"
+dest_files=["res://.godot/imported/Ricardo.dialogue-4ff912f2e9cf3d3e52e8c930bdd4b731.tres"]
+
+[params]
+
+defaults=true

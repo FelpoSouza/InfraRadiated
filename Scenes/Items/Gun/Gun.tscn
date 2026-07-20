@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dil78qu4qwuvg"]
 
-[ext_resource type="Texture2D" uid="uid://bwjjwclyc7ilb" path="res://Assets/Images/Gun.jpg" id="1_p7suu"]
 [ext_resource type="Script" uid="uid://804gl8tg3vgu" path="res://Scenes/Items/Gun/Gun.gd" id="1_u28cm"]
+[ext_resource type="Texture2D" uid="uid://bahflm0vcd6lb" path="res://Assets/Images/Gun.png" id="2_u28cm"]
 
 [sub_resource type="Animation" id="Animation_mc0yi"]
 length = 0.001
@@ -70,7 +70,7 @@ script = ExtResource("1_u28cm")
 
 [node name="GunSprite" type="Sprite3D" parent="." unique_id=928908245]
 pixel_size = 0.0001
-texture = ExtResource("1_p7suu")
+texture = ExtResource("2_u28cm")
 
 [node name="GunshotRay" type="RayCast3D" parent="." unique_id=1836104648]
 target_position = Vector3(200, 0, 0)

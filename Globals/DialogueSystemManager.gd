@@ -1,15 +1,22 @@
 extends Node
 
-const default_voice_sfx: AudioStream = preload("res://Assets/SFX/Npc/Voices/Velha/VelhaVoice1.wav")
-const player_seconds_per_step: float = 0.05
+const default_voice_sfx: AudioStream = preload("res://Assets/SFX/Character/Voices/PlayerVoice1.wav")
 const default_seconds_per_step: float = 0.05
+const player_voice_sfx: Array[AudioStream] = [
+	preload("res://Assets/SFX/Character/Voices/PlayerVoice1.wav"),
+	preload("res://Assets/SFX/Character/Voices/PlayerVoice2.wav"),
+	preload("res://Assets/SFX/Character/Voices/PlayerVoice3.wav"),
+	preload("res://Assets/SFX/Character/Voices/PlayerVoice4.wav"),
+]
+const player_seconds_per_step: float = 0.05
+const DIALOGUE_BALLOON = preload("res://Dialogues/DialogueBalloon/DialogueBalloon.tscn")
+
 var npc_dialogue_data_dict: Dictionary[Constants.NPC_IDS, NpcDialogueData] = {}
 var active_npc_nodes: Dictionary = {}
 var balloon = null
 
-const DIALOGUE_BALLOON = preload("res://Dialogues/DialogueBalloon/DialogueBalloon.tscn")
-
 var is_dialogue_active: bool = false
+var dialogue_caller_node: Node = null
 
 
 ## Função usada por NPC.gd para registrar os dados dos diálogos, de forma que fiquem acessíveis nesta classe Global de forma centralizada
@@ -29,37 +36,57 @@ func show_dialog(data: NpcDialogueData, caller_node: Node) -> void:
 	if data == null or data.dialogue_resource == null:
 		push_warning("Dialogue Manager tried to start, but no valid data or resource was assigned!")
 		return
-	
+		
 	is_dialogue_active = true
+	dialogue_caller_node = caller_node
 	
-	if "is_talking" in caller_node:
-		caller_node.is_talking = true
+	if "is_talking" in dialogue_caller_node:
+		dialogue_caller_node.is_talking = true
 		
 	balloon = DIALOGUE_BALLOON.instantiate()
 	get_tree().current_scene.add_child(balloon)
 	
-	balloon.start(data.dialogue_resource, data.dialogue_start_node, [caller_node])
-	balloon.tree_exited.connect(_on_balloon_closed.bind(caller_node))
-	
+	balloon.start(data.dialogue_resource, data.dialogue_start_node, [dialogue_caller_node])
+	balloon.tree_exited.connect(_on_balloon_closed) 
+
+
 func force_close_dialog():
 	if is_instance_valid(balloon):
 		balloon.queue_free()
 
 
-func _on_balloon_closed(caller_node: Node) -> void:
+func force_close_especific_npc_dialog(caller_node: Node):
+	if is_instance_valid(balloon) and caller_node == dialogue_caller_node:
+		balloon.queue_free()
+
+
+func _on_balloon_closed() -> void:
 	balloon = null
 	is_dialogue_active = false
 	
-	if is_instance_valid(caller_node):
-		if "is_talking" in caller_node:
-			caller_node.is_talking = false
-		
-		if "movement_timer" in caller_node:
-			caller_node.movement_timer.wait_time = randf_range(1.5, 3)
-			caller_node.movement_timer.start()
+	# Salva temporariamente quem chamou o diálogo antes de apagar
+	var original_caller = dialogue_caller_node
+	dialogue_caller_node = null
+	
+	if is_instance_valid(original_caller):
+		if "is_talking" in original_caller:
+			original_caller.is_talking = false
 			
-		if caller_node.has_method("set_npc_texture") and "npc_texture" in caller_node:
-			caller_node.set_npc_texture(caller_node.npc_texture)
+		if "movement_timer" in original_caller:
+			original_caller.movement_timer.wait_time = randf_range(1.5, 3.0)
+			original_caller.movement_timer.start()
+			
+		if original_caller.has_method("set_npc_texture") and "npc_texture" in original_caller:
+			original_caller.set_npc_texture(original_caller.npc_texture)
+		
+		# Fecha o diálogo do player se ele que chamou
+		if original_caller.is_in_group(Constants.PLAYER_GROUP_NAME) and original_caller.has_method("on_balloon_closed"):
+			original_caller.on_balloon_closed()
+		else:
+			# Fecha o diálogo do player caso o diálogo tenha sido chamado de outro lugar
+			var player_ref = get_tree().get_first_node_in_group(Constants.PLAYER_GROUP_NAME)
+			if player_ref and player_ref.has_method("on_balloon_closed"):
+				player_ref.on_balloon_closed()
 
 
 func get_data_for_id(npc_enum_id: Constants.NPC_IDS) -> NpcDialogueData:
@@ -67,6 +94,9 @@ func get_data_for_id(npc_enum_id: Constants.NPC_IDS) -> NpcDialogueData:
 
 
 func get_voice_sfxs_for_character(character_name: String) -> Array[AudioStream]:
+	if character_name == Constants.PLAYER_NAME and player_voice_sfx:
+		return player_voice_sfx
+	
 	var enum_id = _get_enum_from_string(character_name)
 	var data = get_data_for_id(enum_id)
 	

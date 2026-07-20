@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c6fc6qkykdfg1"
+path="res://.godot/imported/Marcinha.dialogue-f4c574ac8c57d326de40b22949d6fff6.tres"
+
+[deps]
+
+source_file="res://Dialogues/Marcinha/Marcinha.dialogue"
+dest_files=["res://.godot/imported/Marcinha.dialogue-f4c574ac8c57d326de40b22949d6fff6.tres"]
+
+[params]
+
+defaults=true

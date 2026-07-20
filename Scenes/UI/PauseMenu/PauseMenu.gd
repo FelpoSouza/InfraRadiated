@@ -2,7 +2,12 @@ extends Control
 
 const MAIN_MENU_SCENE_PATH = "res://Scenes/UI/MainMenu/MainMenu.tscn"
 
+
+@onready var save_button: Button = $VBoxContainer/SaveButton
+@onready var quit_button: Button = $VBoxContainer/QuitButton
+
 func _ready() -> void:
+	SignalHub.monster_is_active.connect(on_monster_is_active)
 	hide()
 
 
@@ -36,10 +41,16 @@ func _on_resume_button_pressed() -> void:
 	resume_game()
 
 
+func _on_save_button_pressed() -> void:
+	SaveLoadManager.save_game()
+
+
 func _on_quit_button_pressed() -> void:
 	SaveLoadManager.save_game()
-	
-	# Despausa antes the trocar de cena, senão o Menu Principal fica congelado
-	get_tree().paused = false
-	
 	ScenesManager.change_scene(MAIN_MENU_SCENE_PATH)
+
+
+func on_monster_is_active() -> void:
+	#save_button.disabled = true
+	#quit_button.disabled = true
+	pass

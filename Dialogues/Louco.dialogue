@@ -1,8 +1,0 @@
-~ start
-{{npc_name}}: Afasta! Afasta! VOCÊ É UM DELES, NÃO É?
-{{Constants.PLAYER_NAME}}: Por favor, acalme-se senhor, sou do Departamento da Ordem Radiativa e vim lidar com a ameaça do irradiado que se encontra nesse local, não sou um deles.
-{{npc_name}}: Não confio em vocês homens do governo! Mandaram irradiados para cá porque sabem que só eu sou capaz de derrubar o Governo dos Illuminati que controla o mundo! [shake rate=10.0 level=3]Hahahaha![/shake]
-{{Constants.PLAYER_NAME}}: Do que você está falando?
-{{npc_name}}: Você não entenderia, já passou pela lavagem cerebral dos reptilianos! [shake rate=20.0 level=5]HAHAHA![/shake]
-{{Constants.PLAYER_NAME}}: Certo…Você se importa de responder algumas perguntas?
-=> END

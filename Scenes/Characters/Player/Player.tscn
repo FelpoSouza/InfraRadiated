@@ -60,7 +60,7 @@ render_target_update_mode = 4
 current = true
 
 [node name="Gun" parent="CanvasLayer/SubViewportContainer/SubViewport/Camera3D" index="1" unique_id=127458777 instance=ExtResource("5_ov5rv")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.2, -0.15, -0.3)
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, 0.3, -0.2, -0.375)
 visible = false
 gunshot_sound = ExtResource("6_xst4l")
 

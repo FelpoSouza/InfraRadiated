@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://by2pp5vrkh3qh"]
+
+[ext_resource type="Script" uid="uid://3bw6hvv3vbb5" path="res://Scenes/UI/GameOver/GameOver.gd" id="1_tsk0b"]
+[ext_resource type="Theme" uid="uid://qncuq2ddgkcv" path="res://Resources/Themes/main_theme.tres" id="2_jho6m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f5tak"]
+font_size = 96
+
+[node name="GameOver" type="Control" unique_id=555388168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tsk0b")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1577399303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=37760962]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.00024
+offset_top = -190.50018
+offset_right = 310.00024
+offset_bottom = 190.50018
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="GameOverLabel" type="Label" parent="ColorRect/VBoxContainer" unique_id=266614619]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_f5tak")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TryAgainButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=1369959442]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_jho6m")
+text = "Play Again"
+
+[node name="MainMenuButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=278507532]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_jho6m")
+text = "Main Menu"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

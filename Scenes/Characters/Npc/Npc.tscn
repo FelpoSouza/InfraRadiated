@@ -17,6 +17,7 @@ npc_texture = null
 npc_id = 0
 random_noise_data = Array[ExtResource("3_6yu4a")]([])
 npc_dialogue_data = null
+head_marker_y_pos = 1.0
 is_monster = false
 monster_scene = null
 monster_texture = null
@@ -25,6 +26,7 @@ monster_texture = null
 material_override = SubResource("ShaderMaterial_x8dhr")
 pixel_size = 0.002
 billboard = 2
+shaded = true
 
 [node name="MovementTimer" type="Timer" parent="." index="12" unique_id=1884047272]
 wait_time = 2.0
@@ -36,6 +38,8 @@ autostart = true
 [node name="TransformToMonsterTimer" type="Timer" parent="." index="14" unique_id=309198708]
 wait_time = 2.0
 one_shot = true
+
+[node name="HeadMarker3D" type="Marker3D" parent="." index="15" unique_id=517610184]
 
 [connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]
 [connection signal="timeout" from="RandomNoiseTimer" to="." method="_on_random_noise_timer_timeout"]

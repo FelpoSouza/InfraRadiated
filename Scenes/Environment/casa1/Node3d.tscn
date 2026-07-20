@@ -3,22 +3,61 @@
 [ext_resource type="MeshLibrary" uid="uid://45kdmpr56jv1" path="res://Scenes/Objects/BlockLibrary/resenha.tres" id="1_c3sq0"]
 [ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Characters/Npc/Npc.tscn" id="2_siw6g"]
 [ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Images/Velha.png" id="3_23aw5"]
-[ext_resource type="Resource" uid="uid://b7vawc48rbhbt" path="res://Dialogues/Marcinha.dialogue" id="4_feqqg"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="4_c3sq0"]
 [ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Classes/NpcsDialogueData.gd" id="5_c3sq0"]
-[ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice1.wav" id="6_yspgp"]
+[ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice1.wav" id="6_yspgp"]
 [ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://Assets/Images/Ricardo.png" id="7_c3sq0"]
-[ext_resource type="Resource" uid="uid://c55yqnrfw4pk0" path="res://Dialogues/Ricardo.dialogue" id="8_qoh4h"]
-[ext_resource type="AudioStream" uid="uid://bhhivfocswwce" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice2.wav" id="9_t3xxd"]
+[ext_resource type="Resource" uid="uid://c55yqnrfw4pk0" path="res://Dialogues/Ricardo/Ricardo.dialogue" id="8_qoh4h"]
+[ext_resource type="AudioStream" uid="uid://bhhivfocswwce" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice2.wav" id="9_t3xxd"]
 [ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://Assets/Images/Louco.png" id="10_yspgp"]
-[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://Assets/SFX/Npc/Voices/Velha/VelhaVoice3.wav" id="11_23aw5"]
-[ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco.dialogue" id="11_c3sq0"]
+[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="11_23aw5"]
+[ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco/Louco.dialogue" id="11_c3sq0"]
 [ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="11_mxo26"]
 [ext_resource type="Texture2D" uid="uid://dydce4dc4e30c" path="res://Assets/Images/Monster.jpg" id="12_prdl4"]
 [ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Characters/Player/Player.tscn" id="14_feqqg"]
 
+[sub_resource type="Resource" id="Resource_yspgp"]
+script = ExtResource("4_c3sq0")
+using_states = PackedStringArray()
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray()
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "2",
+&"type": "title"
+},
+"1": {
+&"id": "1",
+&"next_id": "2",
+&"type": ""
+},
+"2": {
+&"id": "2",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"3": {
+&"id": "3",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+}
+}
+raw_text = "~ start
+
+=> END"
+metadata/dialogue_manager_version = "3.10.4"
+
 [sub_resource type="Resource" id="Resource_mvprb"]
 script = ExtResource("5_c3sq0")
-dialogue_resource = ExtResource("4_feqqg")
+dialogue_resource = SubResource("Resource_yspgp")
 voice_sfxs = Array[AudioStream]([ExtResource("6_yspgp")])
 seconds_per_step = 0.04
 metadata/_custom_type_script = "uid://bcdht27so0doc"

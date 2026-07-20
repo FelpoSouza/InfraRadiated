@@ -1,0 +1,85 @@
+~ start
+if StoryState.has_met_npc(npc_id) == false
+	=> first_interaction
+else
+	=> life_story_questions
+=> END
+
+
+~ first_interaction
+{{npc_name}}: Você veio para me levar?
+{{Constants.PLAYER_NAME}}: Olá, cidadão. Sou do Departamento da Ordem Radiativa e vim para exterminar um irradiado que se encontra neste recinto.
+{{npc_name}}: Cadê meu pai?
+{{Constants.PLAYER_NAME}}: Seu pai?
+{{npc_name}}: É.
+{{Constants.PLAYER_NAME}}: Não sei do que está falando.
+{{npc_name}}: Esquece...
+{{Constants.PLAYER_NAME}}: Hmm. Você não parece preocupado.
+{{npc_name}}: Com o quê?
+{{Constants.PLAYER_NAME}}: Com o fato de haver um irradiado entre vocês…
+{{npc_name}}: Eu tenho convivido com essas pessoas faz mais de uma semana. Se elas quisesem me matar, já teriam feito.
+{{Constants.PLAYER_NAME}}: Não é tão simples assim. Irradiados buscam se integrar-
+{{npc_name}}: Blá blá blá. Ligo não. Só faz seu trabalho aí.
+{{Constants.PLAYER_NAME}}: [shake rate=5.0 level=2][color=gray]Que mal-educado…[/color][/shake]
+do StoryState.mark_npc_as_met(npc_id)
+=> END
+
+
+~ life_story_questions
+if patience_level > 50
+	% {{npc_name}}: O que foi?
+	% {{npc_name}}: E aí?
+else
+	% {{npc_name}}: Que que você quer, hein?
+	% {{npc_name}}: Você de novo? Vai, desembucha.
+if StoryState.get_dialogue_condition("dad_lore")
+	- Quantos anos você tem?
+		=> how_old_are_you 
+	- Seu pai?
+		=> your_father
+- Quantos anos você tem?
+	=> how_old_are_you 
+=> END
+
+
+~ how_old_are_you
+{{Constants.PLAYER_NAME}}: Quantos anos você tem?
+if patience_level > 33
+	{{npc_name}}: Quinze.
+	{{Constants.PLAYER_NAME}}: Você é bem jovem ainda.
+	{{npc_name}}: Sou velho o suficiente pra saber que não devo confiar em você.
+	{{Constants.PLAYER_NAME}}: Eu sou um membro oficial do governo. Pode confiar em mim.
+	{{npc_name}}: E como você sabe que não é um irradiado?
+	{{Constants.PLAYER_NAME}}: Eu passei por diversos testes para garantir que sou humano.
+	{{npc_name}}: ...
+	{{Constants.PLAYER_NAME}}: Confia em mim agora?
+	do increment_patience_level(-50)
+	if patience_level > 66
+		{{npc_name}}: Vou pensar a respeito.
+		{{Constants.PLAYER_NAME}}: Sei que não é fácil confiar em um desconhecido. Agradeço a abertura.
+	else
+		{{npc_name}}: Até eu ver os resultados destes "testes", não posso confiar.
+		{{Constants.PLAYER_NAME}}: Infelizmente, não tenho eles comigo. Mas admiro seu ceticismo.
+		{{npc_name}}: Pois é, meu pai me ensinou a ser assim.
+		do StoryState.unlock_dialogue_condition("dad_lore")
+else
+	{{npc_name}}: Velho o suficiente pra saber que não devo confiar em você.
+	{{Constants.PLAYER_NAME}}: Eu sou um mebro oficial do governo, eu diria que sou bem confiável.
+	{{npc_name}}: E como você sabe que não é um irradiado?
+	{{Constants.PLAYER_NAME}}: Eu passei por diversos testes para garantir que sou humano.
+	{{npc_name}}: Sei..
+=> END
+
+
+~ your_father
+{{Constants.PLAYER_NAME}}: Seu pai?
+{{npc_name}}: É, meu pai. Ele me ensinou tudo que sei.
+{{npc_name}}: Inclusive, você está pisando na propriedade dele.
+{{Constants.PLAYER_NAME}}: Esse bunker é do seu pai?
+{{npc_name}}: Sim, senhor. Ele sempre prezou pela solidariedade e resolveu compartilhar este abrigo com outras pessoas.
+{{Constants.PLAYER_NAME}}: Legal. E onde ele está agora?
+{{npc_name}}: Você que me diga.
+{{Constants.PLAYER_NAME}}: Como assim?
+{{npc_name}}: A última vez que eu vi ele foi há três dias atrás. Foi levado por um de vocês do governo para interrogação, por "comportamento suspeito".
+{{Constants.PLAYER_NAME}}: ... lamento. Infelizmente, não tenho nenhuma informação a respeito do seu pai.
+=> END
