@@ -182,7 +182,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wd0vd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6lqkw"]
-size = Vector3(1.7591858, 1, 0.24580383)
+size = Vector3(2.0033083, 1, 0.24580383)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ql4ff"]
 resource_name = "wall 1 v2.001"
@@ -857,7 +857,7 @@ mesh = SubResource("ArrayMesh_31f3q")
 [node name="parede longa tipo 1_001" type="StaticBody3D" parent="parede longa tipo 1_002" unique_id=777948285]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="parede longa tipo 1_002/parede longa tipo 1_001" unique_id=197756895]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="parede longa tipo 2_003" type="MeshInstance3D" parent="." unique_id=1513823905]
@@ -866,7 +866,7 @@ mesh = SubResource("ArrayMesh_10vds")
 [node name="parede longa tipo 2_001" type="StaticBody3D" parent="parede longa tipo 2_003" unique_id=1575492265]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="parede longa tipo 2_003/parede longa tipo 2_001" unique_id=2060680087]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="parede longa tipo 2_004" type="MeshInstance3D" parent="." unique_id=489493342]
@@ -875,7 +875,7 @@ mesh = SubResource("ArrayMesh_rf17s")
 [node name="parede longa tipo 2_002" type="StaticBody3D" parent="parede longa tipo 2_004" unique_id=220206671]
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="parede longa tipo 2_004/parede longa tipo 2_002" unique_id=1847980468]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="parede longa tipo 3_002" type="MeshInstance3D" parent="." unique_id=557055500]
@@ -884,7 +884,7 @@ mesh = SubResource("ArrayMesh_12fj1")
 [node name="parede longa tipo 3_001" type="StaticBody3D" parent="parede longa tipo 3_002" unique_id=1091497167]
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="parede longa tipo 3_002/parede longa tipo 3_001" unique_id=2031555632]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0040283203, 0, 0.029174805)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="parede tipo 1_003" type="MeshInstance3D" parent="." unique_id=1233963494]
@@ -929,7 +929,7 @@ mesh = SubResource("ArrayMesh_0sdby")
 [node name="chao" type="StaticBody3D" parent="chao2" unique_id=1436318868]
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="chao2/chao" unique_id=1831592299]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.005859375, 0.0057373047)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_ksoih")
 
 [node name="chao_003" type="MeshInstance3D" parent="." unique_id=700701329]
@@ -938,7 +938,7 @@ mesh = SubResource("ArrayMesh_6jrdb")
 [node name="chao_001" type="StaticBody3D" parent="chao_003" unique_id=16014953]
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="chao_003/chao_001" unique_id=355989989]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.005859375, 0.0057373047)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_ksoih")
 
 [node name="chao_004" type="MeshInstance3D" parent="." unique_id=583062108]
@@ -947,7 +947,7 @@ mesh = SubResource("ArrayMesh_v3cpr")
 [node name="chao_002" type="StaticBody3D" parent="chao_004" unique_id=2058485821]
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="chao_004/chao_002" unique_id=949969116]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.005859375, 0.0057373047)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_ksoih")
 
 [node name="parede quarto tipo3" type="MeshInstance3D" parent="." unique_id=857816985]
@@ -956,7 +956,7 @@ mesh = SubResource("ArrayMesh_wh47s")
 [node name="parede quarto tipo1" type="StaticBody3D" parent="parede quarto tipo3" unique_id=334738501]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="parede quarto tipo3/parede quarto tipo1" unique_id=1053000468]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="parede quarto tipo4" type="MeshInstance3D" parent="." unique_id=638371711]
@@ -965,7 +965,7 @@ mesh = SubResource("ArrayMesh_6d21q")
 [node name="parede quarto tipo2" type="StaticBody3D" parent="parede quarto tipo4" unique_id=1684796291]
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="parede quarto tipo4/parede quarto tipo2" unique_id=840618800]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="parede quarto tipo 3" type="MeshInstance3D" parent="." unique_id=1748414110]
@@ -974,7 +974,7 @@ mesh = SubResource("ArrayMesh_hsoop")
 [node name="parede quarto tipo 2" type="StaticBody3D" parent="parede quarto tipo 3" unique_id=672648386]
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="parede quarto tipo 3/parede quarto tipo 2" unique_id=146521507]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="parede quarto tipo 5" type="MeshInstance3D" parent="." unique_id=815103060]
@@ -983,7 +983,7 @@ mesh = SubResource("ArrayMesh_lhkdl")
 [node name="parede quarto tipo 4" type="StaticBody3D" parent="parede quarto tipo 5" unique_id=1361698200]
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="parede quarto tipo 5/parede quarto tipo 4" unique_id=1755371000]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.007293701, 0, 0.0015411377)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_6lqkw")
 
 [node name="pilar tipo 1" type="MeshInstance3D" parent="." unique_id=1994097519]
@@ -992,7 +992,6 @@ mesh = SubResource("ArrayMesh_7n7ii")
 [node name="pilar tipo 2" type="StaticBody3D" parent="pilar tipo 1" unique_id=793281123]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pilar tipo 1/pilar tipo 2" unique_id=808098884]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")
 
 [node name="PILAR TIPO 3" type="MeshInstance3D" parent="." unique_id=1101120075]
@@ -1001,7 +1000,6 @@ mesh = SubResource("ArrayMesh_vcbdc")
 [node name="PILAR TIPO 2" type="StaticBody3D" parent="PILAR TIPO 3" unique_id=868923454]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PILAR TIPO 3/PILAR TIPO 2" unique_id=529559200]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")
 
 [node name="PILAR TIPO 2_002" type="MeshInstance3D" parent="." unique_id=372017124]
@@ -1010,7 +1008,6 @@ mesh = SubResource("ArrayMesh_vbh8c")
 [node name="PILAR TIPO 2_001" type="StaticBody3D" parent="PILAR TIPO 2_002" unique_id=1548476983]
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="PILAR TIPO 2_002/PILAR TIPO 2_001" unique_id=1585741076]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")
 
 [node name="pilar tipo 1_002" type="MeshInstance3D" parent="." unique_id=1101118447]
@@ -1019,5 +1016,4 @@ mesh = SubResource("ArrayMesh_b73qu")
 [node name="pilar tipo 1_001" type="StaticBody3D" parent="pilar tipo 1_002" unique_id=1481921853]
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="pilar tipo 1_002/pilar tipo 1_001" unique_id=1659399821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50323486, -0.007171631, 0.0025634766)
 shape = SubResource("BoxShape3D_p42s2")

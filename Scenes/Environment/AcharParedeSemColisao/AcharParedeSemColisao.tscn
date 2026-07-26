@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d28l6hkvfs3yr"]
+
+[ext_resource type="MeshLibrary" uid="uid://45kdmpr56jv1" path="res://Scenes/Objects/BlockLibrary/resenha.tres" id="1_hbbyn"]
+[ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Characters/Player/Player.tscn" id="2_dswjd"]
+
+[node name="AcharParedeSemColisao" type="Node3D" unique_id=92582401]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1711863919]
+mesh_library = ExtResource("1_hbbyn")
+cell_size = Vector3(2, 1, 2)
+data = {
+"cells": PackedInt32Array(131067, 1, 131074, 131070, 1, 131075, 65537, 1, 131076, 65540, 1, 131077, 65543, 1, 131087, 65546, 1, 131088, 65549, 1, 131085, 65552, 1, 131086, 65555, 1, 524294, 65557, 1, 720903, 65559, 1, 720904, 65561, 1, 655369, 65563, 1, 524305, 65564, 1, 524308, 131065, 1, 524306, 131064, 1, 524307)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="Player" parent="." unique_id=1655873123 instance=ExtResource("2_dswjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, 8)
