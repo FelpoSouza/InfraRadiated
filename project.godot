@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="InfraRadiated"
-run/main_scene="uid://d8sld5o4u7xo"
+run/main_scene="uid://d2vxuegv0jsu1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -206,6 +206,7 @@ locale/test="pt_BR"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="NPC"
 3d_physics/layer_4="Monster"
+3d_physics/layer_5="PickableItem"
 
 [physics]
 

@@ -40,19 +40,19 @@ theme_override_constants/separation = 12
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_e4e6r")
-text = "Resume"
+text = "Continuar"
 
 [node name="SaveButton" type="Button" parent="VBoxContainer" unique_id=1706264885]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_e4e6r")
-text = "Save"
+text = "Salvar"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=596154803]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_e4e6r")
-text = "Save and Quit"
+text = "Salvar e Sair"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1355768578]
 visible = false

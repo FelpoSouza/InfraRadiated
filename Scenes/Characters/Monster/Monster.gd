@@ -3,7 +3,7 @@ extends BaseCharacter
 
 const SCENE_FILEPATH = "res://Scenes/Characters/Monster/Monster.tscn"
 const MONSTER_CHASE_RADIUS: int = 16
-const MINIMUM_MOVEMENT_TIMER_WAIT_TIME: float = 0.75
+const MINIMUM_MOVEMENT_TIMER_WAIT_TIME: float = 0.5
 const SPEED_UP_FACTOR: float = 0.3
 
 var astar_grid: AStarGrid2D
@@ -90,7 +90,6 @@ func _on_movement_timer_timeout() -> void:
 	if not is_instance_valid(player_ref):
 		return
 		
-	print("7777")
 	# Pergunta para o GridMap em qual célula o Monstro está
 	var monster_local_pos = grid_map_ref.to_local(global_position)
 	var monster_map_pos_3d = grid_map_ref.local_to_map(monster_local_pos)

@@ -2,18 +2,18 @@
 
 [ext_resource type="MeshLibrary" uid="uid://45kdmpr56jv1" path="res://Scenes/Objects/BlockLibrary/resenha.tres" id="1_c3sq0"]
 [ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Characters/Npc/Npc.tscn" id="2_siw6g"]
-[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://assets/Images/Velha.png" id="3_23aw5"]
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Images/Velha.png" id="3_23aw5"]
 [ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="4_c3sq0"]
 [ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Classes/NpcsDialogueData.gd" id="5_c3sq0"]
-[ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://assets/SFX/Npc/Voices/Louco/LoucoVoice1.wav" id="6_yspgp"]
-[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://assets/Images/Ricardo.png" id="7_c3sq0"]
+[ext_resource type="AudioStream" uid="uid://bjcon4mnl3x8b" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice1.wav" id="6_yspgp"]
+[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://Assets/Images/Ricardo.png" id="7_c3sq0"]
 [ext_resource type="Resource" uid="uid://c55yqnrfw4pk0" path="res://Dialogues/Ricardo/Ricardo.dialogue" id="8_qoh4h"]
-[ext_resource type="AudioStream" uid="uid://bhhivfocswwce" path="res://assets/SFX/Npc/Voices/Louco/LoucoVoice2.wav" id="9_t3xxd"]
-[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://assets/Images/Louco.png" id="10_yspgp"]
-[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="11_23aw5"]
+[ext_resource type="AudioStream" uid="uid://bhhivfocswwce" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice2.wav" id="9_t3xxd"]
+[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://Assets/Images/Louco.png" id="10_yspgp"]
+[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="11_23aw5"]
 [ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco/Louco.dialogue" id="11_c3sq0"]
 [ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="11_mxo26"]
-[ext_resource type="Texture2D" uid="uid://dydce4dc4e30c" path="res://assets/Images/Monster.jpg" id="12_prdl4"]
+[ext_resource type="Texture2D" uid="uid://dydce4dc4e30c" path="res://Assets/Images/Monster.jpg" id="12_prdl4"]
 [ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Characters/Player/Player.tscn" id="14_feqqg"]
 
 [sub_resource type="Resource" id="Resource_yspgp"]
@@ -78,13 +78,13 @@ metadata/_custom_type_script = "uid://bcdht27so0doc"
 
 [node name="Node3D" type="Node3D" unique_id=1234331050]
 
-[node name="GridMap" type="GridMap" parent="." unique_id=473660077]
+[node name="GridMap" type="GridMap" parent="." unique_id=473660077 groups=["GridMap"]]
 mesh_library = ExtResource("1_c3sq0")
 cell_size = Vector3(2, 1, 2)
 data = {
 "cells": PackedInt32Array(2, 65533, 655366, 131077, 0, 1048579, 131075, 1, 3, 65533, 65532, 1048589, 8, 65532, 1048589, 1, 65523, 1179653, 1, 65521, 1179653, 11, 65521, 1048581, 11, 65523, 1048581, 8, 65524, 20, 9, 65524, 5, 11, 65524, 5, 131083, 65521, 1441797, 131083, 65523, 1441797, 131082, 65524, 655365, 131080, 65524, 655365, 131078, 65524, 655365, 131073, 65521, 1048581, 131073, 65523, 1048581, 131082, 65522, 9, 131083, 65522, 9, 131076, 65524, 5, 131074, 65524, 5, 6, 65524, 1, 7, 65524, 9, 4, 65524, 655380, 131081, 65522, 9, 7, 65523, 1310725, 10, 65522, 1, 11, 65522, 20, 9, 65522, 9, 8, 65522, 9, 7, 65522, 655380, 131079, 65522, 655380, 131080, 65522, 655369, 131079, 65523, 1048581, -65526, 65521, 1048587, -65526, 65523, 1048587, -65528, 65523, 1048587, -65528, 65521, 1048587, -65530, 65521, 1048587, -65530, 65523, 1048587, -65532, 65523, 1048587, -65532, 65521, 1048587, -65534, 65523, 1048587, -65534, 65521, 1048587, 65535, 1, 0, 0, 1, 6, 1, 1, 2, 65534, 1, 6, 65533, 1, 13, 2, 1, 1048582, 65533, 65533, 524294, 65534, 65533, 524294, 65535, 65533, 0, 1, 65533, 2, 0, 65533, 524305, 65533, 0, 1310722, 65533, 65534, 1310722, -65535, 0, 1310732, -65535, 65534, 1310732, -1, 65534, 1310732, -1, 0, 1310732, -3, 0, 1310732, -3, 65534, 1310732, -65533, 65534, 1310730, -65531, 65534, 1310730, -65533, 0, 1310730, -65531, 0, 1310730, -65536, 65530, 1310732, -65536, 65528, 1310732, -2, 65528, 1310732, -2, 65530, 1310732, -65534, 65530, 1310732, -65534, 65528, 1310732, -65532, 65528, 1310732, -65532, 65530, 1310732, -65530, 65530, 1310730, -65530, 65528, 1310730, -65528, 65528, 1310730, -65528, 65530, 1310730, -65528, 65532, 1310732, -65530, 65532, 1310732, -65532, 65532, 1310732, -65534, 65532, 1310732, -65536, 65532, 1310732, -2, 65532, 1310732, 4, 65533, 655360, 3, 65533, 655366, 2, 0, 1048576, 2, 65535, 1048593, 2, 65534, 1048578, 5, 0, 1048580, 3, 1, 4, 5, 1, 4, 5, 65534, 1441796, 5, 65533, 17, 65535, 65531, 0, 0, 65531, 6, 1, 65531, 6, 65534, 65531, 6, 65533, 65531, 6, 65533, 65530, 1441794, 65533, 65528, 1441794, 65534, 65527, 655362, 0, 65527, 655362, 1, 65528, 1048578, 1, 65530, 1048578, 3, 65531, 0, 2, 65531, 6, 4, 65531, 6, 5, 65531, 6, 6, 65531, 0, 7, 65531, 6, 8, 65531, 6, 5, 65530, 1441794, 5, 65528, 1441794, 2, 65527, 655362, 4, 65527, 655362, 6, 65527, 655364, 8, 65527, 655364, 8, 65528, 1048580, 8, 65530, 1048580, 196605, 65534, 1048578, 196605, 0, 1048578, 196606, 1, 2, 131072, 1, 2, 131073, 1, 2, 131074, 0, 1441794, 131074, 65534, 1441794, 131073, 65533, 655362, 196607, 65533, 655362, 196606, 65533, 17, 196605, 65533, 655377, 131075, 65533, 655362, 131077, 65533, 655362, 131079, 65533, 655362, 6, 65533, 2, 8, 65533, 2, 131080, 65532, 1048578, 196605, 65532, 1441794, 196606, 65531, 655362, 131072, 65531, 655362, 131074, 65531, 655362, 131076, 65531, 655362, 131078, 65531, 655362, 131080, 65531, 655362, 131077, 65530, 1048578, 131077, 65528, 1048578, 131078, 65527, 3, 131080, 65527, 655363, 131080, 65528, 1441795, 131080, 65530, 1048579, 196605, 65530, 1048578, 196605, 65528, 1048578, 196606, 65527, 2, 131072, 65527, 2, 131074, 65527, 2, 131076, 65527, 2, 131073, 65528, 1441794, 131073, 65530, 1441794, 131077, 65534, 1441795, 131077, 1, 655363, 5, 65524, 9, 3, 65524, 5, 1, 65524, 5, 4, 65521, 1441793, 4, 65523, 1441797, 4, 65522, 1441812, 4, 65520, 1048596, 5, 65520, 655365, 3, 65520, 655365, 1, 65520, 655365, 7, 65520, 655365, 9, 65520, 655365, 10, 65520, 655365, 131074, 65520, 655365, 131076, 65520, 655365, 131078, 65520, 655365, 131080, 65520, 655365, 131082, 65520, 655365, 131076, 65523, 1048581, 131076, 65521, 1048581)
 }
-metadata/_editor_floor_ = Vector3(0, 2, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="NPCs" type="Node" parent="." unique_id=1801186964]
 

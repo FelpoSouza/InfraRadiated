@@ -78,7 +78,6 @@ func _perform_switch() -> void:
 	get_tree().current_scene = new_scene_instance
 	
 	get_tree().paused = false
-	print("PAUSED FALSE")
 	
 	if is_loading_from_save:
 		is_loading_from_save = false

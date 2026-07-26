@@ -58,19 +58,19 @@ theme_override_constants/separation = 16
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_les83")
-text = "Load Game"
+text = "Carregar Jogo"
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer" unique_id=131357528]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_les83")
-text = "New Game"
+text = "Novo Jogo"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=836661129]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_les83")
-text = "Quit Game"
+text = "Sair"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1261543540]
 stream = ExtResource("3_ehq06")

@@ -17,7 +17,7 @@ else
 {{Constants.PLAYER_NAME}}: Hmm. Você não parece preocupado.
 {{npc_name}}: Com o quê?
 {{Constants.PLAYER_NAME}}: Com o fato de haver um irradiado entre vocês…
-{{npc_name}}: Eu tenho convivido com essas pessoas faz mais de uma semana. Se elas quisesem me matar, já teriam feito.
+{{npc_name}}: Eu tenho convivido com essas pessoas faz mais de uma semana. Se elas quisessem me matar, já o teriam feito.
 {{Constants.PLAYER_NAME}}: Não é tão simples assim. Irradiados buscam se integrar-
 {{npc_name}}: Blá blá blá. Ligo não. Só faz seu trabalho aí.
 {{Constants.PLAYER_NAME}}: [shake rate=5.0 level=2][color=gray]Que mal-educado…[/color][/shake]
@@ -81,5 +81,5 @@ else
 {{npc_name}}: Você que me diga.
 {{Constants.PLAYER_NAME}}: Como assim?
 {{npc_name}}: A última vez que eu vi ele foi há três dias atrás. Foi levado por um de vocês do governo para interrogação, por "comportamento suspeito".
-{{Constants.PLAYER_NAME}}: ... lamento. Infelizmente, não tenho nenhuma informação a respeito do seu pai.
+{{Constants.PLAYER_NAME}}: ... lamento. Infelizmente, não tenho nenhuma informação a respeito dele.
 => END

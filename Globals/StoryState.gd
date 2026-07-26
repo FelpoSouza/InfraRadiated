@@ -26,7 +26,6 @@ func mark_npc_as_met(npc_id):
 
 func unlock_dialogue_condition(condition: String, value: bool = true):
 	dialogue_conditions.set(condition, value)
-	print("LPLPLPLPLPLP")
 	print(get_dialogue_condition(condition))
 
 func get_dialogue_condition(condition: String):

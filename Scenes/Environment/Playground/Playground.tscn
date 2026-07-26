@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://c5ydhmce86apm" path="res://Objects/Portacimatipo1.tscn" id="11_0r50r"]
 [ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://Assets/Images/Louco.png" id="11_ee0fq"]
 [ext_resource type="AudioStream" uid="uid://mvgk6yqcoqdv" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice2.wav" id="11_y6p06"]
-[ext_resource type="Texture2D" uid="uid://dydce4dc4e30c" path="res://Assets/Images/Monster.jpg" id="12_myy5i"]
 [ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="12_umtol"]
 [ext_resource type="AudioStream" uid="uid://cq4dvo3q5pfxe" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice3.wav" id="12_vjt7h"]
 [ext_resource type="AudioStream" uid="uid://dc2npbhn8ypq1" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice4.wav" id="13_2hd4j"]
@@ -33,6 +32,9 @@
 [ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="14_ee0fq"]
 [ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
 [ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco/Louco.dialogue" id="17_ebfwc"]
+[ext_resource type="Texture2D" uid="uid://c3vduqh7jhkuu" path="res://Assets/Images/Monster.png" id="23_ao6io"]
+[ext_resource type="PackedScene" uid="uid://dqd7igilxv6df" path="res://Scenes/Items/PickableItem/PickableItem.tscn" id="34_mspud"]
+[ext_resource type="Texture2D" uid="uid://brp6ay2ssur8l" path="res://Assets/Images/Key.png" id="35_h3jfr"]
 
 [sub_resource type="GDScript" id="GDScript_akijn"]
 
@@ -106,28 +108,29 @@ light_size = 0.175
 light_bake_mode = 1
 
 [node name="Player" parent="." unique_id=1655873123 instance=ExtResource("2_vlr3l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 3, 5.5)
 
 [node name="Marcinha" parent="." unique_id=221141199 instance=ExtResource("3_px5p2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, 1.5)
 npc_texture = ExtResource("7_umtol")
 random_noise_data = Array[ExtResource("5_ao6io")]([SubResource("Resource_h3jfr")])
 npc_dialogue_data = SubResource("Resource_ebfwc")
 
 [node name="Ricardo" parent="." unique_id=102763535 instance=ExtResource("3_px5p2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, 1.5)
 npc_texture = ExtResource("8_o8fte")
 npc_id = 1
 npc_dialogue_data = SubResource("Resource_y6p06")
 
 [node name="Louco" parent="." unique_id=128017345 instance=ExtResource("3_px5p2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 2, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 2.5, 1.5)
 npc_texture = ExtResource("11_ee0fq")
 npc_id = 2
 npc_dialogue_data = SubResource("Resource_vjt7h")
+head_marker_y_pos = 0.84
 is_monster = true
 monster_scene = ExtResource("14_ee0fq")
-monster_texture = ExtResource("12_myy5i")
+monster_texture = ExtResource("23_ao6io")
 
 [node name="longwall1" parent="." unique_id=102856207 instance=ExtResource("5_ue7t3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.522482, 4.765255, 17.98617)
@@ -158,3 +161,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746428, 4.765, 15.244)
 
 [node name="portaladostipo 3" parent="." unique_id=1591173517 instance=ExtResource("14_f24ur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746, 4.765, 15.244)
+
+[node name="PickableItem" parent="." unique_id=89077518 instance=ExtResource("34_mspud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1.5, -2.5)
+item_texture = ExtResource("35_h3jfr")

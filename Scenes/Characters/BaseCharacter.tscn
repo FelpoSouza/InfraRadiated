@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://blecmpoqty32l" path="res://Assets/SFX/Character/Footsteps/FootestpsGrass/FootstepGrass3.wav" id="7_kn5hb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n04rl"]
-size = Vector3(1.5, 1.5, 1.5)
+size = Vector3(1.5, 2.5, 1.5)
 
 [node name="Character" type="Area3D" unique_id=1655873123]
 script = ExtResource("1_24qhx")
