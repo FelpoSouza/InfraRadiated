@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhhivfocswwce"
-path="res://.godot/imported/LoucoVoice2.wav-7d7d150f038f540766a5483052e472eb.sample"
+path="res://.godot/imported/LoucoVoice2.wav-620c5130d000f27cfa60f4eb7220c79e.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice2.wav"
-dest_files=["res://.godot/imported/LoucoVoice2.wav-7d7d150f038f540766a5483052e472eb.sample"]
+source_file="res://assets/SFX/Npc/Voices/Louco/LoucoVoice2.wav"
+dest_files=["res://.godot/imported/LoucoVoice2.wav-620c5130d000f27cfa60f4eb7220c79e.sample"]
 
 [params]
 

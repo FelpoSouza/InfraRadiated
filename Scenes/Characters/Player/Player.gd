@@ -23,6 +23,7 @@ var is_gun_active: bool = false
 @onready var camera: Camera3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D
 @onready var shader_container: SubViewportContainer = $CanvasLayer/SubViewportContainer
 @onready var forward_ray_for_areas: RayCast3D = $ForwardRayForAreas
+@onready var forward_ray_for_interact: RayCast3D = $ForwardRayForInteract
 @onready var pause_menu: Control = $CanvasLayer/PauseMenu
 @onready var gun: Node3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D/Gun
 
@@ -30,6 +31,20 @@ var is_gun_active: bool = false
 @onready var thermal_battery_label: Label = $CanvasLayer/UserInterface/ThermalBatteryLabel
 @onready var ammo_label: Label = $CanvasLayer/UserInterface/AmmoHBoxContainer/AmmoLabel
 
+#func click(): # comentado pois pode ser útil
+#	if event is InputEventMouseButton and event.is_pressed():
+#   	var viewport = camera.get_viewport()
+#		var click_position = viewport.get_mouse_position()
+#		if click_position.x < =ajuste aqui para definir pos=: #removível no nosso caso...
+#			var space_state = camera.get_world_3d().direct_space_state
+#			var ray_origin = camera.project_ray_origin(click_position)
+#			var ray_end = ray_origin + camera.project_ray_normal(click_position) * 2.0
+#			var query = PhysicsRayQueryParameter3D.create(ray_origin, ray_end)
+#			var result = space_state.intersect_ray(query)
+#			if result:
+#				var object = result.collider
+#				if object.has_method("click_on"):
+#					object.clicked_on()
 
 func _ready() -> void:
 	super._ready()
@@ -108,6 +123,19 @@ func on_balloon_closed() -> void:
 
 	tween.tween_callback(func(): is_camera_locked_on_npc = false)
 	
+#----------------------------------------
+# INTERAÇÃO GERAL 
+#----------------------------------------	
+func try_interact():
+	var object = forward_ray_for_interact.get_collider() #esse raio tambem rastreia InterPoints
+	
+	if object != null:
+		print_debug("colisao com objeto")
+	else:
+		print_debug("sem colidir!")
+	if object:
+		if object.has_method("interact"):
+			object.interact()
 #-------------------------------------------------------------------------
 # INPUT
 #-------------------------------------------------------------------------
@@ -149,6 +177,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				try_talk_to_npc()
 			elif is_gun_active:
 				fire_gun()
+			else:
+				try_interact()
 	
 	if current_peeking != PeekingDirections.NONE:
 		if ((current_peeking == PeekingDirections.DOWN and event.is_action_released("peek_down")) or 

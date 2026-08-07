@@ -6,35 +6,36 @@
 [ext_resource type="Script" uid="uid://dvhhe0yq64rhi" path="res://Classes/RandomNoiseData.gd" id="5_ao6io"]
 [ext_resource type="PackedScene" uid="uid://brbiud4i1id6d" path="res://Objects/Longwall2.tscn" id="5_ue7t3"]
 [ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Classes/NpcsDialogueData.gd" id="6_e6pjy"]
-[ext_resource type="AudioStream" uid="uid://cltkyf7pv7o8f" path="res://Assets/SFX/Character/Coughs.wav" id="6_mspud"]
+[ext_resource type="AudioStream" uid="uid://cltkyf7pv7o8f" path="res://assets/SFX/Character/Coughs.wav" id="6_mspud"]
 [ext_resource type="PackedScene" uid="uid://bxqk7kg10g1hm" path="res://Objects/Longwall3.tscn" id="6_pxtwo"]
-[ext_resource type="AudioStream" uid="uid://bmljacjcu6gqv" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice1.wav" id="7_2hd4j"]
+[ext_resource type="AudioStream" uid="uid://bmljacjcu6gqv" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice1.wav" id="7_2hd4j"]
 [ext_resource type="PackedScene" uid="uid://prcdmdd1gifk" path="res://Objects/longwall1.tscn" id="7_6lgce"]
 [ext_resource type="Resource" uid="uid://c6fc6qkykdfg1" path="res://Dialogues/Marcinha/Marcinha.dialogue" id="7_ao6io"]
-[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Images/Velha.png" id="7_umtol"]
-[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="8_myy5i"]
-[ext_resource type="AudioStream" uid="uid://rfnmtsl65edp" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice2.wav" id="8_n20ui"]
-[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://Assets/Images/Ricardo.png" id="8_o8fte"]
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://assets/Images/Velha.png" id="7_umtol"]
+[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="8_myy5i"]
+[ext_resource type="AudioStream" uid="uid://rfnmtsl65edp" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice2.wav" id="8_n20ui"]
+[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://assets/Images/Ricardo.png" id="8_o8fte"]
 [ext_resource type="PackedScene" uid="uid://bhfcbcivlgqqm" path="res://Objects/wall2.tscn" id="8_vlr3l"]
 [ext_resource type="PackedScene" uid="uid://3a6x7r53iq3n" path="res://Objects/wall1.tscn" id="9_42c34"]
-[ext_resource type="AudioStream" uid="uid://dlc8his16urbt" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice3.wav" id="9_ao6io"]
+[ext_resource type="AudioStream" uid="uid://dlc8his16urbt" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice3.wav" id="9_ao6io"]
 [ext_resource type="Resource" uid="uid://c55yqnrfw4pk0" path="res://Dialogues/Ricardo/Ricardo.dialogue" id="9_ee0fq"]
 [ext_resource type="PackedScene" uid="uid://c8sjoysw55g1s" path="res://Objects/wall3.tscn" id="10_bt6he"]
-[ext_resource type="AudioStream" uid="uid://sk4b4pxhxcrq" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice1.wav" id="10_ebfwc"]
-[ext_resource type="AudioStream" uid="uid://c3jtuw4etctl0" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice4.wav" id="10_mspud"]
+[ext_resource type="AudioStream" uid="uid://sk4b4pxhxcrq" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice1.wav" id="10_ebfwc"]
+[ext_resource type="AudioStream" uid="uid://c3jtuw4etctl0" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice4.wav" id="10_mspud"]
 [ext_resource type="PackedScene" uid="uid://c5ydhmce86apm" path="res://Objects/Portacimatipo1.tscn" id="11_0r50r"]
-[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://Assets/Images/Louco.png" id="11_ee0fq"]
-[ext_resource type="AudioStream" uid="uid://mvgk6yqcoqdv" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice2.wav" id="11_y6p06"]
+[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://assets/Images/Louco.png" id="11_ee0fq"]
+[ext_resource type="AudioStream" uid="uid://mvgk6yqcoqdv" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice2.wav" id="11_y6p06"]
 [ext_resource type="PackedScene" uid="uid://cqc361haru1kr" path="res://Objects/Portaladostipo1.tscn" id="12_umtol"]
-[ext_resource type="AudioStream" uid="uid://cq4dvo3q5pfxe" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice3.wav" id="12_vjt7h"]
-[ext_resource type="AudioStream" uid="uid://dc2npbhn8ypq1" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice4.wav" id="13_2hd4j"]
+[ext_resource type="AudioStream" uid="uid://cq4dvo3q5pfxe" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice3.wav" id="12_vjt7h"]
+[ext_resource type="AudioStream" uid="uid://dc2npbhn8ypq1" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice4.wav" id="13_2hd4j"]
 [ext_resource type="PackedScene" uid="uid://brqnygduicn" path="res://Objects/Portacimatipo3.tscn" id="13_umtol"]
 [ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="14_ee0fq"]
 [ext_resource type="PackedScene" uid="uid://dlt2ldxs3i7pn" path="res://Objects/Portaladostipo3.tscn" id="14_f24ur"]
 [ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco/Louco.dialogue" id="17_ebfwc"]
-[ext_resource type="Texture2D" uid="uid://c3vduqh7jhkuu" path="res://Assets/Images/Monster.png" id="23_ao6io"]
+[ext_resource type="Texture2D" uid="uid://c3vduqh7jhkuu" path="res://assets/Images/Monster.png" id="23_ao6io"]
 [ext_resource type="PackedScene" uid="uid://dqd7igilxv6df" path="res://Scenes/Items/PickableItem/PickableItem.tscn" id="34_mspud"]
-[ext_resource type="Texture2D" uid="uid://brp6ay2ssur8l" path="res://Assets/Images/Key.png" id="35_h3jfr"]
+[ext_resource type="Texture2D" uid="uid://brp6ay2ssur8l" path="res://assets/Images/Key.png" id="35_h3jfr"]
+[ext_resource type="PackedScene" uid="uid://cblt0ivhtb781" path="res://Scenes/Objects/Door/FullDoor.tscn" id="36_0yi6x"]
 
 [sub_resource type="GDScript" id="GDScript_akijn"]
 
@@ -93,6 +94,14 @@ light_bake_mode = 1
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=924662181]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.437662, 2.4885812, 6.0227194)
+light_energy = 12.873
+light_indirect_energy = 1.425
+light_volumetric_fog_energy = 2.079
+light_size = 0.175
+light_bake_mode = 1
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="OmniLight3D4" unique_id=2025159179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.562338, -0.5114188, -5.9772806)
 light_energy = 12.873
 light_indirect_energy = 1.425
 light_volumetric_fog_energy = 2.079
@@ -165,3 +174,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.746, 4.765, 15.244)
 [node name="PickableItem" parent="." unique_id=89077518 instance=ExtResource("34_mspud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1.5, -2.5)
 item_texture = ExtResource("35_h3jfr")
+
+[node name="Node3D" parent="." unique_id=1113936729 instance=ExtResource("36_0yi6x")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.5, 1, -1)

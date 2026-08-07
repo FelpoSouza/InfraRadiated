@@ -7,7 +7,7 @@ size = Vector3(2, 0.292, 0.5)
 
 [node name="portacimatipo 1" unique_id=532225392 instance=ExtResource("1_0equq")]
 
-[node name="Cube_021" parent="." index="0" unique_id=1668674867]
+[node name="Cube_021" parent="." index="0" unique_id=167213962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.25, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=361925262]
