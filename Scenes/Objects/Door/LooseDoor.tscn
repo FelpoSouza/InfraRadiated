@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ig35htlun0ix"]
+
+[ext_resource type="Script" uid="uid://hgtaew2peakv" path="res://Scenes/Environment/Playground/Door.gd" id="1_yihp3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mttov"]
+size = Vector3(2, 2, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sj1e7"]
+size = Vector3(2, 2, 0.5)
+
+[node name="Node3D" type="Node3D" unique_id=1245430663]
+
+[node name="Door" type="CharacterBody3D" parent="." unique_id=507791132 node_paths=PackedStringArray("door_switch")]
+script = ExtResource("1_yihp3")
+door_switch = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Door" unique_id=885281739]
+mesh = SubResource("BoxMesh_mttov")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door" unique_id=67924374]
+shape = SubResource("BoxShape3D_sj1e7")

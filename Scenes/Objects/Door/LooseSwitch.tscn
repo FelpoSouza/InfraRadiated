@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dx35tqb3qhgyv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r67fh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pfrd6"]
+
+[node name="Node3D" type="Node3D" unique_id=137644381]
+
+[node name="Switch" type="StaticBody3D" parent="." unique_id=1050797578]
+collision_layer = 16
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Switch" unique_id=89652179]
+mesh = SubResource("BoxMesh_r67fh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Switch" unique_id=1263377923]
+shape = SubResource("BoxShape3D_pfrd6")
