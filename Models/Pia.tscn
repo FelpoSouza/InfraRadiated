@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dhfkxb281jp1"]
+
+[ext_resource type="PackedScene" uid="uid://g42xl3ri3s76" path="res://Models/pia.glb" id="1_p1cry"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3qmy7"]
+size = Vector3(1.5039063, 1.4230957, 1.1040039)
+
+[node name="pia" unique_id=423004000 instance=ExtResource("1_p1cry")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1041344248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001953125, -0.31726074, -0.19431138)
+shape = SubResource("BoxShape3D_3qmy7")

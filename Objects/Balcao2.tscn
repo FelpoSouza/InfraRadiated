@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://vqqxoosaro3k"]
+
+[ext_resource type="PackedScene" uid="uid://dpg60ghbpxclr" path="res://Models/balcao2.glb" id="1_see2g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q4620"]
+size = Vector3(1.5061035, 1.0631714, 1)
+
+[node name="balcao2" unique_id=1402359915 instance=ExtResource("1_see2g")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2032524633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0010986328, 0.49815208, 0)
+shape = SubResource("BoxShape3D_q4620")

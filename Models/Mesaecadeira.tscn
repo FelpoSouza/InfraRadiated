@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://co0esnso6i8m6"]
+
+[ext_resource type="PackedScene" uid="uid://2qg0ylblot1f" path="res://Models/mesaecadeira.glb" id="1_j2wew"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8t1fh"]
+size = Vector3(1, 0.7529297, 1)
+
+[node name="mesaecadeira" unique_id=946314921 instance=ExtResource("1_j2wew")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2133428738]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.11538601, 0.74749744, 0)
+shape = SubResource("BoxShape3D_8t1fh")
