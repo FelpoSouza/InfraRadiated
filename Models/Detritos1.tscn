@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cso2u25d1v6nq"]
+
+[ext_resource type="PackedScene" uid="uid://chc6gu7hp8f6e" path="res://Models/detritos1.glb" id="1_wobrl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q6hnb"]
+size = Vector3(2.0009613, 0.61091614, 2.0045166)
+
+[node name="detritos1" unique_id=1375826978 instance=ExtResource("1_wobrl")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1768901172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100227356, 0.18631744, -0.001)
+shape = SubResource("BoxShape3D_q6hnb")

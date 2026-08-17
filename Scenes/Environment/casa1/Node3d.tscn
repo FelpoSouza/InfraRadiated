@@ -26,6 +26,8 @@
 [ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="18_j0c1g"]
 [ext_resource type="Texture2D" uid="uid://c3vduqh7jhkuu" path="res://assets/Images/Monster.png" id="20_cy88w"]
 [ext_resource type="PackedScene" uid="uid://ctfsfs5twnn35" path="res://Scenes/Items/Interactable/Interactable.tscn" id="26_cy88w"]
+[ext_resource type="PackedScene" uid="uid://cso2u25d1v6nq" path="res://Models/Detritos1.tscn" id="26_hdnp8"]
+[ext_resource type="PackedScene" uid="uid://c1x3mttwpkj6y" path="res://Models/Detritos2.tscn" id="27_5bfh5"]
 [ext_resource type="Texture2D" uid="uid://bax5np8njagsm" path="res://Models/balcao1_Ucupaint balcoes Color.png" id="27_bs4ok"]
 [ext_resource type="PackedScene" uid="uid://c25pyihxrd3q3" path="res://Models/porta1.tscn" id="28_revq3"]
 
@@ -211,6 +213,21 @@ transform = Transform3D(-3.14722e-08, 0, 0.72, 0, 0.72, 0, -0.72, 0, -3.14722e-0
 
 [node name="mesaecadeira2" parent="objetos" unique_id=946314921 instance=ExtResource("12_c3sq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.594, -0.254, -0.629)
+
+[node name="detritos1" parent="objetos" unique_id=1375826978 instance=ExtResource("26_hdnp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.939284, -0.32589203, -9.865916)
+
+[node name="detritos2" parent="objetos" unique_id=631292280 instance=ExtResource("26_hdnp8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.5756135, -0.34932384, -13.605899)
+
+[node name="detritos3" parent="objetos" unique_id=2139961111 instance=ExtResource("27_5bfh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7767549, -0.28630525, -15.823218)
+
+[node name="detritos4" parent="objetos" unique_id=1194339582 instance=ExtResource("27_5bfh5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.9590368, -0.28470212, 2.0451667)
+
+[node name="detritos5" parent="objetos" unique_id=1368501100 instance=ExtResource("27_5bfh5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.885091, -0.28470212, -15.988253)
 
 [node name="Interactable" parent="." unique_id=466476721 instance=ExtResource("26_cy88w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9996697, 1.7614881, -2)
