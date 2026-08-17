@@ -2,31 +2,32 @@
 
 [ext_resource type="MeshLibrary" uid="uid://cnayu4g325f0h" path="res://Scenes/Objects/BlockLibrary/resenha2.tres" id="1_feqqg"]
 [ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Characters/Npc/Npc.tscn" id="2_siw6g"]
-[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://Assets/Images/Velha.png" id="3_23aw5"]
+[ext_resource type="Texture2D" uid="uid://07ykwu1plx6f" path="res://assets/Images/Velha.png" id="3_23aw5"]
 [ext_resource type="Resource" uid="uid://c6fc6qkykdfg1" path="res://Dialogues/Marcinha/Marcinha.dialogue" id="4_jngou"]
 [ext_resource type="Script" uid="uid://bcdht27so0doc" path="res://Classes/NpcsDialogueData.gd" id="5_c3sq0"]
-[ext_resource type="AudioStream" uid="uid://bmljacjcu6gqv" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice1.wav" id="6_mxo26"]
-[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://Assets/Images/Ricardo.png" id="7_c3sq0"]
-[ext_resource type="AudioStream" uid="uid://rfnmtsl65edp" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice2.wav" id="7_prdl4"]
-[ext_resource type="AudioStream" uid="uid://dlc8his16urbt" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice3.wav" id="8_mvprb"]
+[ext_resource type="AudioStream" uid="uid://bmljacjcu6gqv" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice1.wav" id="6_mxo26"]
+[ext_resource type="Texture2D" uid="uid://bhs4c6nhwjhll" path="res://assets/Images/Ricardo.png" id="7_c3sq0"]
+[ext_resource type="AudioStream" uid="uid://rfnmtsl65edp" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice2.wav" id="7_prdl4"]
+[ext_resource type="AudioStream" uid="uid://dlc8his16urbt" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice3.wav" id="8_mvprb"]
 [ext_resource type="Resource" uid="uid://c55yqnrfw4pk0" path="res://Dialogues/Ricardo/Ricardo.dialogue" id="8_qoh4h"]
-[ext_resource type="AudioStream" uid="uid://c3jtuw4etctl0" path="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice4.wav" id="9_2dthr"]
-[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://Assets/Images/Louco.png" id="10_yspgp"]
+[ext_resource type="AudioStream" uid="uid://c3jtuw4etctl0" path="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice4.wav" id="9_2dthr"]
+[ext_resource type="Texture2D" uid="uid://dmu62v78h2ps0" path="res://assets/Images/Louco.png" id="10_yspgp"]
 [ext_resource type="Resource" uid="uid://cah505vxmsl1y" path="res://Dialogues/Louco/Louco.dialogue" id="11_c3sq0"]
 [ext_resource type="PackedScene" uid="uid://c3r7wuxihvu5r" path="res://Scenes/Characters/Monster/Monster.tscn" id="11_mxo26"]
-[ext_resource type="AudioStream" uid="uid://sk4b4pxhxcrq" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice1.wav" id="12_2dthr"]
+[ext_resource type="AudioStream" uid="uid://sk4b4pxhxcrq" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice1.wav" id="12_2dthr"]
 [ext_resource type="PackedScene" uid="uid://co0esnso6i8m6" path="res://Models/Mesaecadeira.tscn" id="12_c3sq0"]
-[ext_resource type="AudioStream" uid="uid://mvgk6yqcoqdv" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice2.wav" id="13_j0c1g"]
+[ext_resource type="AudioStream" uid="uid://mvgk6yqcoqdv" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice2.wav" id="13_j0c1g"]
 [ext_resource type="PackedScene" uid="uid://dhfkxb281jp1" path="res://Models/Pia.tscn" id="13_yspgp"]
-[ext_resource type="AudioStream" uid="uid://cq4dvo3q5pfxe" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice3.wav" id="14_cy88w"]
+[ext_resource type="AudioStream" uid="uid://cq4dvo3q5pfxe" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice3.wav" id="14_cy88w"]
 [ext_resource type="PackedScene" uid="uid://bjwokm8q3335r" path="res://Scenes/Characters/Player/Player.tscn" id="14_feqqg"]
 [ext_resource type="PackedScene" uid="uid://c4x12484xuct" path="res://Objects/Balcao1.tscn" id="14_mhtpt"]
-[ext_resource type="AudioStream" uid="uid://dc2npbhn8ypq1" path="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice4.wav" id="15_bs4ok"]
+[ext_resource type="AudioStream" uid="uid://dc2npbhn8ypq1" path="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice4.wav" id="15_bs4ok"]
 [ext_resource type="PackedScene" uid="uid://vqqxoosaro3k" path="res://Objects/Balcao2.tscn" id="15_qoh4h"]
-[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://Assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="18_j0c1g"]
-[ext_resource type="Texture2D" uid="uid://c3vduqh7jhkuu" path="res://Assets/Images/Monster.png" id="20_cy88w"]
+[ext_resource type="AudioStream" uid="uid://dxgjflrfana73" path="res://assets/SFX/Npc/Voices/Louco/LoucoVoice3.wav" id="18_j0c1g"]
+[ext_resource type="Texture2D" uid="uid://c3vduqh7jhkuu" path="res://assets/Images/Monster.png" id="20_cy88w"]
 [ext_resource type="PackedScene" uid="uid://ctfsfs5twnn35" path="res://Scenes/Items/Interactable/Interactable.tscn" id="26_cy88w"]
 [ext_resource type="Texture2D" uid="uid://bax5np8njagsm" path="res://Models/balcao1_Ucupaint balcoes Color.png" id="27_bs4ok"]
+[ext_resource type="PackedScene" uid="uid://c25pyihxrd3q3" path="res://Models/porta1.tscn" id="28_revq3"]
 
 [sub_resource type="Resource" id="Resource_ebfwc"]
 script = ExtResource("5_c3sq0")
@@ -190,9 +191,6 @@ light_size = 1.0
 
 [node name="objetos" type="Node" parent="." unique_id=381758111]
 
-[node name="mesaecadeira" parent="objetos" unique_id=946314921 instance=ExtResource("12_c3sq0")]
-transform = Transform3D(0.72, 0, 0, 0, 0.72, 0, 0, 0, 0.72, -3.5938249, -0.25390565, -0.6294422)
-
 [node name="pia" parent="objetos" unique_id=423004000 instance=ExtResource("13_yspgp")]
 transform = Transform3D(-3.14722e-08, 0, 0.72, 0, 0.72, 0, -0.72, 0, -3.14722e-08, 10.381094, 0.49661902, 1.0167094)
 
@@ -211,6 +209,9 @@ transform = Transform3D(-3.14722e-08, 0, 0.72, 0, 0.72, 0, -0.72, 0, -3.14722e-0
 [node name="balcao6" parent="objetos" unique_id=1616026626 instance=ExtResource("15_qoh4h")]
 transform = Transform3D(-3.14722e-08, 0, 0.72, 0, 0.72, 0, -0.72, 0, -3.14722e-08, 10.261, -0.22513254, 2.0974317)
 
+[node name="mesaecadeira2" parent="objetos" unique_id=946314921 instance=ExtResource("12_c3sq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.594, -0.254, -0.629)
+
 [node name="Interactable" parent="." unique_id=466476721 instance=ExtResource("26_cy88w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9996697, 1.7614881, -2)
 interactable_name = "inter1"
@@ -223,3 +224,6 @@ interactable_name = "inter2"
 [node name="Interactable3" parent="." unique_id=1076839859 instance=ExtResource("26_cy88w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9996697, 0.1080327, -2)
 interactable_name = "inter3"
+
+[node name="portas" parent="." unique_id=919608939 instance=ExtResource("28_revq3")]
+transform = Transform3D(-1.0536451, 0, -1.3136635e-07, 0, 0.99550635, 0, 1.5909599e-07, 0, -0.87, -1.0116359, -0.35024297, 2.904286)

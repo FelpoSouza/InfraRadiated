@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coaaxt30f1tjb"
-path.s3tc="res://.godot/imported/bateria_bateria.png-6ac40fdb8527d0e3d532f9caffdc92c2.s3tc.ctex"
+path.s3tc="res://.godot/imported/bateria_bateria.png-0922bbc75122d526f0c69f2a127a33cd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/bateria_bateria.png"
-dest_files=["res://.godot/imported/bateria_bateria.png-6ac40fdb8527d0e3d532f9caffdc92c2.s3tc.ctex"]
+source_file="res://Models/itens/bateria_bateria.png"
+dest_files=["res://.godot/imported/bateria_bateria.png-0922bbc75122d526f0c69f2a127a33cd.s3tc.ctex"]
 
 [params]
 

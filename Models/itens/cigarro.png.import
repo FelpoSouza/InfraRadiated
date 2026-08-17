@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drxuiqxkovphn"
-path="res://.godot/imported/cingaro.png-2d6d26fff37d3ba605324f9e789e11b1.ctex"
+uid="uid://ro0kvvoqx6nb"
+path="res://.godot/imported/cigarro.png-d7198aea66a32e6dab104362b104fe13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/cingaro.png"
-dest_files=["res://.godot/imported/cingaro.png-2d6d26fff37d3ba605324f9e789e11b1.ctex"]
+source_file="res://Models/itens/cigarro.png"
+dest_files=["res://.godot/imported/cigarro.png-d7198aea66a32e6dab104362b104fe13.ctex"]
 
 [params]
 

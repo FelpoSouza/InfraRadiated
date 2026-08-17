@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://sswnr80osebw"
-path="res://.godot/imported/cigarro.glb-60853693dc0b6e82c037affc0bd6531b.scn"
+uid="uid://be6p1bdvgnq4c"
+path="res://.godot/imported/bateria.glb-38b90c739282a64ed5896759032c4c72.scn"
 
 [deps]
 
-source_file="res://Models/cigarro.glb"
-dest_files=["res://.godot/imported/cigarro.glb-60853693dc0b6e82c037affc0bd6531b.scn"]
+source_file="res://Models/itens/bateria.glb"
+dest_files=["res://.godot/imported/bateria.glb-38b90c739282a64ed5896759032c4c72.scn"]
 
 [params]
 

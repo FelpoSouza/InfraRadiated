@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cju6dqauc5mlv"
-path="res://.godot/imported/bateria.png-81cf77b4d40f3643fd1b24a9f3cbbdb1.ctex"
+uid="uid://drxuiqxkovphn"
+path="res://.godot/imported/cingaro.png-937c5914e6a7b918e171955af0045b82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/bateria.png"
-dest_files=["res://.godot/imported/bateria.png-81cf77b4d40f3643fd1b24a9f3cbbdb1.ctex"]
+source_file="res://Models/itens/cingaro.png"
+dest_files=["res://.godot/imported/cingaro.png-937c5914e6a7b918e171955af0045b82.ctex"]
 
 [params]
 

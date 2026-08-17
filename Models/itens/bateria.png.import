@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ro0kvvoqx6nb"
-path="res://.godot/imported/cigarro.png-979cf573391f900d29921759465ba78f.ctex"
+uid="uid://cju6dqauc5mlv"
+path="res://.godot/imported/bateria.png-49d7b7e69737f17368f50ee222a16f13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/cigarro.png"
-dest_files=["res://.godot/imported/cigarro.png-979cf573391f900d29921759465ba78f.ctex"]
+source_file="res://Models/itens/bateria.png"
+dest_files=["res://.godot/imported/bateria.png-49d7b7e69737f17368f50ee222a16f13.ctex"]
 
 [params]
 
