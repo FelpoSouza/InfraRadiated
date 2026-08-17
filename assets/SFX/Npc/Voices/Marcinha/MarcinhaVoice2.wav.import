@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://rfnmtsl65edp"
-path="res://.godot/imported/MarcinhaVoice2.wav-3a8741b480b92c5642e63e240a6de8c7.sample"
+path="res://.godot/imported/MarcinhaVoice2.wav-a57529b09fa1fe419ec1de45c991a6a3.sample"
 
 [deps]
 
-source_file="res://assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice2.wav"
-dest_files=["res://.godot/imported/MarcinhaVoice2.wav-3a8741b480b92c5642e63e240a6de8c7.sample"]
+source_file="res://Assets/SFX/Npc/Voices/Marcinha/MarcinhaVoice2.wav"
+dest_files=["res://.godot/imported/MarcinhaVoice2.wav-a57529b09fa1fe419ec1de45c991a6a3.sample"]
 
 [params]
 

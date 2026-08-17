@@ -5,7 +5,7 @@ extends Node
 signal progress_changed(progress)
 signal load_finished
 # Save/Load Sinal de Dados
-signal scene_change_completed(save_data)
+signal scene_change_completed(should_save_game_, is_loading_from_save_, save_data)
 
 # --- Variáveis da tela de carregamento ---
 var loading_screen: PackedScene = preload("res://Scenes/UI/LoadingScreen/LoadingScreen.tscn")
@@ -17,6 +17,7 @@ var use_sub_threads: bool = true
 # --- Variáveis de persistência de dados ---
 var pending_save_data: Dictionary = {}
 var is_loading_from_save: bool = false
+var should_save_game: bool = false
 
 
 func _ready() -> void:
@@ -25,12 +26,14 @@ func _ready() -> void:
 
 ## Para trocas de cena comuns (por exemplo, passar por uma porta)
 func change_scene(target_scene_path: String) -> void:
+	should_save_game = false
 	is_loading_from_save = false
 	_start_async_load(target_scene_path)
 
 ## Para trocas de cena com carregamento de dados salvos
-func change_scene_then_load_data(target_scene_path: String, save_data: Dictionary) -> void:
-	is_loading_from_save = true
+func change_scene_then_load_data(target_scene_path: String, is_loading_from_save_: bool, save_data: Dictionary) -> void:
+	should_save_game = true
+	is_loading_from_save = is_loading_from_save_
 	pending_save_data = save_data
 	_start_async_load(target_scene_path)
 
@@ -79,10 +82,10 @@ func _perform_switch() -> void:
 	
 	get_tree().paused = false
 	
-	if is_loading_from_save:
-		is_loading_from_save = false
-		scene_change_completed.emit(pending_save_data)
-		pending_save_data.clear()
+	scene_change_completed.emit(should_save_game, is_loading_from_save, pending_save_data)
+	pending_save_data.clear()
+	is_loading_from_save = false
+		
 	
 	# Diz para a tela de carregamento sumir/animar fechamento
 	load_finished.emit()

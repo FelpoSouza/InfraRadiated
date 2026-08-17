@@ -1,12 +1,21 @@
 [gd_scene format=3 uid="uid://dhobh86kvkhp2"]
 
+[ext_resource type="FontFile" uid="uid://cghjqwt1yyu6h" path="res://Assets/Fonts/DOTMATRI.TTF" id="1_mtsjr"]
 [ext_resource type="Texture2D" uid="uid://df363s1d2ml3t" path="res://Assets/Images/Ammo.png" id="1_oujdm"]
+[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://Assets/Fonts/veteran typewriter.ttf" id="2_5rtfa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_353u4"]
+font = ExtResource("1_mtsjr")
 font_size = 48
 
 [sub_resource type="LabelSettings" id="LabelSettings_oujdm"]
+font = ExtResource("1_mtsjr")
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtsjr"]
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_eqe8m"]
 
 [node name="UserInterface" type="Control" unique_id=640953137]
 layout_mode = 3
@@ -119,3 +128,41 @@ size_flags_vertical = 4
 texture = ExtResource("1_oujdm")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1176586696]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -70.0
+offset_right = 128.5
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_5rtfa")
+text = "Pressione 'Space' para interagir com 'Interactable'"
+label_settings = SubResource("LabelSettings_mtsjr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextInteractableLabel" type="Label" parent="." unique_id=910305432]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -40.0
+offset_right = 128.5
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_5rtfa")
+text = "('Tab' para selecionar 'Interactable')"
+label_settings = SubResource("LabelSettings_eqe8m")
+horizontal_alignment = 1
+vertical_alignment = 1

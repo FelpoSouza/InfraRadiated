@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://by2pp5vrkh3qh"]
 
 [ext_resource type="Script" uid="uid://3bw6hvv3vbb5" path="res://Scenes/UI/GameOver/GameOver.gd" id="1_tsk0b"]
+[ext_resource type="FontFile" uid="uid://b7avf0p1aysqu" path="res://Assets/Fonts/Capsmall.ttf" id="2_f5tak"]
 [ext_resource type="Theme" uid="uid://qncuq2ddgkcv" path="res://Resources/Themes/main_theme.tres" id="2_jho6m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f5tak"]
+font = ExtResource("2_f5tak")
 font_size = 96
 
 [node name="GameOver" type="Control" unique_id=555388168]
@@ -44,7 +46,7 @@ theme_override_constants/separation = 16
 [node name="GameOverLabel" type="Label" parent="ColorRect/VBoxContainer" unique_id=266614619]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Game Over"
+text = "VOCÊ MORREU"
 label_settings = SubResource("LabelSettings_f5tak")
 horizontal_alignment = 1
 vertical_alignment = 1

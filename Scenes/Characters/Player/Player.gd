@@ -5,12 +5,12 @@ enum PeekingDirections { NONE, LEFT, RIGHT, UP, DOWN }
 const GAME_OVER = "res://Scenes/UI/GameOver/GameOver.tscn"
 
 const thermal_vision_on_battery_decay = 0.2
-const thermal_vision_off_battery_decay = 0.02
+const thermal_vision_off_battery_decay = 0.04
 
 var peek_distance: float = 1.5
 var peek_duration: float = 0.1
 var camera_offset: Vector3 = Vector3.ZERO
-var thermal_vision_battery: float = 1.0
+var thermal_vision_battery: float = 100.0
 var ammo_amount: int = 1
 var camera_basis_before_dialogue: Basis
 var is_camera_locked_on_npc: bool = false
@@ -18,18 +18,29 @@ var is_camera_locked_on_npc: bool = false
 var current_peeking: PeekingDirections = PeekingDirections.NONE
 var is_thermal_vision_on: bool = false
 var is_facing_npc: bool = false
+var is_facing_interactable: bool = false
 var is_gun_active: bool = false
+
+var interactables: Array[Area3D]
+var selected_interactable_index: int = -1
+var interact_key_text: String
+var next_interactable_key_text: String
 
 @onready var camera: Camera3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D
 @onready var shader_container: SubViewportContainer = $CanvasLayer/SubViewportContainer
 @onready var forward_ray_for_areas: RayCast3D = $ForwardRayForAreas
 @onready var forward_ray_for_interact: RayCast3D = $ForwardRayForInteract
+@onready var area_for_interactable_up: Area3D = $AreaForInteractableUp
+@onready var area_for_interactable_none: Area3D = $AreaForInteractableNone
+@onready var area_for_interactable_down: Area3D = $AreaForInteractableDown
 @onready var pause_menu: Control = $CanvasLayer/PauseMenu
 @onready var gun: Node3D = $CanvasLayer/SubViewportContainer/SubViewport/Camera3D/Gun
 
 @onready var crosshair: ColorRect = $CanvasLayer/UserInterface/Crosshair
 @onready var thermal_battery_label: Label = $CanvasLayer/UserInterface/ThermalBatteryLabel
 @onready var ammo_label: Label = $CanvasLayer/UserInterface/AmmoHBoxContainer/AmmoLabel
+@onready var interact_label: Label = $CanvasLayer/UserInterface/InteractLabel
+@onready var next_interactable_label: Label = $CanvasLayer/UserInterface/NextInteractableLabel
 
 #func click(): # comentado pois pode ser útil
 #	if event is InputEventMouseButton and event.is_pressed():
@@ -55,6 +66,9 @@ func _ready() -> void:
 	
 	camera.global_transform = global_transform
 	
+	interact_key_text = get_action_key_text("interact")
+	next_interactable_key_text = get_action_key_text("next_interactable")
+	
 	
 func _process(_delta: float) -> void:
 	super._process(_delta)
@@ -65,6 +79,7 @@ func _process(_delta: float) -> void:
 		camera.rotation.y = rotation.y
 	
 	check_crosshair_interaction()
+	check_available_interactions()
 	
 	decrease_thermal_vision_battery(_delta)
 	
@@ -81,6 +96,15 @@ func check_crosshair_interaction() -> void:
 			return
 	
 	is_facing_npc = false
+	
+	#if forward_ray_for_interact.is_colliding():
+		#var target = forward_ray_for_interact.get_collider()
+		#
+		#if target and target.is_in_group(Constants.INTERACTABLE_GROUP_NAME ): 
+			#crosshair.color = Color(0.91, 0.766, 0.0, 1.0)
+			#is_facing_interactable = true
+			#return
+	
 	crosshair.color = Color(1.0, 1.0, 1.0)
 
 func look_at_npc_face(npc_node: Node3D) -> void:
@@ -127,15 +151,69 @@ func on_balloon_closed() -> void:
 # INTERAÇÃO GERAL 
 #----------------------------------------	
 func try_interact():
-	var object = forward_ray_for_interact.get_collider() #esse raio tambem rastreia InterPoints
+	#var object = forward_ray_for_interact.get_collider() #esse raio tambem rastreia InterPoints
+	#
+	#if object != null:
+		#print_debug("colisao com objeto")
+	#else:
+		#print_debug("sem colidir!")
+	#if object:
+		#if object.has_method("interact"):
+			#object.interact()
+	if interactables.size() > 0 and selected_interactable_index >= 0 and selected_interactable_index < interactables.size():
+		var target = interactables[selected_interactable_index]
+		if target.has_method("interact"):
+			target.interact()
+
+func check_available_interactions() -> void:
+	if is_facing_npc:
+		interact_label.visible = false
+		next_interactable_label.visible = false
+		return
 	
-	if object != null:
-		print_debug("colisao com objeto")
+	var current_area_for_interactable: Area3D
+	if current_peeking == PeekingDirections.UP:
+		current_area_for_interactable = area_for_interactable_up
+	elif current_peeking == PeekingDirections.DOWN: 
+		current_area_for_interactable = area_for_interactable_down
 	else:
-		print_debug("sem colidir!")
-	if object:
-		if object.has_method("interact"):
-			object.interact()
+		current_area_for_interactable = area_for_interactable_none
+	
+	var raw_interactables = current_area_for_interactable.get_overlapping_areas()
+	
+	interactables = raw_interactables.filter(has_line_of_sight)
+	
+	if interactables.size() > 0:
+		if selected_interactable_index < 0 or selected_interactable_index >= interactables.size():
+			selected_interactable_index = 0
+			
+		if interactables[selected_interactable_index].interact_message:
+			interact_label.text = "Pressione '%s' %s" % [get_action_key_text("interact"), interactables[selected_interactable_index].interact_message]
+		else:
+			interact_label.text = "Pressione '%s' para interagir" % get_action_key_text("interact")
+		interact_label.visible = true
+		
+		if interactables.size() > 1:
+			if interactables[(selected_interactable_index+1)%interactables.size()].interactable_name:
+				next_interactable_label.text = "('%s' para selecionar '%s')" % [get_action_key_text("next_interactable"), interactables[(selected_interactable_index+1)%interactables.size()].interactable_name]
+			else:
+				next_interactable_label.text = "('%s' para selecionar o próximo interagível)" % get_action_key_text("next_interactable")
+			next_interactable_label.visible = true
+	else:
+		interact_label.visible = false
+		next_interactable_label.visible = false
+
+func has_line_of_sight(target_area: Area3D) -> bool:
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(camera.global_position, target_area.global_position)
+	
+	query.collision_mask = 1
+	query.exclude = [self.get_rid(), target_area.get_rid()]
+	var result = space_state.intersect_ray(query)
+	
+	return result.is_empty()
+
+
 #-------------------------------------------------------------------------
 # INPUT
 #-------------------------------------------------------------------------
@@ -143,6 +221,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_moving or is_turning: return
 	
 	var is_shifting = Input.is_action_pressed("modifier")
+	
+	if interactables.size() > 1 and event.is_action_pressed("next_interactable"):
+			selected_interactable_index = (selected_interactable_index + 1) % interactables.size()
+			
+	elif event.is_action_pressed("interact"):
+		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
+			try_talk_to_npc()
+		elif is_gun_active:
+			fire_gun()
+		else:
+			try_interact()
 	
 	if is_shifting:
 		if event.is_action_pressed("heatvision"):
@@ -171,14 +260,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			turn_left()
 		elif event.is_action_pressed("turn_right"):
 			turn_right()
-			
-		elif event.is_action_pressed("interact"):
-			if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
-				try_talk_to_npc()
-			elif is_gun_active:
-				fire_gun()
-			else:
-				try_interact()
+		
+		
 	
 	if current_peeking != PeekingDirections.NONE:
 		if ((current_peeking == PeekingDirections.DOWN and event.is_action_released("peek_down")) or 
@@ -200,6 +283,11 @@ func perform_peek(target_rot_x: float, target_rot_z: float, offset: Vector3 = Ve
 	tween.tween_property(camera, "rotation:x", target_rot_x, peek_duration)
 	tween.tween_property(camera, "rotation:z", target_rot_z, peek_duration)
 	tween.chain().tween_callback(func(): is_moving = false)
+	
+	interactables = []
+	selected_interactable_index = -1
+	interact_label.visible = false
+	next_interactable_label.visible = false
 
 func peek_down() -> void:
 	if current_peeking != PeekingDirections.DOWN:
@@ -256,12 +344,12 @@ func decrease_thermal_vision_battery(delta: float) -> void:
 				toggle_thermal_vision()
 			SignalHub.emit_player_is_at_risk()
 
-	thermal_battery_label.text = "%.1f%%" % thermal_vision_battery
+	thermal_battery_label.text = "%.1f %%" % thermal_vision_battery
 
 #-------------------------------------------------------------------------
 # DETEÇÃO DE MORTE
 #-------------------------------------------------------------------------
-func _on_area_3d_area_entered(area: Area3D) -> void:
+func _on_area_for_death_entered(area: Area3D) -> void:
 	if area.is_in_group(Constants.MONSTER_GROUP_NAME):
 		DialogueSystemManager.force_close_dialog()
 		ScenesManager.change_scene(GAME_OVER)
@@ -323,3 +411,15 @@ func load_from_state(state: Dictionary) -> void:
 	thermal_battery_label.visible = is_thermal_vision_on
 	
 	camera.global_position = global_position
+
+#-------------------------------------------------------------------------
+# MISCELÂNEA
+#-------------------------------------------------------------------------
+func get_action_key_text(action_name: String) -> String:
+	var events = InputMap.action_get_events(action_name)
+	
+	for event in events:
+		if event is InputEventKey:
+			return event.as_text().split(" ")[0]
+			
+	return "No Key Bound"

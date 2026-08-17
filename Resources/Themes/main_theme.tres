@@ -1,5 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://qncuq2ddgkcv"]
 
+[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://Assets/Fonts/veteran typewriter.ttf" id="1_oac4r"]
+
 [sub_resource type="Gradient" id="Gradient_o2ta1"]
 offsets = PackedFloat32Array(0, 0.90654206)
 colors = PackedColorArray(0, 0, 1, 0.7490196, 0, 0.6117647, 0.3647059, 0.19607843)
@@ -55,7 +57,7 @@ texture = SubResource("GradientTexture2D_o2ta1")
 [resource]
 Button/colors/font_outline_color = Color(0, 0, 1, 1)
 Button/font_sizes/font_size = 24
-Button/fonts/font = null
+Button/fonts/font = ExtResource("1_oac4r")
 Button/styles/disabled = SubResource("StyleBoxTexture_2f3ak")
 Button/styles/focus = SubResource("StyleBoxTexture_o2ta1")
 Button/styles/hover = SubResource("StyleBoxTexture_o2ta1")

@@ -1,7 +1,7 @@
 extends Node
 
 const SAVE_PATH = "user://savegame.data"
-const BEGINNING_SCENE_PATH = "res://Scenes/Environment/Playground/Playground.tscn"
+const BEGINNING_SCENE_PATH = "res://Scenes/Environment/casa1/Node3d.tscn"
 
 func _ready() -> void:
 	# Escuta o sinal de quando ScenesManager termina de criar a cena
@@ -34,14 +34,15 @@ func load_game() -> bool:
 			
 			var saved_scene = game_state.get("current_scene", BEGINNING_SCENE_PATH)
 			
-			ScenesManager.change_scene_then_load_data(saved_scene, game_state)
+			ScenesManager.change_scene_then_load_data(saved_scene, true, game_state)
 			return true
 			
 	return false
 
-func start_new_game() -> void:
-	StoryState.reset_state()	
-	ScenesManager.change_scene(BEGINNING_SCENE_PATH)
+func start_new_game() -> void:	
+	StoryState.reset_state()
+	var game_state = capture_game_state()
+	ScenesManager.change_scene_then_load_data(BEGINNING_SCENE_PATH, false, game_state)
 
 func game_save_exists() -> bool:
 	if FileAccess.file_exists(SAVE_PATH):
@@ -49,9 +50,14 @@ func game_save_exists() -> bool:
 	return false
 
 # Acionado depois que o mapa foi completamente carregado para RAM
-func _on_level_ready_to_populate(game_state: Dictionary) -> void:
-	apply_game_state(game_state) 
-	print("Game State Distributed Successfully!")
+func _on_level_ready_to_populate(should_save_game: bool, is_loading_from_save: bool, game_state: Dictionary) -> void:
+	if is_loading_from_save:
+		apply_game_state(game_state)
+		print("Game State Distributed Successfully!")
+	
+	if should_save_game:
+		save_game()
+		print("Game Successfully Saved After Scene Transition!")
 
 # Pega dados dos nodes instanciados
 func capture_game_state() -> Dictionary:

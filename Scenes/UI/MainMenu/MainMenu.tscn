@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://diywuyjrgpea8" path="res://Scenes/UI/MainMenu/MainMenu.gd" id="1_7rqq1"]
 [ext_resource type="Theme" uid="uid://qncuq2ddgkcv" path="res://Resources/Themes/main_theme.tres" id="1_les83"]
+[ext_resource type="FontFile" uid="uid://b7avf0p1aysqu" path="res://Assets/Fonts/Capsmall.ttf" id="2_gwdte"]
 [ext_resource type="AudioStream" uid="uid://cjoei000q5ljm" path="res://Assets/Music/MainMenu.wav" id="3_ehq06"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fe4vj"]
-font_size = 96
+font = ExtResource("2_gwdte")
+font_size = 128
 
 [node name="MainMenu" type="Control" unique_id=784851417]
 layout_mode = 3

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2em5bdcq6pjc" path="res://Dialogues/DialogueBalloon/DialogueBalloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://Assets/Fonts/veteran typewriter.ttf" id="2_wjsiu"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -144,6 +145,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_wjsiu")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -153,6 +155,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_wjsiu")
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
@@ -190,6 +193,7 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wjsiu")
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]

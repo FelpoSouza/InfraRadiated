@@ -6,6 +6,8 @@
 size = Vector3(1.404419, 1, 1.0942383)
 
 [node name="balcao1" unique_id=1214896535 instance=ExtResource("1_pjhdg")]
+disable_mode = 1
+gravity_scale = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=353378602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0028686523, 0.47817838, -0.04711914)

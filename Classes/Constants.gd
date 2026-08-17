@@ -7,6 +7,7 @@ const NPC_GROUP_NAME = "NPCs"
 const PLAYER_GROUP_NAME = "Player"
 const MONSTER_GROUP_NAME = "Monster"
 const DATA_PERSISTENCE_GROUP_NAME = "Persist"
+const INTERACTABLE_GROUP_NAME = "Interactable"
 const PLAYER_NAME = "Protagonista"
 
 enum NPC_IDS {

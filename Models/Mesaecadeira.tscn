@@ -6,6 +6,7 @@
 size = Vector3(1, 0.7529297, 1)
 
 [node name="mesaecadeira" unique_id=946314921 instance=ExtResource("1_j2wew")]
+disable_mode = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2133428738]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.11538601, 0.74749744, 0)

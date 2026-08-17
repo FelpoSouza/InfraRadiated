@@ -24,7 +24,7 @@ monster_texture = null
 
 [node name="Sprite3D" type="Sprite3D" parent="." index="11" unique_id=1649848864]
 material_override = SubResource("ShaderMaterial_x8dhr")
-pixel_size = 0.0015
+pixel_size = 0.0008
 billboard = 2
 shaded = true
 
