@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://s7tvdo8j3ptd"]
+[gd_scene format=3 uid="uid://s7tvdo8j3ptd"]
 
 [ext_resource type="MeshLibrary" uid="uid://cnayu4g325f0h" path="res://Scenes/Objects/BlockLibrary/resenha2.tres" id="1_feqqg"]
 [ext_resource type="PackedScene" uid="uid://bprgvomf5rvsb" path="res://Scenes/Characters/Npc/Npc.tscn" id="2_siw6g"]
@@ -28,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://ctfsfs5twnn35" path="res://Scenes/Items/Interactable/Interactable.tscn" id="26_cy88w"]
 [ext_resource type="PackedScene" uid="uid://cso2u25d1v6nq" path="res://Models/Detritos1.tscn" id="26_hdnp8"]
 [ext_resource type="PackedScene" uid="uid://c1x3mttwpkj6y" path="res://Models/Detritos2.tscn" id="27_5bfh5"]
-[ext_resource type="Texture2D" uid="uid://bax5np8njagsm" path="res://Models/balcao1_Ucupaint balcoes Color.png" id="27_bs4ok"]
 [ext_resource type="PackedScene" uid="uid://c25pyihxrd3q3" path="res://Models/porta1.tscn" id="28_revq3"]
 
 [sub_resource type="Resource" id="Resource_ebfwc"]
@@ -52,45 +51,8 @@ voice_sfxs = Array[AudioStream]([ExtResource("18_j0c1g")])
 seconds_per_step = 0.01
 metadata/_custom_type_script = "uid://bcdht27so0doc"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbx5r"]
-resource_name = "balcoes"
-cull_mode = 2
-albedo_texture = ExtResource("27_bs4ok")
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_4n6jg"]
-_surfaces = [{
-"aabb": AABB(-0.7, -0.5, -0.58965224, 1.4, 1, 1.0896523),
-"format": 34896613377,
-"index_count": 108,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYACAAJAAoACAALAAkADAAKAAkACwAMAAkADQAIAAoACwAIAA0ADAAOAAoADQAKAA4ACwAPAAwACwANAA8ADwAOAAwADwANAA4AEAARABIAEAATABEAFAASABEAEwAUABEAFQAQABIAEwAQABUAFAAWABIAFQASABYAEwAXABQAEwAVABcAFwAWABQAFwAVABYA"),
-"lods": [0.72407174, PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA")],
-"name": "balcoes",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//DxUAAAAA/////wAAAAAAAA8VAAD/////DxUAAP//AAD//wAA////////AAD//wAADxUAAN8NxSITGgAA3w053W4EAADfDTndExoAAN8NxSJuBAAAH/I53W4EAAAf8sUiExoAAB/yOd0TGgAAH/LFIm4EAACpMRRCNwUAAKkx6r0AAAAAqTHqvTcFAACpMRRCAAAAAKhA6r0AAAAAqEAUQjcFAACoQOq9NwUAAKhAFEIAAAAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_nne7e"]
-resource_name = "balcao1_Cube_002"
-_surfaces = [{
-"aabb": AABB(-0.7, -0.5, -0.58965224, 1.4, 1, 1.0896523),
-"attribute_data": PackedByteArray("QjPYYqoBcJSqAdhiQjNwlNtk2GJCM3CUQjPYYttkcJTbZKH3QjMJxttkCcZCM6H322QJxkIzcJTbZHCUQjMJxkIzcJSqAQnGqgFwlEIzCcZCM6H3qgEJxkIzCcaqAaH3qmY/pvqIraH6iD+mqmatobtlYq8TkYLTu2WC0xORYq/hZa2h+ogbnfqIraHhZRud22SC0xORoffbZKH3E5GC0+FlYq8TkdGqE5Fir+Fl0aoKZ9GqE5E/phOR0aoKZz+mo2Uyltl8GJXZfDKWo2UYlY1lNJrZfEyX2Xw0mo1lTJeDZUyX2Xwyltl8TJeDZTKW22Qbndl8NJrZfBud22Q0msNn/pOAZRiVgGX+k8NnGJXbZP6Tw2fkksNn/pPbZOSS"),
-"format": 34896613399,
-"index_count": 108,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUA"),
-"lods": [0.72407174, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA")],
-"material": SubResource("StandardMaterial3D_tbx5r"),
-"name": "balcoes",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 72,
-"vertex_data": PackedByteArray("AAAAAP//VNUAAP//DxVU1QAA/////1TVAAAAAA8VVNUAAAAADxX///////8PFf//AAD//w8V/////wAADxX/////AAAPFf+//////////7//////DxX/v///AAD///+///8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAADxX/////AAD///////8AAA8V//8AAAAA//////////8PFVTVAAD/////VNUAAP//DxVU1f///////1TV3w3FIhMaVNXfDTndbgRU1d8NOd0TGlTV3w3FIm4EVNXfDcUibgT//x/yOd1uBP//3w053W4E//8f8sUibgT//x/yxSJuBFTVH/I53RMaVNUf8jndbgRU1R/yxSITGlTVH/LFIhMa///fDTndExr//x/yOd0TGv//3w3FIhMa///fDcUibgT/vx/yxSITGv+/H/LFIm4E/7/fDcUiExr/vx/yOd1uBP//3w053RMa///fDTndbgT//x/yOd0TGv//qTEUQjcFVNWpMeq9AABU1akx6r03BVTVqTEUQgAAVNWpMRRCAAD//6hA6r0AAP//qTHqvQAA//+oQBRCAAD//6hAFEIAAFTVqEDqvTcFVNWoQOq9AABU1ahAFEI3BVTVqEAUQjcF/7+pMeq9NwX/v6hA6r03Bf+/qTEUQjcF/7+pMRRCAAD//6hAFEI3Bf//qEAUQgAA//+pMRRCNwX//6hA6r0AAP//qTHqvTcF//+pMeq9AAD//6hA6r03Bf//VFWqqlRVqqpUVaqqVVWqqv8//7//P/+//z//v/8//7//fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9//z//f/8//3//P/9//z9U1aoqVNWqKlTVqipU1aoqVNVU1VTVVNVU1VTVVNVU1f///3/+//9/////f/7//3+qKqoqqiqqKqoqqiqqKqoq/3//f/9//3//f/9//3//fwAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq//////////////////////9//z//f/8//3//P/9//z//f/+//3//v/9//7//f/+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_4n6jg")
+[sub_resource type="BoxShape3D" id="BoxShape3D_poanh"]
+size = Vector3(0.9354248, 1.480278, 0.6816406)
 
 [node name="Node3D" type="Node3D" unique_id=1234331050]
 
@@ -232,7 +194,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.8
 [node name="Interactable" parent="." unique_id=466476721 instance=ExtResource("26_cy88w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9996697, 1.7614881, -2)
 interactable_name = "inter1"
-mesh = SubResource("ArrayMesh_nne7e")
 
 [node name="Interactable2" parent="." unique_id=592337941 instance=ExtResource("26_cy88w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9996697, 0.90042305, -2)
@@ -242,5 +203,12 @@ interactable_name = "inter2"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9996697, 0.1080327, -2)
 interactable_name = "inter3"
 
-[node name="portas" parent="." unique_id=919608939 instance=ExtResource("28_revq3")]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1737093574]
 transform = Transform3D(-1.0536451, 0, -1.3136635e-07, 0, 0.99550635, 0, 1.5909599e-07, 0, -0.87, -1.0116359, -0.35024297, 2.904286)
+
+[node name="portas" parent="StaticBody3D" unique_id=919608939 instance=ExtResource("28_revq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 2.842171e-14, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1679060832]
+transform = Transform3D(0.9999992, -0.0012195922, 0.00023164763, 0.0012197362, 1, -0.000638993, -0.000230885, 0.00063926715, 0.99999976, -0.008036256, 0.82623124, -0.15929008)
+shape = SubResource("BoxShape3D_poanh")
