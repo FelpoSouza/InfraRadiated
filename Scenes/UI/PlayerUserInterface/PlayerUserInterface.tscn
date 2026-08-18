@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://dhobh86kvkhp2"]
 
-[ext_resource type="FontFile" uid="uid://cghjqwt1yyu6h" path="res://Assets/Fonts/DOTMATRI.TTF" id="1_mtsjr"]
-[ext_resource type="Texture2D" uid="uid://df363s1d2ml3t" path="res://Assets/Images/Ammo.png" id="1_oujdm"]
-[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://Assets/Fonts/veteran typewriter.ttf" id="2_5rtfa"]
+[ext_resource type="Texture2D" uid="uid://3wi7onginw4p" path="res://Models/InvBack.jpg" id="1_f8n5d"]
+[ext_resource type="FontFile" uid="uid://cghjqwt1yyu6h" path="res://assets/Fonts/DOTMATRI.TTF" id="1_mtsjr"]
+[ext_resource type="Texture2D" uid="uid://df363s1d2ml3t" path="res://assets/Images/Ammo.png" id="1_oujdm"]
+[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://assets/Fonts/veteran typewriter.ttf" id="2_5rtfa"]
+[ext_resource type="Texture2D" uid="uid://y623yg80sblx" path="res://Models/mauTransp.png" id="2_imsl2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtsjr"]
+font_size = 18
 
 [sub_resource type="LabelSettings" id="LabelSettings_353u4"]
 font = ExtResource("1_mtsjr")
@@ -11,9 +16,6 @@ font_size = 48
 [sub_resource type="LabelSettings" id="LabelSettings_oujdm"]
 font = ExtResource("1_mtsjr")
 font_size = 32
-
-[sub_resource type="LabelSettings" id="LabelSettings_mtsjr"]
-font_size = 18
 
 [sub_resource type="LabelSettings" id="LabelSettings_eqe8m"]
 
@@ -24,6 +26,260 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="FullMessage" type="Label" parent="." unique_id=263479624]
+visible = false
+layout_mode = 0
+offset_left = 429.0
+offset_top = 267.0
+offset_right = 852.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("2_5rtfa")
+text = "Inventário cheio, troque um item"
+label_settings = SubResource("LabelSettings_mtsjr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory" type="HBoxContainer" parent="." unique_id=1891186557]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 189.0
+offset_bottom = 37.0
+
+[node name="Slot1" type="TextureRect" parent="Inventory" unique_id=1314138767]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+texture = ExtResource("1_f8n5d")
+expand_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/Slot1" unique_id=1537399849]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("2_imsl2")
+expand_mode = 3
+
+[node name="SelectSlot" type="ColorRect" parent="Inventory/Slot1" unique_id=1649228626]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 83.46603
+offset_bottom = 33.951454
+scale = Vector2(1.03, 1.03)
+
+[node name="nomeItem" type="Label" parent="Inventory/Slot1" unique_id=1317675535]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.252426
+offset_top = -14.0
+offset_right = 73.74757
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("2_5rtfa")
+theme_override_font_sizes/font_size = 7
+text = "nada"
+label_settings = SubResource("LabelSettings_mtsjr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot2" type="TextureRect" parent="Inventory" unique_id=1506366249]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+texture = ExtResource("1_f8n5d")
+expand_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/Slot2" unique_id=1490308179]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("2_imsl2")
+expand_mode = 3
+
+[node name="SelectSlot" type="ColorRect" parent="Inventory/Slot2" unique_id=1380779734]
+visible = false
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 83.46603
+offset_bottom = 33.951454
+scale = Vector2(1.03, 1.03)
+
+[node name="nomeItem" type="Label" parent="Inventory/Slot2" unique_id=91608366]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.252426
+offset_top = -14.0
+offset_right = 73.74757
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("2_5rtfa")
+theme_override_font_sizes/font_size = 7
+text = "nada"
+label_settings = SubResource("LabelSettings_mtsjr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot3" type="TextureRect" parent="Inventory" unique_id=838491084]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+texture = ExtResource("1_f8n5d")
+expand_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/Slot3" unique_id=233797199]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("2_imsl2")
+expand_mode = 3
+
+[node name="SelectSlot" type="ColorRect" parent="Inventory/Slot3" unique_id=432019020]
+visible = false
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 83.46603
+offset_bottom = 33.951454
+scale = Vector2(1.03, 1.03)
+
+[node name="nomeItem" type="Label" parent="Inventory/Slot3" unique_id=934102978]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.252426
+offset_top = -14.0
+offset_right = 73.74757
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("2_5rtfa")
+theme_override_font_sizes/font_size = 7
+text = "nada"
+label_settings = SubResource("LabelSettings_mtsjr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot4" type="TextureRect" parent="Inventory" unique_id=1768188509]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+texture = ExtResource("1_f8n5d")
+expand_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/Slot4" unique_id=766765003]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("2_imsl2")
+expand_mode = 3
+
+[node name="SelectSlot" type="ColorRect" parent="Inventory/Slot4" unique_id=385238918]
+visible = false
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 83.46603
+offset_bottom = 33.951454
+scale = Vector2(1.03, 1.03)
+
+[node name="nomeItem" type="Label" parent="Inventory/Slot4" unique_id=1209276493]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.252426
+offset_top = -14.0
+offset_right = 73.74757
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("2_5rtfa")
+theme_override_font_sizes/font_size = 7
+text = "nada"
+label_settings = SubResource("LabelSettings_mtsjr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot5" type="TextureRect" parent="Inventory" unique_id=1959874160]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+texture = ExtResource("1_f8n5d")
+expand_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/Slot5" unique_id=80142715]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("2_imsl2")
+expand_mode = 3
+
+[node name="SelectSlot" type="ColorRect" parent="Inventory/Slot5" unique_id=1406412461]
+visible = false
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 83.46603
+offset_bottom = 33.951454
+scale = Vector2(1.03, 1.03)
+
+[node name="nomeItem" type="Label" parent="Inventory/Slot5" unique_id=18870443]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.252426
+offset_top = -14.0
+offset_right = 73.74757
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("2_5rtfa")
+theme_override_font_sizes/font_size = 7
+text = "nada"
+label_settings = SubResource("LabelSettings_mtsjr")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GunContainer" type="HBoxContainer" parent="." unique_id=293071916]
 layout_mode = 1
@@ -38,38 +294,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 
 [node name="Button" type="Button" parent="GunContainer" unique_id=586689084]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 text = " - EQUIP GUN -"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=965117903]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=3573008]
-layout_mode = 2
-columns = 5
-
-[node name="Button1" type="Button" parent="VBoxContainer/GridContainer" unique_id=2094509798]
-layout_mode = 2
-text = "-> item"
-
-[node name="Button2" type="Button" parent="VBoxContainer/GridContainer" unique_id=1559939811]
-layout_mode = 2
-text = "-> item"
-
-[node name="Button3" type="Button" parent="VBoxContainer/GridContainer" unique_id=375163887]
-layout_mode = 2
-text = "-> item"
-
-[node name="Button4" type="Button" parent="VBoxContainer/GridContainer" unique_id=989416764]
-layout_mode = 2
-text = "-> item"
-
-[node name="Button5" type="Button" parent="VBoxContainer/GridContainer" unique_id=113934320]
-layout_mode = 2
-text = "-> item"
 
 [node name="Crosshair" type="ColorRect" parent="." unique_id=2073899075]
 layout_mode = 1
@@ -85,6 +313,21 @@ offset_bottom = 2.5
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 0, 1)
+
+[node name="SelectedItem" type="TextureRect" parent="Crosshair" unique_id=364063880]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 1.0
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = -14.5
+offset_top = -16.5
+offset_right = 14.5
+offset_bottom = 10.5
+texture = ExtResource("2_imsl2")
+expand_mode = 3
 
 [node name="ThermalBatteryLabel" type="Label" parent="." unique_id=540798336]
 visible = false

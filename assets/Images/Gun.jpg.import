@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwjjwclyc7ilb"
-path.s3tc="res://.godot/imported/Gun.jpg-d5b660674d78221ad370d58e293f37ee.s3tc.ctex"
+path.s3tc="res://.godot/imported/Gun.jpg-7146b62b7e8982f6e00d41ac22c57a6f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Images/Gun.jpg"
-dest_files=["res://.godot/imported/Gun.jpg-d5b660674d78221ad370d58e293f37ee.s3tc.ctex"]
+source_file="res://assets/Images/Gun.jpg"
+dest_files=["res://.godot/imported/Gun.jpg-7146b62b7e8982f6e00d41ac22c57a6f.s3tc.ctex"]
 
 [params]
 

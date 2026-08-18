@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cylbmnebkdc1y"]
+
+[ext_resource type="Texture2D" uid="uid://b4i1bboaen481" path="res://Models/casa_Wood_Floor_012_basecolor.jpg" id="1_uf2b1"]
+[ext_resource type="Texture2D" uid="uid://cju6dqauc5mlv" path="res://Models/itens/bateria.png" id="2_152rn"]
+
+[node name="InventorySlot" type="Control" unique_id=270364112]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Selected" type="ColorRect" parent="." unique_id=2013602145]
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 62.0
+
+[node name="Background" type="TextureRect" parent="." unique_id=1597048798]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1029.0
+offset_bottom = 1028.0
+scale = Vector2(0.135, 0.055)
+texture = ExtResource("1_uf2b1")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=1610193003]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 56.0
+offset_bottom = 56.0
+texture = ExtResource("2_152rn")
+expand_mode = 1
