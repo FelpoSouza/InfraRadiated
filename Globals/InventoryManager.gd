@@ -63,11 +63,8 @@ func get_selected_item() -> ItemData:
 
 
 func select_slot(index: int) -> void:
-	# Slot vazio
 	if index < 0 or index >= items.size():
 		return
-
-	# Apertou novamente o mesmo slot
 	if selected_index == index:
 		selected_index = -1
 	else:
@@ -97,3 +94,20 @@ func consume_selected_item() -> void:
 	
 func change_size(ammount: int):
 	MAX_ITEMS = ammount
+	
+	
+func use_selected_item() -> bool:
+	if selected_index < 0:
+		return false
+
+	if selected_index >= items.size():
+		return false
+
+	var item: ItemData = items[selected_index]
+
+	if item.consumable:
+		print("Item consumido: %s" % item.item_name)
+		remove_item(selected_index)
+		return true
+
+	return false
