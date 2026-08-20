@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://e0sdqnd57c3y"]
+
+[ext_resource type="PackedScene" uid="uid://bo05dlxf0fer5" path="res://Scenes/Items/PickableItem/PickableItem3D.tscn" id="1_h5a5l"]
+[ext_resource type="Resource" uid="uid://chvhve4uagrwv" path="res://Scenes/Items/InvItem/Bateria.tres" id="2_yy7nq"]
+
+[node name="Battery" type="Node3D" unique_id=1034379836]
+
+[node name="Pickable3D" parent="." unique_id=415543769 instance=ExtResource("1_h5a5l")]
+item_data = ExtResource("2_yy7nq")

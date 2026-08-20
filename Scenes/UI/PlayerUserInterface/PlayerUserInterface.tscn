@@ -4,7 +4,9 @@
 [ext_resource type="FontFile" uid="uid://cghjqwt1yyu6h" path="res://assets/Fonts/DOTMATRI.TTF" id="1_mtsjr"]
 [ext_resource type="Texture2D" uid="uid://df363s1d2ml3t" path="res://assets/Images/Ammo.png" id="1_oujdm"]
 [ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://assets/Fonts/veteran typewriter.ttf" id="2_5rtfa"]
+[ext_resource type="Script" uid="uid://cryk4ov32k6er" path="res://Scenes/UI/Inventory/Inventory.gd" id="2_eekh3"]
 [ext_resource type="Texture2D" uid="uid://y623yg80sblx" path="res://Models/mauTransp.png" id="2_imsl2"]
+[ext_resource type="Script" uid="uid://bee7yd15sr7p8" path="res://Scenes/UI/Inventory/InventorySlot.gd" id="4_cf8ec"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mtsjr"]
 font_size = 18
@@ -46,6 +48,7 @@ offset_left = 3.0
 offset_top = 3.0
 offset_right = 189.0
 offset_bottom = 37.0
+script = ExtResource("2_eekh3")
 
 [node name="Slot1" type="TextureRect" parent="Inventory" unique_id=1314138767]
 light_mask = 2
@@ -53,6 +56,7 @@ visibility_layer = 2
 layout_mode = 2
 texture = ExtResource("1_f8n5d")
 expand_mode = 3
+script = ExtResource("4_cf8ec")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/Slot1" unique_id=1537399849]
 layout_mode = 0
@@ -99,6 +103,7 @@ visibility_layer = 2
 layout_mode = 2
 texture = ExtResource("1_f8n5d")
 expand_mode = 3
+script = ExtResource("4_cf8ec")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/Slot2" unique_id=1490308179]
 layout_mode = 0
@@ -146,6 +151,7 @@ visibility_layer = 2
 layout_mode = 2
 texture = ExtResource("1_f8n5d")
 expand_mode = 3
+script = ExtResource("4_cf8ec")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/Slot3" unique_id=233797199]
 layout_mode = 0
@@ -193,6 +199,7 @@ visibility_layer = 2
 layout_mode = 2
 texture = ExtResource("1_f8n5d")
 expand_mode = 3
+script = ExtResource("4_cf8ec")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/Slot4" unique_id=766765003]
 layout_mode = 0
@@ -240,6 +247,7 @@ visibility_layer = 2
 layout_mode = 2
 texture = ExtResource("1_f8n5d")
 expand_mode = 3
+script = ExtResource("4_cf8ec")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/Slot5" unique_id=80142715]
 layout_mode = 0

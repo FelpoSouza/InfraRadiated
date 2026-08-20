@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://chvhve4uagrwv"]
+
+[ext_resource type="Script" uid="uid://dul5bt3k83gka" path="res://Scenes/Items/Data/ItemData.gd" id="1_xehry"]
+[ext_resource type="Texture2D" uid="uid://cju6dqauc5mlv" path="res://Models/itens/bateria.png" id="1_xtf5n"]
+[ext_resource type="PackedScene" uid="uid://be6p1bdvgnq4c" path="res://Models/itens/bateria.glb" id="2_abxtj"]
+
+[resource]
+script = ExtResource("1_xehry")
+item_name = "Bateria"
+item_id = "battery"
+inventory_sprite = ExtResource("1_xtf5n")
+item_model = ExtResource("2_abxtj")
+metadata/_custom_type_script = "uid://dul5bt3k83gka"
