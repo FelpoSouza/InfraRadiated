@@ -208,5 +208,5 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -3)
 [node name="Battery2" parent="." unique_id=365058947 instance=ExtResource("30_hdnp8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, -14)
 
-[node name="teto2" parent="." unique_id=766872067 instance=ExtResource("30_5bfh5")]
-transform = Transform3D(0.8187348, 0, 0, 0, 1, 0, 0, 0, 0.8622951, 3.3567038, 3.5770001, -8.48895)
+[node name="teto2" parent="." unique_id=868583259 instance=ExtResource("30_5bfh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.784724, 0, 3.5650845, -10.112914)
