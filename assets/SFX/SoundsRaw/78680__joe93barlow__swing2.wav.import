@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cw3nw7ppcao03"
-path="res://.godot/imported/78680__joe93barlow__swing2.wav-48e3f4691bf09ae10fcc21ee082b45d4.sample"
+path="res://.godot/imported/78680__joe93barlow__swing2.wav-accd6ddb7a397ab240013815f5e58d27.sample"
 
 [deps]
 
-source_file="res://assets/SFX/SoundsRaw/78680__joe93barlow__swing2.wav"
-dest_files=["res://.godot/imported/78680__joe93barlow__swing2.wav-48e3f4691bf09ae10fcc21ee082b45d4.sample"]
+source_file="res://Assets/SFX/SoundsRaw/78680__joe93barlow__swing2.wav"
+dest_files=["res://.godot/imported/78680__joe93barlow__swing2.wav-accd6ddb7a397ab240013815f5e58d27.sample"]
 
 [params]
 

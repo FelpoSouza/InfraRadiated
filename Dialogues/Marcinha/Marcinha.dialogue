@@ -61,4 +61,29 @@ else
 
 
 ~ what_did_you_do_for_a_living
+{{Constants.PLAYER_NAME}}: Imagino não ser uma suposição muito distante afirmar que a senhora é religiosa. Isso está relacionado com seu trabalho antes de tudo isso? você era uma frade ou algo do tipo?
+{{npc_name}}: Não preciso sê da igreja pra tá lá, sinhô.
+{{Constants.PLAYER_NAME}}: Certo, então uma das minhas hipóteses estava errada…
+
+if patience_level > 33:
+	{{npc_name}}: Mas de certa forma sim, afetou o meu trabalho. Não teria escolhido cuidar de criança se Deus não tivesse me guiado!
+	{{Constants.PLAYER_NAME}}: Ah, então a promessa de um paraíso eterno te levou a essa escolha?
+	if patience_level > 66:
+		{{npc_name}}: Não fale dessa forma! Oxê, me insultando, eh?
+		do increment_patience_level(-50)
+		{{Constants.PLAYER_NAME}}: Perdão, você pode me falar do trabalho, ainda assim?
+	else:
+		{{npc_name}}: ... Na verdade, moço, é o medo do capiroto memo…
+		{{Constants.PLAYER_NAME}}: Então cometeu algum pecado? Ou um crime? De qualquer forma acho uma forma bem nobre de se redimir
+		{{npc_name}}: Num faria um crime, não! e só que… eu fumo muito. Meu filho já me pediu para parar e até acho que ele se tornou doutor para tentar acabar com isso. No final não parei e agora num tô bem.
+		{{Constants.PLAYER_NAME}}: Nossa! então você está com-
+		{{npc_name}}: Úlcera Gástrica, tô tratando mas não vai sara, é para a vida.
+		{{Constants.PLAYER_NAME}}: Ufa, isso é um milagre… não que você está ruim, é só que com toda essa radiação eu estava assumindo o pior.
+		{{npc_name}}: Tendi sinhô. A coisa é que fiquei com medo de morre quando tava fazendo os testes. Dai lembrei das minhas amigas que ia na igreja… e pensei que morrer de vício certamente me levaria no inferno
+		{{Constants.PLAYER_NAME}}: Bem, pelo menos agora você parou…
+		{{npc_name}}: Sobre isso… é difícil parar sabe? Por isso decidi pedir perdão de outra forma
+		{{Constants.PLAYER_NAME}}: ... Certo, e então começou o seu trabalho que é?
+		{{npc_name}}: Ah! é, sobre o trabalho…
+
+
 => END

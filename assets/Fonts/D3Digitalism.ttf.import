@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://7uunpqcu5yut"
-path="res://.godot/imported/D3Digitalism.ttf-237de89fe370052388c291190549ad5d.fontdata"
+path="res://.godot/imported/D3Digitalism.ttf-475512217c8df16f91436d99fe326080.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/D3Digitalism.ttf"
-dest_files=["res://.godot/imported/D3Digitalism.ttf-237de89fe370052388c291190549ad5d.fontdata"]
+source_file="res://Assets/Fonts/D3Digitalism.ttf"
+dest_files=["res://.godot/imported/D3Digitalism.ttf-475512217c8df16f91436d99fe326080.fontdata"]
 
 [params]
 

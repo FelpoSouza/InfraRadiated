@@ -2,6 +2,7 @@ extends Control
 
 const BEGINNING_SCENE_PATH = "res://Scenes/Environment/casa1/Node3d.tscn"
 @onready var load_game_button: Button = $VBoxContainer/LoadGameButton
+@onready var music_player: AudioStreamPlayer = $MusicPlayer
 
 
 func _ready() -> void:

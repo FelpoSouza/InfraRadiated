@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ci8atkfeyr6ke"
-path="res://.godot/imported/veteran typewriter.ttf-f87786a4b418655acf7b6fef3f808687.fontdata"
+path="res://.godot/imported/veteran typewriter.ttf-ac1bd2aa642d6cea7cf9f298fd012aac.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/veteran typewriter.ttf"
-dest_files=["res://.godot/imported/veteran typewriter.ttf-f87786a4b418655acf7b6fef3f808687.fontdata"]
+source_file="res://Assets/Fonts/veteran typewriter.ttf"
+dest_files=["res://.godot/imported/veteran typewriter.ttf-ac1bd2aa642d6cea7cf9f298fd012aac.fontdata"]
 
 [params]
 

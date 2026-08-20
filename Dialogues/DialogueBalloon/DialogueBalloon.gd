@@ -252,7 +252,7 @@ func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -
 		voice_sfx_player.stream = voice_sfxs.pick_random()
 	
 	# Add a tiny bit of random pitch modification so it doesn't sound repetitive
-	voice_sfx_player.pitch_scale = randf_range(0.9, 1.1)
+	voice_sfx_player.pitch_scale = randf_range(0.85, 1.15)
 	
 	# Play the blip
 	voice_sfx_player.play()

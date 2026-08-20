@@ -74,8 +74,9 @@ size_flags_vertical = 3
 theme = ExtResource("1_les83")
 text = "Sair"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1261543540]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1261543540]
 stream = ExtResource("3_ehq06")
+volume_db = -10.0
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/LoadGameButton" to="." method="_on_load_game_button_pressed"]

@@ -1,8 +1,72 @@
 ~ start
+if StoryState.has_met_npc(npc_id) == false
+	=> first_interaction
+else
+	=> life_story_questions
+=> END
+
+~ life_story_questions
+if patience_level > 50
+	{{npc_name}}: Você quer derrubar os reptilianos também? Posso ajudar você.
+else
+	{{npc_name}}: FIQUE LONGE DE MIM! Vocês Illuminatis não vão tirar mais nada de mim!
+- Como você chegou aqui?
+	=> how_did_you_get_here
+- Como você ficou louco?
+	=> how_did_you_go_crazy  
+=> END
+
+~ first_interaction
 {{npc_name}}: Afasta! Afasta! VOCÊ É UM DELES, NÃO É?
 {{Constants.PLAYER_NAME}}: Por favor, acalme-se senhor, sou do Departamento da Ordem Radiativa e vim lidar com a ameaça do irradiado que se encontra nesse local, não sou um deles.
 {{npc_name}}: Não confio em vocês homens do governo! Mandaram irradiados para cá porque sabem que só eu sou capaz de derrubar o Governo dos Illuminati que controla o mundo! [shake rate=10.0 level=3]Hahahaha![/shake]
 {{Constants.PLAYER_NAME}}: Do que você está falando?
-{{npc_name}}: Você não entenderia, já passou pela lavagem cerebral dos reptilianos! [shake rate=20.0 level=5]HAHAHA![/shake]
+{{npc_name}}: Você não entenderia, já passou pela lavagem cerebral dos reptilianos!
 {{Constants.PLAYER_NAME}}: Certo…Você se importa de responder algumas perguntas?
+do StoryState.mark_npc_as_met(npc_id)
+=> END
+
+~ how_did_you_get_here
+{{Constants.PLAYER_NAME}}: Acredito que você não seja originalmente dessa casa… Como você chegou aqui?
+
+if patience_level > 33:
+	{{npc_name}}: Os irradiados me perseguem! Eles sabem quem eu sou e querem me prejudicar!
+	{{Constants.PLAYER_NAME}}: Então você veio até aqui para fugir dessas criaturas. Por acaso o senhor nasceu aqui em Brasília?
+	if patience_level > 66:
+		{{npc_name}}: [shake rate=10.0 level=3]Hahahaha![/shake] Você já devia saber! Vocês do governo sabem tudo de mim, receberam ordens dos reptilianos.
+		{{Constants.PLAYER_NAME}}: Bem… os “reptilianos” não me deram muitas informações sobre você. Talvez você poderia me contar isso.
+		{{npc_name}}: Não, é melhor assim. Um dia você vai entender minha grandeza! [shake rate=10.0 level=3]Hahahaha![/shake].
+	else:
+		{{npc_name}}: Não, eu nasci na grande São Paulo. Eu gostava de SP, mas sabe como é… lá é onde fica um dos escritórios secretos dos reptilianos. FORAM ELES QUE DESTRUÍRAM TUDO. Queriam me matar e não conseguiram! Agora chamaram os irradiados para me caçar! MAS NÃO VÃO CONSEGUIR ME DERRUBAR [shake rate=20.0 level=5]HAHAHA![/shake].
+		{{Constants.PLAYER_NAME}}: Por que acha que estão caçando especificamente você?
+		{{npc_name}}: Se você soubesse, tentaria me caçar também!
+		{{Constants.PLAYER_NAME}}: O que você está escondendo?
+		{{npc_name}}: ... Vo-cê do-o governo-o…. F-Faz perguntas demais! NÃO VOU FALAR NADA!
+		{{Constants.PLAYER_NAME}}: Acho que já ouvi o bastante...
+else:
+	{{npc_name}}: Eu sou de… Ora? Por que quer saber? Está tentando me espionar?
+	{{Constants.PLAYER_NAME}}: Não vim para te espionar, só estou coletando pistas para encontrar o irradiado presente nesse local e toda informação é importante.
+	{{npc_name}}: Não vou dizer! Vocês illuminatis já sabem de tudo mesmo! Vivem me perseguindo, mandando irradiados.
+=> END
+
+~ how_did_you_go_crazy
+{{Constants.PLAYER_NAME}}: Você sempre foi assim, digamos… excêntrico?
+
+if patience_level > 33:
+	{{npc_name}}: Não, antes eu não ouvia essas… vozes feias sabe? Elas mudaram meu jeito de enxergar as coisas.
+	{{Constants.PLAYER_NAME}}: E o que fez você começar a ouvir essas vozes?
+	if patience_level > 66:
+		{{npc_name}}: "Você é especial". Foi o que as vozes disseram, elas vieram me guiar para que pudesse libertar o mundo do Governo dos Illuminatis.
+		{{Constants.PLAYER_NAME}}: Mas… exatamente quando elas começaram?
+		{{npc_name}}: Alguns anos atrás talvez? Antes da destruição promovida pelos reptilianos. EU JÁ SABIA QUE ISSO IA ACONTECER! [shake rate=20.0 level=5]HAHAHA![/shake]. Eles tentaram de tudo para acabar comigo.
+	else:
+		{{npc_name}}: Os médicos disseram que foram as drogas, mas eles mentem. Eu sei a verdade, recebi um chamado divino, foram as vozes que contaram, às vezes elas falam coisas feias que não gosto, mas às vezes me falam isso também.
+		{{Constants.PLAYER_NAME}}: O que te fez começar a usar drogas?
+		{{npc_name}}: Minha vida era ruim a uns anos atrás, fumar pedra me fazia sentir melhor. Com o apocalipse promovido pelos iluminatis, ficou difícil achar o que fumar… nem um cigarrinho pra me esquentar.
+		{{Constants.PLAYER_NAME}}: Esquentar?
+		{{npc_name}}: CHEGA DE PERGUNTAS, você agente do governo me irrita!
+else:
+	{{npc_name}}: Um dia, talvez, você seja iluminado como eu e começe a entender de vez a verdade dos reptilianos que controlam o mundo e aprenda a me respeitar!
+	{{Constants.PLAYER_NAME}}: Enquanto esse dia não chega, você poderia me dar mais detalhes?
+	{{npc_name}}: SAIA LOGO DAQUI. Você irrita eu e as vozes, elas estão gritando na minha cabeça.
 => END

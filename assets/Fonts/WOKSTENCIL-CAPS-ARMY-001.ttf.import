@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cjxv8s5m7ojw3"
-path="res://.godot/imported/WOKSTENCIL-CAPS-ARMY-001.ttf-8fb6bfcc464200890162d7dde37dd1d6.fontdata"
+path="res://.godot/imported/WOKSTENCIL-CAPS-ARMY-001.ttf-6a6b85ae3044939c24f8d7dc2c015870.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/WOKSTENCIL-CAPS-ARMY-001.ttf"
-dest_files=["res://.godot/imported/WOKSTENCIL-CAPS-ARMY-001.ttf-8fb6bfcc464200890162d7dde37dd1d6.fontdata"]
+source_file="res://Assets/Fonts/WOKSTENCIL-CAPS-ARMY-001.ttf"
+dest_files=["res://.godot/imported/WOKSTENCIL-CAPS-ARMY-001.ttf-6a6b85ae3044939c24f8d7dc2c015870.fontdata"]
 
 [params]
 
