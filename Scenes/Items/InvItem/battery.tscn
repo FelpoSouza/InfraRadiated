@@ -7,3 +7,4 @@
 
 [node name="Pickable3D" parent="." unique_id=415543769 instance=ExtResource("1_h5a5l")]
 item_data = ExtResource("2_yy7nq")
+interactable_name = "Bateria"

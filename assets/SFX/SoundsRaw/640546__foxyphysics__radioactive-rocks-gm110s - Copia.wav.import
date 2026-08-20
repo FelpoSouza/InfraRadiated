@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://qpvtp545ndtb"
-path="res://.godot/imported/640546__foxyphysics__radioactive-rocks-gm110s - Copia.wav-14a9e28e83d71695ea21cfbe03908873.sample"
+path="res://.godot/imported/640546__foxyphysics__radioactive-rocks-gm110s - Copia.wav-738736f3ff11a533ae99a0628640a0ff.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/640546__foxyphysics__radioactive-rocks-gm110s - Copia.wav"
-dest_files=["res://.godot/imported/640546__foxyphysics__radioactive-rocks-gm110s - Copia.wav-14a9e28e83d71695ea21cfbe03908873.sample"]
+source_file="res://assets/SFX/SoundsRaw/640546__foxyphysics__radioactive-rocks-gm110s - Copia.wav"
+dest_files=["res://.godot/imported/640546__foxyphysics__radioactive-rocks-gm110s - Copia.wav-738736f3ff11a533ae99a0628640a0ff.sample"]
 
 [params]
 
