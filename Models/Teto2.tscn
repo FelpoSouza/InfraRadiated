@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c7p2bmwb6jt3h"]
+
+[ext_resource type="PackedScene" uid="uid://b77foi3oe0epg" path="res://Models/teto.glb" id="1_tak45"]
+
+[node name="teto2" unique_id=766872067 instance=ExtResource("1_tak45")]
