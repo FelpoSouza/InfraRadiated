@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://utf0pb2eycof"
-path="res://.godot/imported/689416__saha213131__wood-step - Copia.mp3-7da1cbf486d64f2d80ed0e0957b2c16e.mp3str"
+path="res://.godot/imported/689416__saha213131__wood-step - Copia.mp3-f05b9c1d2d7caa3f294af09f3ccec278.mp3str"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/689416__saha213131__wood-step - Copia.mp3"
-dest_files=["res://.godot/imported/689416__saha213131__wood-step - Copia.mp3-7da1cbf486d64f2d80ed0e0957b2c16e.mp3str"]
+source_file="res://assets/SFX/SoundsRaw/689416__saha213131__wood-step - Copia.mp3"
+dest_files=["res://.godot/imported/689416__saha213131__wood-step - Copia.mp3-f05b9c1d2d7caa3f294af09f3ccec278.mp3str"]
 
 [params]
 

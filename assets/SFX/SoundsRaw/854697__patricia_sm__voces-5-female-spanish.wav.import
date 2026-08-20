@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://buymk8qkecc4j"
-path="res://.godot/imported/854697__patricia_sm__voces-5-female-spanish.wav-dff38f0458083ab3d7e56c5dae23e825.sample"
+path="res://.godot/imported/854697__patricia_sm__voces-5-female-spanish.wav-10474e5e6398948a36f51be2f27033af.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/854697__patricia_sm__voces-5-female-spanish.wav"
-dest_files=["res://.godot/imported/854697__patricia_sm__voces-5-female-spanish.wav-dff38f0458083ab3d7e56c5dae23e825.sample"]
+source_file="res://assets/SFX/SoundsRaw/854697__patricia_sm__voces-5-female-spanish.wav"
+dest_files=["res://.godot/imported/854697__patricia_sm__voces-5-female-spanish.wav-10474e5e6398948a36f51be2f27033af.sample"]
 
 [params]
 

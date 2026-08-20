@@ -63,13 +63,6 @@ func update_slots() -> void:
 
 func select_slot(index: int) -> void:
 	InventoryManager.select_slot(index)
-	var item := InventoryManager.get_selected_item()
-	if item:
-		show_selected_item(item)
-	else:
-		hide_selected_item()
-
-	update_selection_visuals()
 
 
 func show_selected_item(item: ItemData) -> void:
@@ -88,17 +81,23 @@ func hide_selected_item() -> void:
 
 
 func update_selection_visuals() -> void:
-
 	var selected_index: int = InventoryManager.selected_index
 
 	for i in range(slots.size()):
-
 		var select_slot = slots[i].get_node("SelectSlot")
 
 		if i == selected_index:
 			select_slot.visible = true
 		else:
 			select_slot.visible = false
+
+	# Atualiza o item mostrado no centro da tela
+	var item := InventoryManager.get_selected_item()
+
+	if item:
+		show_selected_item(item)
+	else:
+		hide_selected_item()
 
 
 func show_inventory_full() -> void:
