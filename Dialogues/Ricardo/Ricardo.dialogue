@@ -16,11 +16,11 @@ else
 {{npc_name}}: Esquece...
 {{Constants.PLAYER_NAME}}: Hmm. Você não parece preocupado.
 {{npc_name}}: Com o quê?
-{{Constants.PLAYER_NAME}}: Com o fato de haver um irradiado entre vocês…
+{{Constants.PLAYER_NAME}}: Com o fato de haver um irradiado entre vocês...
 {{npc_name}}: Eu tenho convivido com essas pessoas faz mais de uma semana. Se elas quisessem me matar, já o teriam feito.
 {{Constants.PLAYER_NAME}}: Não é tão simples assim. Irradiados buscam se integrar-
 {{npc_name}}: Blá blá blá. Ligo não. Só faz seu trabalho aí.
-{{Constants.PLAYER_NAME}}: [shake rate=5.0 level=2][color=gray]Que mal-educado…[/color][/shake]
+{{Constants.PLAYER_NAME}}: [shake rate=5.0 level=2][color=gray]Que mal-educado...[/color][/shake]
 do StoryState.mark_npc_as_met(npc_id)
 => END
 
@@ -37,8 +37,9 @@ if StoryState.get_dialogue_condition("dad_lore")
 		=> how_old_are_you 
 	- Seu pai?
 		=> your_father
-- Quantos anos você tem?
-	=> how_old_are_you 
+else
+	- Quantos anos você tem?
+		=> how_old_are_you 
 => END
 
 

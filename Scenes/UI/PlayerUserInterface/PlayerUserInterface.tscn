@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dhobh86kvkhp2"]
 
 [ext_resource type="Texture2D" uid="uid://3wi7onginw4p" path="res://Models/InvBack.jpg" id="1_f8n5d"]
-[ext_resource type="FontFile" uid="uid://cghjqwt1yyu6h" path="res://assets/Fonts/DOTMATRI.TTF" id="1_mtsjr"]
-[ext_resource type="Texture2D" uid="uid://df363s1d2ml3t" path="res://assets/Images/Ammo.png" id="1_oujdm"]
-[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://assets/Fonts/veteran typewriter.ttf" id="2_5rtfa"]
+[ext_resource type="FontFile" uid="uid://cghjqwt1yyu6h" path="res://Assets/Fonts/DOTMATRI.TTF" id="1_mtsjr"]
+[ext_resource type="Texture2D" uid="uid://df363s1d2ml3t" path="res://Assets/Images/Ammo.png" id="1_oujdm"]
+[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://Assets/Fonts/veteran typewriter.ttf" id="2_5rtfa"]
 [ext_resource type="Script" uid="uid://cryk4ov32k6er" path="res://Scenes/UI/Inventory/Inventory.gd" id="2_eekh3"]
 [ext_resource type="Texture2D" uid="uid://y623yg80sblx" path="res://Models/mauTransp.png" id="2_imsl2"]
 [ext_resource type="Script" uid="uid://bee7yd15sr7p8" path="res://Scenes/UI/Inventory/InventorySlot.gd" id="4_cf8ec"]
@@ -314,10 +314,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2.5
-offset_top = -2.5
-offset_right = 2.5
-offset_bottom = 2.5
+offset_left = -3.5
+offset_top = -3.5
+offset_right = 3.5
+offset_bottom = 3.5
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 0, 1)

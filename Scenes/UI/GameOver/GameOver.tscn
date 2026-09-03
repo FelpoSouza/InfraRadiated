@@ -46,7 +46,7 @@ theme_override_constants/separation = 16
 [node name="GameOverLabel" type="Label" parent="ColorRect/VBoxContainer" unique_id=266614619]
 layout_mode = 2
 size_flags_vertical = 0
-text = "VOCÊ MORREU"
+text = "VOCÊ MORREU."
 label_settings = SubResource("LabelSettings_f5tak")
 horizontal_alignment = 1
 vertical_alignment = 1

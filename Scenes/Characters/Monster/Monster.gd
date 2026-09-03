@@ -135,6 +135,7 @@ func _on_speed_up_timer_timeout() -> void:
 # É ATIRADO PELO PLAYER
 #-------------------------------------------------------------------------
 func react_to_being_shot():
+	GameManager.decrease_monsters_count()
 	queue_free()
 
 #-------------------------------------------------------------------------

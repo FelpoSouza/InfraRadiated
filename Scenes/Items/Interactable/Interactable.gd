@@ -3,7 +3,7 @@ class_name Interactable
 extends Area3D
 
 @export var interactable_name: String
-@export var interact_action: String = "para interagir"
+@export var interact_action: String = "para interagir com"
 
 var interact_message: String
 

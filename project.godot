@@ -13,7 +13,7 @@ config_version=5
 config/name="InfraRadiated"
 run/main_scene="uid://d2vxuegv0jsu1"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://cimt2x1raunk3"
 
 [autoload]
 
@@ -24,6 +24,7 @@ DialogueSystemManager="*uid://65bfysfuwx2i"
 ScenesManager="*uid://da08r74vierm"
 SignalHub="*uid://bhxvce1ohce2g"
 InventoryManager="*uid://bui0ulatxuwk2"
+GameManager="*uid://c84o11kmor7ds"
 
 [dialogue_manager]
 
@@ -215,6 +216,11 @@ dialogs_continue_action={
 next_interactable={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+fire_gun={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
 ]
 }
 

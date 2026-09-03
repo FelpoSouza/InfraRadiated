@@ -10,7 +10,7 @@ const thermal_vision_off_battery_decay = 0.04
 var peek_distance: float = 1.5
 var peek_duration: float = 0.1
 var camera_offset: Vector3 = Vector3.ZERO
-var thermal_vision_battery: float = 100.0
+var thermal_vision_battery: float = 35.0
 var ammo_amount: int = 1
 var camera_basis_before_dialogue: Basis
 var is_camera_locked_on_npc: bool = false
@@ -91,7 +91,8 @@ func check_crosshair_interaction() -> void:
 		var target = forward_ray_for_areas.get_collider()
 		
 		if target and target.is_in_group(Constants.NPC_GROUP_NAME): 
-			crosshair.color = Color(0.91, 0.766, 0.0, 1.0)
+			#crosshair.color = Color(0.91, 0.766, 0.0, 1.0)
+			crosshair.color = Color(0.0, 0.922, 0.0, 1.0)
 			is_facing_npc = true
 			return
 	
@@ -228,11 +229,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("interact"):
 		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
 			try_talk_to_npc()
-		elif is_gun_active:
-			fire_gun()
 		else:
 			try_interact()
 	
+	if event.is_action_pressed("fire_gun") and is_gun_active:
+		fire_gun()
+		
 	if is_shifting:
 		if event.is_action_pressed("heatvision"):
 			toggle_thermal_vision()
@@ -343,7 +345,7 @@ func decrease_thermal_vision_battery(delta: float) -> void:
 			if is_thermal_vision_on:
 				toggle_thermal_vision()
 			SignalHub.emit_player_is_at_risk()
-
+	
 	thermal_battery_label.text = "%.1f %%" % thermal_vision_battery
 
 #-------------------------------------------------------------------------

@@ -44,6 +44,18 @@ func start_new_game() -> void:
 	var game_state = capture_game_state()
 	ScenesManager.change_scene_then_load_data(BEGINNING_SCENE_PATH, false, game_state)
 
+func delete_save() -> void:
+	if FileAccess.file_exists(SAVE_PATH):
+		var error = DirAccess.remove_absolute(SAVE_PATH)
+		
+		if error == OK:
+			print("Save file deleted successfully!")
+		else:
+			print("Failed to delete save file. Error code: ", error)
+	else:
+		print("No save file exists to delete.")
+
+
 func game_save_exists() -> bool:
 	if FileAccess.file_exists(SAVE_PATH):
 		return true

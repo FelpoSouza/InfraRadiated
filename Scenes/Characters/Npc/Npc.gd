@@ -179,6 +179,8 @@ func transform_to_monster() -> void:
 	
 	get_parent().add_child(monster_instance)
 	
+	GameManager.increase_monsters_count()
+	
 	if is_dead:
 		if monster_instance.has_method("react_to_being_shot"):
 			monster_instance.react_to_being_shot()
@@ -186,7 +188,7 @@ func transform_to_monster() -> void:
 	is_dead = true
 	
 	queue_free()
-	
+
 
 #-------------------------------------------------------------------------
 # FUNÇÕES DE PERSISTÊNCIA DE DADOS

@@ -9,7 +9,7 @@ else
 ~ first_interaction
 {{npc_name}}: Ah não, mais uma boca nessa casa?! Já não tava ruim antes pra ocê, sinhô?
 {{Constants.PLAYER_NAME}}: Não se preocupe senhora, sou militar do Depar-
-{{npc_name}}: E É UM MILITAR?! Oh Deusinho, ocê me fala pra cuida do outro mais só põe desgraça na frente…
+{{npc_name}}: E É UM MILITAR?! Oh Deusinho, ocê me fala pra cuida do outro mais só põe desgraça na frente...
 {{Constants.PLAYER_NAME}}: ... Departamento da Ordem Radiativa, e estou aqui apenas para verificar a existência de irradiados na região e resgatar civis para proteção no bunker.
 {{npc_name}}: É? Ah, Deus sorriu para mim então, num guento mais ficar indo de casa em casa dependendo da bondade dos outros. Vamo indo moço, só chama o povo e pega a panela aqui e-
 {{Constants.PLAYER_NAME}}: Espere, como disse preciso confirmar a presença de irradiados no local, talvez demore um pouco. Também tenho que garantir que a senhora não seja um deles.
@@ -41,17 +41,17 @@ if patience_level > 33
 	{{Constants.PLAYER_NAME}}: Poderia elaborar?
 	{{npc_name}}: Vim andando, lá do nordeste até aqui. Palavra honesta sinhô. Caminho foi duro. Muita casa vazia, pelo menos me dava abrigo. Achava que essa ia ser a mesma coisa mas pelo menos tenho companhia.
 	{{Constants.PLAYER_NAME}}: Companhia potencialmente perigosa. Você não se abrigava com ninguém nessas casas?
-	{{npc_name}}: Quando ainda tava lá no nordeste, às vezes achava uns conhecidos, ou conhecido de conhecido. Tentei vir até aqui com eles mas…
+	{{npc_name}}: Quando ainda tava lá no nordeste, às vezes achava uns conhecidos, ou conhecido de conhecido. Tentei vir até aqui com eles mas...
 	{{Constants.PLAYER_NAME}}: Mas?
 	if patience_level > 66
 		{{npc_name}}: Oiâ sinhô, num é nada sério, só memórias ruins.
-		{{Constants.PLAYER_NAME}}: Ah… eu… entendo.
+		{{Constants.PLAYER_NAME}}: Ah... eu... entendo.
 	else
-		{{npc_name}}: Um deles… era um deles
+		{{npc_name}}: Um deles... era um deles
 		{{Constants.PLAYER_NAME}}: Uma Criatura Demon- quer dizer, Irradiado?
-		{{npc_name}}: Sim. Até o momento achava que era fofoca da igreja, mas eu vi sinhô. Um moço arrancou o braço de uma criança e se banhou no sangue… ele me viu… não taria viva agora se não tivesse jogado minha sopa nele…
+		{{npc_name}}: Sim. Até o momento achava que era fofoca da igreja, mas eu vi sinhô. Um moço arrancou o braço de uma criança e se banhou no sangue... ele me viu... não taria viva agora se não tivesse jogado minha sopa nele...
 		{{Constants.PLAYER_NAME}}: ... Você pode falar mais?
-		{{npc_name}}: Ele… ele parou? Eu corri… eu só ouvi ele gritando depois, não sei se a possessão acabou ou a sopa fervendo fez efeito.
+		{{npc_name}}: Ele... ele parou? Eu corri... eu só ouvi ele gritando depois, não sei se a possessão acabou ou a sopa fervendo fez efeito.
 		{{Constants.PLAYER_NAME}}: Isso parece ter sido difícil para você, obrigado por compartilhar. Tenho certeza que me ajudará.
 else
 	{{npc_name}}: Andando.
@@ -63,7 +63,7 @@ else
 ~ what_did_you_do_for_a_living
 {{Constants.PLAYER_NAME}}: Imagino não ser uma suposição muito distante afirmar que a senhora é religiosa. Isso está relacionado com seu trabalho antes de tudo isso? você era uma frade ou algo do tipo?
 {{npc_name}}: Não preciso sê da igreja pra tá lá, sinhô.
-{{Constants.PLAYER_NAME}}: Certo, então uma das minhas hipóteses estava errada…
+{{Constants.PLAYER_NAME}}: Certo, então uma das minhas hipóteses estava errada...
 
 if patience_level > 33:
 	{{npc_name}}: Mas de certa forma sim, afetou o meu trabalho. Não teria escolhido cuidar de criança se Deus não tivesse me guiado!
@@ -73,17 +73,17 @@ if patience_level > 33:
 		do increment_patience_level(-50)
 		{{Constants.PLAYER_NAME}}: Perdão, você pode me falar do trabalho, ainda assim?
 	else:
-		{{npc_name}}: ... Na verdade, moço, é o medo do capiroto memo…
+		{{npc_name}}: ... Na verdade, moço, é o medo do capiroto memo...
 		{{Constants.PLAYER_NAME}}: Então cometeu algum pecado? Ou um crime? De qualquer forma acho uma forma bem nobre de se redimir
-		{{npc_name}}: Num faria um crime, não! e só que… eu fumo muito. Meu filho já me pediu para parar e até acho que ele se tornou doutor para tentar acabar com isso. No final não parei e agora num tô bem.
+		{{npc_name}}: Num faria um crime, não! e só que... eu fumo muito. Meu filho já me pediu para parar e até acho que ele se tornou doutor para tentar acabar com isso. No final não parei e agora num tô bem.
 		{{Constants.PLAYER_NAME}}: Nossa! então você está com-
 		{{npc_name}}: Úlcera Gástrica, tô tratando mas não vai sara, é para a vida.
-		{{Constants.PLAYER_NAME}}: Ufa, isso é um milagre… não que você está ruim, é só que com toda essa radiação eu estava assumindo o pior.
-		{{npc_name}}: Tendi sinhô. A coisa é que fiquei com medo de morre quando tava fazendo os testes. Dai lembrei das minhas amigas que ia na igreja… e pensei que morrer de vício certamente me levaria no inferno
-		{{Constants.PLAYER_NAME}}: Bem, pelo menos agora você parou…
-		{{npc_name}}: Sobre isso… é difícil parar sabe? Por isso decidi pedir perdão de outra forma
+		{{Constants.PLAYER_NAME}}: Ufa, isso é um milagre... não que você está ruim, é só que com toda essa radiação eu estava assumindo o pior.
+		{{npc_name}}: Tendi sinhô. A coisa é que fiquei com medo de morre quando tava fazendo os testes. Dai lembrei das minhas amigas que ia na igreja... e pensei que morrer de vício certamente me levaria no inferno
+		{{Constants.PLAYER_NAME}}: Bem, pelo menos agora você parou...
+		{{npc_name}}: Sobre isso... é difícil parar sabe? Por isso decidi pedir perdão de outra forma
 		{{Constants.PLAYER_NAME}}: ... Certo, e então começou o seu trabalho que é?
-		{{npc_name}}: Ah! é, sobre o trabalho…
+		{{npc_name}}: Ah! é, sobre o trabalho...
 
 
 => END

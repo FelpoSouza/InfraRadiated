@@ -10,6 +10,8 @@ var MAX_ITEMS : int = 5
 var items: Array[ItemData] = []
 var selected_index: int = -1
 
+func _ready() -> void:
+	add_to_group(Constants.DATA_PERSISTENCE_GROUP_NAME)
 
 func add_item(item: ItemData) -> bool:
 	if item == null:
@@ -111,3 +113,39 @@ func use_selected_item() -> bool:
 		return true
 
 	return false
+
+
+#-------------------------------------------------------------------------
+# FUNÇÕES DE PERSISTÊNCIA DE DADOS
+#-------------------------------------------------------------------------
+func save_to_state(state: Dictionary) -> void:
+	var inventory_manager_dict: Dictionary = {}
+	
+	var saved_item_paths: Array[String] = []
+	for item in items:
+		if item and item.resource_path != "":
+			saved_item_paths.append(item.resource_path)
+			
+	inventory_manager_dict["saved_item_paths"] = saved_item_paths
+	inventory_manager_dict["selected_index"] = selected_index
+	
+	inventory_manager_dict["max_items"] = MAX_ITEMS 
+	
+	state["InventoryManager"] = inventory_manager_dict
+
+func load_from_state(state: Dictionary) -> void:
+	var inventory_manager_dict = state.get("InventoryManager", {})
+	
+	var saved_item_paths = inventory_manager_dict.get("saved_item_paths", [])
+	MAX_ITEMS = inventory_manager_dict.get("max_items", 5)
+	selected_index = inventory_manager_dict.get("selected_index", -1)
+	
+	items.clear()
+	for path in saved_item_paths:
+		if ResourceLoader.exists(path):
+			var loaded_item = load(path) as ItemData
+			if loaded_item:
+				items.append(loaded_item)
+				
+	inventory_changed.emit()
+	selection_changed.emit()
