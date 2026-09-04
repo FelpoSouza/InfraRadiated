@@ -36,7 +36,9 @@
 [ext_resource type="PackedScene" uid="uid://dk5kyeu4hhe0x" path="res://Objects/Geladeira.tscn" id="30_ma7v8"]
 [ext_resource type="PackedScene" uid="uid://dykhly7rehnwq" path="res://Objects/Panela1.tscn" id="31_mkc2m"]
 [ext_resource type="PackedScene" uid="uid://cm8oggem6wvh4" path="res://Objects/Lixo.tscn" id="32_8aen5"]
+[ext_resource type="PackedScene" uid="uid://2py554g637is" path="res://Models/Quadro.tscn" id="33_xf7o5"]
 [ext_resource type="PackedScene" uid="uid://dfaqrpkbblanc" path="res://Objects/Vidro2.tscn" id="34_xf7o5"]
+[ext_resource type="PackedScene" uid="uid://dm0jhr14lceaf" path="res://Models/Armario.tscn" id="39_g4gw0"]
 
 [sub_resource type="Resource" id="Resource_ebfwc"]
 script = ExtResource("5_c3sq0")
@@ -274,6 +276,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.592825, -0.42415845, -6.68
 [node name="lixo5" parent="objetos/corredor" unique_id=1673385775 instance=ExtResource("32_8aen5")]
 transform = Transform3D(0.82044464, 0.010992214, 0.022321727, -0.011821895, 0.8201648, 0.030633416, -0.021893676, -0.030940887, 0.8199461, 16.200249, -0.42415845, -6.339572)
 
+[node name="quadro" parent="objetos/corredor" unique_id=360169270 instance=ExtResource("33_xf7o5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7234707, 1.2816181, -7.0432525)
+
 [node name="porta" type="StaticBody3D" parent="." unique_id=1737093574]
 transform = Transform3D(-1.0536451, 0, -1.3136635e-07, 0, 0.99550635, 0, 1.5909599e-07, 0, -0.87, -1.0116359, -0.35024297, 2.904286)
 
@@ -292,3 +297,9 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, -14)
 
 [node name="teto2" parent="." unique_id=868583259 instance=ExtResource("30_5bfh5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.784724, 0, 3.5650845, -10.112914)
+
+[node name="armario" parent="." unique_id=1837857384 instance=ExtResource("39_g4gw0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.6880355, 0.7460937, -12.918373)
+
+[node name="armario2" parent="." unique_id=97924066 instance=ExtResource("39_g4gw0")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 9.807, 0.687, -12.918)
