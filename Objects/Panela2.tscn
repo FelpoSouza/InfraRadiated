@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dnowyvvm2iw5a"]
+
+[ext_resource type="PackedScene" uid="uid://om8uem8153js" path="res://Models/panela2.glb" id="1_uyj34"]
+
+[node name="panela2" unique_id=788079424 instance=ExtResource("1_uyj34")]
+
+[node name="Cylinder_004" parent="." index="0" unique_id=415378520]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

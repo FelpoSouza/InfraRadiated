@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dr0o5hhxfkpdq"]
+
+[ext_resource type="PackedScene" uid="uid://cpnwb3vf2enc7" path="res://Models/microondas.glb" id="1_8j54u"]
+
+[node name="microondas" unique_id=1202106610 instance=ExtResource("1_8j54u")]

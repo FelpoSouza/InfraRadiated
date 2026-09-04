@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b87mcsk3g4oub"]
+
+[ext_resource type="PackedScene" uid="uid://b06uocyf1x2hv" path="res://Models/fogao.glb" id="1_vm2jr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_23gow"]
+size = Vector3(1.7436829, 1.750061, 2.0057983)
+
+[node name="fogao" unique_id=153121334 instance=ExtResource("1_vm2jr")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1182125915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013961792, 0.024505615, -0.000579834)
+shape = SubResource("BoxShape3D_23gow")

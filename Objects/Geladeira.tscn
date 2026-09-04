@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dk5kyeu4hhe0x"]
+
+[ext_resource type="PackedScene" uid="uid://c5c4xwqngldyq" path="res://Models/geladeira.glb" id="1_5bvhu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cc2wj"]
+size = Vector3(1.2164307, 2.3544922, 1.2052002)
+
+[node name="geladeira" unique_id=2141235291 instance=ExtResource("1_5bvhu")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=768396568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05987549, 0.0034179688, -0.0005493164)
+shape = SubResource("BoxShape3D_cc2wj")

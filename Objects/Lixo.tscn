@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cm8oggem6wvh4"]
+
+[ext_resource type="PackedScene" uid="uid://cfwsvklp14d8f" path="res://Models/lixo.glb" id="1_led2y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cl52c"]
+size = Vector3(0.86273193, 1.0062256, 0.86779785)
+
+[node name="lixo2" unique_id=1228803560 instance=ExtResource("1_led2y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=68351516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, 0.519501, -0.0006713867)
+shape = SubResource("BoxShape3D_cl52c")
