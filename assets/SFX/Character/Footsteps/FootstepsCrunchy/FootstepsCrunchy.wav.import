@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://btmj4d8x6uq7m"
-path="res://.godot/imported/FootstepsCrunchy.wav-223c3489ac70a38354ed8389f03ab190.sample"
+path="res://.godot/imported/FootstepsCrunchy.wav-e530f3d1cd373e7f522e85f92adfe0cb.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/Character/Footsteps/FootstepsCrunchy/FootstepsCrunchy.wav"
-dest_files=["res://.godot/imported/FootstepsCrunchy.wav-223c3489ac70a38354ed8389f03ab190.sample"]
+source_file="res://assets/SFX/Character/Footsteps/FootstepsCrunchy/FootstepsCrunchy.wav"
+dest_files=["res://.godot/imported/FootstepsCrunchy.wav-e530f3d1cd373e7f522e85f92adfe0cb.sample"]
 
 [params]
 

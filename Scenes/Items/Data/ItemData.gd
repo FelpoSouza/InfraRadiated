@@ -1,6 +1,12 @@
 extends Resource
 class_name ItemData
 
+enum ItemType {
+	FREE_USE,
+	NPC_USE,
+	OBJECT_USE
+}
+
 @export_category("Identificação")
 @export var item_name: String
 @export var item_id: String
@@ -15,3 +21,4 @@ class_name ItemData
 
 @export_category("Comportamento")
 @export var consumable: bool = true
+@export var item_type: ItemType = ItemType.FREE_USE 
