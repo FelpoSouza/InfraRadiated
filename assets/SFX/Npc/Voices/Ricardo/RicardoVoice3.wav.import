@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cq4dvo3q5pfxe"
-path="res://.godot/imported/RicardoVoice3.wav-c98b11b16ac859b0a8a9cf87f9878619.sample"
+path="res://.godot/imported/RicardoVoice3.wav-6d39ae2c11b72e58e61070423442d0c7.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/Npc/Voices/Ricardo/RicardoVoice3.wav"
-dest_files=["res://.godot/imported/RicardoVoice3.wav-c98b11b16ac859b0a8a9cf87f9878619.sample"]
+source_file="res://assets/SFX/Npc/Voices/Ricardo/RicardoVoice3.wav"
+dest_files=["res://.godot/imported/RicardoVoice3.wav-6d39ae2c11b72e58e61070423442d0c7.sample"]
 
 [params]
 

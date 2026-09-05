@@ -108,6 +108,15 @@ func check_crosshair_interaction() -> void:
 	
 	crosshair.color = Color(1.0, 1.0, 1.0)
 
+func item_interaction(item_type: ItemData.ItemType) -> int:
+	if item_type == ItemData.ItemType.FREE_USE:
+		if InventoryManager.use_selected_item():
+			return 1 # retorna de imediato se item usado com sucesso 
+	#EXPANDIR
+	# Retorna 1 se NPC_USE, então no NPC use InventoryManager.use_selected_item()		
+	# Retorne 2 para uso em objeto		
+	return 0
+
 func look_at_npc_face(npc_node: Node3D) -> void:
 	var target_pos: Vector3 = npc_node.global_position
 	var head_marker = npc_node.get_node_or_null("HeadMarker3D")
@@ -161,6 +170,7 @@ func try_interact():
 	#if object:
 		#if object.has_method("interact"):
 			#object.interact()
+	
 	if interactables.size() > 0 and selected_interactable_index >= 0 and selected_interactable_index < interactables.size():
 		var target = interactables[selected_interactable_index]
 		if target.has_method("interact"):
@@ -227,6 +237,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			selected_interactable_index = (selected_interactable_index + 1) % interactables.size()
 			
 	elif event.is_action_pressed("interact"):
+		var item_code = -1
+		if InventoryManager.selected_index >= 0 and InventoryManager.selected_index < InventoryManager.items.size():
+			item_code = item_interaction(InventoryManager.items[InventoryManager.selected_index].item_type)
+		if item_code == 1:
+			return	# Uso de consumivel
 		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
 			try_talk_to_npc()
 		else:
