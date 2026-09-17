@@ -22,3 +22,18 @@ enum ItemType {
 @export_category("Comportamento")
 @export var consumable: bool = true
 @export var item_type: ItemType = ItemType.FREE_USE 
+
+# Função base para uso livre
+func use_free(player: Node) -> bool:
+	InventoryManager.use_selected_item()
+	return false
+	
+# Função base para uso em npc
+func use_npc(player: Node, Npc: Node) -> bool:
+	InventoryManager.use_selected_item()
+	return false
+	
+# Função base para em objetos
+func use_object(player: Node) -> bool:
+	InventoryManager.use_selected_item()
+	return false
