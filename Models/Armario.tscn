@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dm0jhr14lceaf"]
+
+[ext_resource type="PackedScene" uid="uid://n0qgijg3e4ky" path="res://Models/armario.glb" id="1_1xwix"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ygvh"]
+size = Vector3(2.0007324, 1.998291, 1.1166382)
+
+[node name="armario" unique_id=1559444307 instance=ExtResource("1_1xwix")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=646164024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207031, -0.0025634766, 0.057769775)
+shape = SubResource("BoxShape3D_5ygvh")

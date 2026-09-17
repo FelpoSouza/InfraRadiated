@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cjebcngyy76ro"]
+
+[ext_resource type="PackedScene" uid="uid://mrrg7ukqc82g" path="res://Models/privada.glb" id="1_iwfrd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hy400"]
+size = Vector3(0.7651367, 1.0928955, 1.1025391)
+
+[node name="privada" unique_id=967468580 instance=ExtResource("1_iwfrd")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1074298929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012207031, -0.014587402, 0.05126953)
+shape = SubResource("BoxShape3D_hy400")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bm7ewvtqh6txv"]
+
+[ext_resource type="PackedScene" uid="uid://ca6lng3jx2qrk" path="res://Models/chuveiro.glb" id="1_2u6o0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wfc8g"]
+size = Vector3(1, 2.0019531, 0.9981079)
+
+[node name="chuveiro" unique_id=1712943859 instance=ExtResource("1_2u6o0")]
+
+[node name="Cube_021" parent="." index="0" unique_id=751683516]
+transform = Transform3D(1.6540488, 0, 0, 0, 1.6540488, 0, 0, 0, 1.6540488, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=444587183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4892578, 0.079193115)
+shape = SubResource("BoxShape3D_wfc8g")

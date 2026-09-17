@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://1iw2p18lignk"]
+
+[ext_resource type="PackedScene" uid="uid://dpq8vui6dtccs" path="res://Models/sofa.glb" id="1_avl2x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0u1dl"]
+size = Vector3(2.499939, 1.2406006, 1.1084595)
+
+[node name="sofa" unique_id=84287407 instance=ExtResource("1_avl2x")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=64312287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0030212402, 0.30877686, 0.047454834)
+shape = SubResource("BoxShape3D_0u1dl")

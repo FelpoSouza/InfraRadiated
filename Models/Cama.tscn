@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dvjyf0mn6pgpf"]
+
+[ext_resource type="PackedScene" uid="uid://bchxfvujptqsj" path="res://Models/cama.glb" id="1_3sodb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3www8"]
+size = Vector3(1.1894531, 1.4471436, 2.0129395)
+
+[node name="cama" unique_id=2091897881 instance=ExtResource("1_3sodb")]
+
+[node name="Cube_017" parent="." index="0" unique_id=1347290723]
+transform = Transform3D(1.2185068, 0, 0, 0, 1.2185068, 0, 0, 0, 1.2185068, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1960820265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12005615, 0.26867676)
+shape = SubResource("BoxShape3D_3www8")

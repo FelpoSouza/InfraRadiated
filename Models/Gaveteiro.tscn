@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://6ffnna8n438"]
+
+[ext_resource type="PackedScene" uid="uid://3kp4odvw3mf" path="res://Models/gaveteiro.glb" id="1_j11l2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_55eob"]
+size = Vector3(1.9998779, 0.7056885, 0.798584)
+
+[node name="gaveteiro" unique_id=920735597 instance=ExtResource("1_j11l2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=545963475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0020141602, -0.046569824, -0.2310791)
+shape = SubResource("BoxShape3D_55eob")
