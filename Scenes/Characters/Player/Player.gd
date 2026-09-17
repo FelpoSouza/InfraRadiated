@@ -86,7 +86,7 @@ func _process(_delta: float) -> void:
 #-------------------------------------------------------------------------
 # INTERAÇÃO
 #-------------------------------------------------------------------------
-func check_crosshair_interaction() -> void:
+func check_crosshair_interaction() -> Node:
 	if forward_ray_for_areas.is_colliding():
 		var target = forward_ray_for_areas.get_collider()
 		
@@ -94,7 +94,7 @@ func check_crosshair_interaction() -> void:
 			#crosshair.color = Color(0.91, 0.766, 0.0, 1.0)
 			crosshair.color = Color(0.0, 0.922, 0.0, 1.0)
 			is_facing_npc = true
-			return
+			return target
 	
 	is_facing_npc = false
 	
@@ -107,15 +107,37 @@ func check_crosshair_interaction() -> void:
 			#return
 	
 	crosshair.color = Color(1.0, 1.0, 1.0)
+	return null
 
-func item_interaction(item_type: ItemData.ItemType) -> int:
-	if item_type == ItemData.ItemType.FREE_USE:
-		if InventoryManager.use_selected_item():
+func item_interaction(item: ItemData) -> int:
+	if item.item_type == ItemData.ItemType.FREE_USE:
+		if item.use_free(self):
 			return 1 # retorna de imediato se item usado com sucesso 
+	if item.item_type == ItemData.ItemType.NPC_USE:
+		return 2
+	if item.item_type == ItemData.ItemType.OBJECT_USE:
+		return 3
 	#EXPANDIR
-	# Retorna 1 se NPC_USE, então no NPC use InventoryManager.use_selected_item()		
-	# Retorne 2 para uso em objeto		
+	# Retorna 2 se NPC_USE, então no NPC use InventoryManager.use_selected_item()		
+	# Retorne 3 para uso em objeto		
 	return 0
+	
+func apply_to_npc(item: ItemData) -> void:
+	if forward_ray_for_areas.is_colliding():
+		var target = forward_ray_for_areas.get_collider()
+		
+		if target.is_in_group(Constants.NPC_GROUP_NAME) and target.has_method("show_dialog"):
+			item.use_npc(self, target)
+			#var forward_dir: Vector3 = -camera.global_transform.basis.z
+			#forward_dir.y = 0.0
+			#forward_dir = forward_dir.normalized()
+			
+			#camera_basis_before_dialogue = Basis.looking_at(forward_dir, Vector3.UP)
+			
+			#is_camera_locked_on_npc = true
+			
+			#look_at_npc_face(target)
+			#target.show_dialog()
 
 func look_at_npc_face(npc_node: Node3D) -> void:
 	var target_pos: Vector3 = npc_node.global_position
@@ -239,11 +261,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("interact"):
 		var item_code = -1
 		if InventoryManager.selected_index >= 0 and InventoryManager.selected_index < InventoryManager.items.size():
-			item_code = item_interaction(InventoryManager.items[InventoryManager.selected_index].item_type)
+			item_code = item_interaction(InventoryManager.items[InventoryManager.selected_index])
 		if item_code == 1:
 			return	# Uso de consumivel
 		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
-			try_talk_to_npc()
+			if item_code == 2:
+				var thisItem = InventoryManager.items[InventoryManager.selected_index]
+				apply_to_npc(thisItem)
+			else:	
+				try_talk_to_npc()
 		else:
 			try_interact()
 	
