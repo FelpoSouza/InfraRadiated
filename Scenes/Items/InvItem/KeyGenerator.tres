@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="KeyGeneratorItemData" format=3 uid="uid://bu1l1fd8fj2co"]
+
+[ext_resource type="Texture2D" uid="uid://brp6ay2ssur8l" path="res://assets/Images/Key.png" id="1_kpkrs"]
+[ext_resource type="PackedScene" uid="uid://be6p1bdvgnq4c" path="res://Models/itens/bateria.glb" id="2_eup5b"]
+[ext_resource type="Script" uid="uid://cv5ka7wk6qrlh" path="res://Scenes/Items/InvItem/KeyGeneratorItemData.gd" id="2_kpkrs"]
+
+[resource]
+script = ExtResource("2_kpkrs")
+item_name = "Chave do Gerador"
+item_id = "generatorKey"
+inventory_sprite = ExtResource("1_kpkrs")
+item_model = ExtResource("2_eup5b")
+consumable = false
+item_type = 2
+metadata/_custom_type_script = "uid://dul5bt3k83gka"

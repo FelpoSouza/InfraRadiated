@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://cmpcq8pfx0jxn" path="res://Models/quadro.glb" id="46_1l5xx"]
 [ext_resource type="PackedScene" uid="uid://x2qf11a55lql" path="res://Objects/Piabanehro.tscn" id="48_ldvd6"]
 [ext_resource type="PackedScene" uid="uid://bm7ewvtqh6txv" path="res://Objects/Chuveiro.tscn" id="49_84i1s"]
+[ext_resource type="PackedScene" uid="uid://joy5mx4ldgnx" path="res://Scenes/Items/InvItem/keyGenerator.tscn" id="51_o6lc4"]
 
 [sub_resource type="Resource" id="Resource_ebfwc"]
 script = ExtResource("5_c3sq0")
@@ -392,3 +393,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.784724, 0, 3.5650845, -10.1129
 
 [node name="armario2" parent="." unique_id=1305460435 instance=ExtResource("38_xf7o5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.7356539, 0.69225883, -11.743572)
+
+[node name="KeyGenerator" parent="." unique_id=1354103293 instance=ExtResource("51_o6lc4")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0.5, -14)

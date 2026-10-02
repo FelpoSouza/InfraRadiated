@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://joy5mx4ldgnx"]
+
+[ext_resource type="PackedScene" uid="uid://bo05dlxf0fer5" path="res://Scenes/Items/PickableItem/PickableItem3D.tscn" id="1_52074"]
+[ext_resource type="Resource" uid="uid://bu1l1fd8fj2co" path="res://Scenes/Items/InvItem/KeyGenerator.tres" id="2_52074"]
+
+[node name="KeyGenerator" type="Node3D" unique_id=1034379836]
+
+[node name="Pickable3D" parent="." unique_id=415543769 instance=ExtResource("1_52074")]
+item_data = ExtResource("2_52074")
+interactable_name = "Chave do Gerador"

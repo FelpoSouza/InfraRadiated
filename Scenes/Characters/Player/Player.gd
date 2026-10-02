@@ -157,11 +157,17 @@ func look_at_npc_face(npc_node: Node3D) -> void:
 	var tween = create_tween()
 	tween.tween_property(camera, "global_transform:basis", target_transform.basis, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)	
 
-func try_talk_to_npc() -> void:
+func try_talk_to_npc(item: ItemData) -> void:
 	if forward_ray_for_areas.is_colliding():
 		var target = forward_ray_for_areas.get_collider()
 		
 		if target.is_in_group(Constants.NPC_GROUP_NAME) and target.has_method("show_dialog"):
+			if item != null:
+				if item.item_type == ItemData.ItemType.NPC_USE:
+					item.use_npc(self, target)
+					return #iniciar dialogo especial? 
+				# o dialago acima poderia ser chamado pelo "use_npc" especifico
+			
 			var forward_dir: Vector3 = -camera.global_transform.basis.z
 			forward_dir.y = 0.0
 			forward_dir = forward_dir.normalized()
@@ -182,7 +188,7 @@ func on_balloon_closed() -> void:
 #----------------------------------------
 # INTERAÇÃO GERAL 
 #----------------------------------------	
-func try_interact():
+func try_interact(item: ItemData):
 	#var object = forward_ray_for_interact.get_collider() #esse raio tambem rastreia InterPoints
 	#
 	#if object != null:
@@ -195,8 +201,10 @@ func try_interact():
 	
 	if interactables.size() > 0 and selected_interactable_index >= 0 and selected_interactable_index < interactables.size():
 		var target = interactables[selected_interactable_index]
-		if target.has_method("interact"):
+		if target.has_method("interact") && item == null:
 			target.interact()
+		elif target.has_method("interact") && item.item_type == ItemData.ItemType.OBJECT_USE:
+			item.use_object(self, target)		
 
 func check_available_interactions() -> void:
 	if is_facing_npc:
@@ -259,19 +267,17 @@ func _unhandled_input(event: InputEvent) -> void:
 			selected_interactable_index = (selected_interactable_index + 1) % interactables.size()
 			
 	elif event.is_action_pressed("interact"):
-		var item_code = -1
+		var thisItem : ItemData = null 
 		if InventoryManager.selected_index >= 0 and InventoryManager.selected_index < InventoryManager.items.size():
-			item_code = item_interaction(InventoryManager.items[InventoryManager.selected_index])
-		if item_code == 1:
-			return	# Uso de consumivel
-		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
-			if item_code == 2:
-				var thisItem = InventoryManager.items[InventoryManager.selected_index]
-				apply_to_npc(thisItem)
-			else:	
-				try_talk_to_npc()
+			thisItem = InventoryManager.items[InventoryManager.selected_index]
+		if thisItem != null:
+			if thisItem.item_type == ItemData.ItemType.FREE_USE:
+				thisItem.use_free(self)
+				return	# Uso de consumivel
+		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:	
+				try_talk_to_npc(thisItem)
 		else:
-			try_interact()
+			try_interact(thisItem)
 	
 	if event.is_action_pressed("fire_gun") and is_gun_active:
 		fire_gun()
