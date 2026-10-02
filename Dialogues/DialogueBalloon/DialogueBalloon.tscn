@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2em5bdcq6pjc" path="res://Dialogues/DialogueBalloon/DialogueBalloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://Assets/Fonts/veteran typewriter.ttf" id="2_wjsiu"]
+[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://assets/Fonts/veteran typewriter.ttf" id="2_wjsiu"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]

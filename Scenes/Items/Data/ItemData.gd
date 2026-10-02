@@ -34,6 +34,6 @@ func use_npc(player: Node, Npc: Node) -> bool:
 	return false
 	
 # Função base para em objetos
-func use_object(player: Node) -> bool:
+func use_object(player: Node, interObj: Interactable) -> bool:
 	InventoryManager.use_selected_item()
 	return false
