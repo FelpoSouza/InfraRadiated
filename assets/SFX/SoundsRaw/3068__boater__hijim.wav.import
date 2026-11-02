@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cicg8fltbdsgh"
-path="res://.godot/imported/3068__boater__hijim.wav-13497babb1b8cccedea4025205e7e296.sample"
+path="res://.godot/imported/3068__boater__hijim.wav-cddc6fc5ea646de955e73d06929b3830.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/3068__boater__hijim.wav"
-dest_files=["res://.godot/imported/3068__boater__hijim.wav-13497babb1b8cccedea4025205e7e296.sample"]
+source_file="res://assets/SFX/SoundsRaw/3068__boater__hijim.wav"
+dest_files=["res://.godot/imported/3068__boater__hijim.wav-cddc6fc5ea646de955e73d06929b3830.sample"]
 
 [params]
 

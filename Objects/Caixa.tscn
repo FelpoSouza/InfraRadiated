@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b5b0ap0wstw56"]
+
+[ext_resource type="PackedScene" uid="uid://cbi5gy2ea6a00" path="res://Models/caixa.glb" id="1_4qmhm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bq60r"]
+
+[node name="caixa" unique_id=1918707809 instance=ExtResource("1_4qmhm")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1793822374]
+shape = SubResource("BoxShape3D_bq60r")

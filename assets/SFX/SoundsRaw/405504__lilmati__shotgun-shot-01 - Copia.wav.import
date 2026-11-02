@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ci2f3p4odfr8"
-path="res://.godot/imported/405504__lilmati__shotgun-shot-01 - Copia.wav-dec60e5189d4fe102cd188277482a02d.sample"
+path="res://.godot/imported/405504__lilmati__shotgun-shot-01 - Copia.wav-f6b49ff36ba8175c0b535d7842633362.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/405504__lilmati__shotgun-shot-01 - Copia.wav"
-dest_files=["res://.godot/imported/405504__lilmati__shotgun-shot-01 - Copia.wav-dec60e5189d4fe102cd188277482a02d.sample"]
+source_file="res://assets/SFX/SoundsRaw/405504__lilmati__shotgun-shot-01 - Copia.wav"
+dest_files=["res://.godot/imported/405504__lilmati__shotgun-shot-01 - Copia.wav-f6b49ff36ba8175c0b535d7842633362.sample"]
 
 [params]
 

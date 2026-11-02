@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b7wsoluc6wqrj"
-path="res://.godot/imported/206043__thefrohman__ambiant-1 - Copia.mp3-b2e4aeb7e918df9dd83a1bac9e9c2256.mp3str"
+path="res://.godot/imported/206043__thefrohman__ambiant-1 - Copia.mp3-8a08b9a0dd2e5076a0a1667fbed566b8.mp3str"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/206043__thefrohman__ambiant-1 - Copia.mp3"
-dest_files=["res://.godot/imported/206043__thefrohman__ambiant-1 - Copia.mp3-b2e4aeb7e918df9dd83a1bac9e9c2256.mp3str"]
+source_file="res://assets/SFX/SoundsRaw/206043__thefrohman__ambiant-1 - Copia.mp3"
+dest_files=["res://.godot/imported/206043__thefrohman__ambiant-1 - Copia.mp3-8a08b9a0dd2e5076a0a1667fbed566b8.mp3str"]
 
 [params]
 

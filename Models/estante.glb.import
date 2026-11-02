@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ce1tvj2xwvjgf"
+uid="uid://bb15pga2uy0qw"
 path="res://.godot/imported/estante.glb-12afc1c1286c99e3a7c7211d69c4e53d.scn"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/estante.glb-12afc1c1286c99e3a7c7211d69c4e53d.
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="RigidBody3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

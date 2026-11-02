@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://6yyjbq8wpyp"]
+
+[ext_resource type="PackedScene" uid="uid://byuaky1rg4mic" path="res://Models/criadomudo.glb" id="1_2v8pb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ugdlg"]
+size = Vector3(1.0424805, 1.022583, 1.1138916)
+
+[node name="criadomudo" unique_id=131403383 instance=ExtResource("1_2v8pb")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2050239897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0021972656, -0.070739746, -0.31707764)
+shape = SubResource("BoxShape3D_ugdlg")

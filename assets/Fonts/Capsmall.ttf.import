@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b7avf0p1aysqu"
-path="res://.godot/imported/Capsmall.ttf-18a57883e6876d6226de66410ad078de.fontdata"
+path="res://.godot/imported/Capsmall.ttf-8d72bd8b2c99a0e004e63cb34ba46648.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Capsmall.ttf"
-dest_files=["res://.godot/imported/Capsmall.ttf-18a57883e6876d6226de66410ad078de.fontdata"]
+source_file="res://assets/Fonts/Capsmall.ttf"
+dest_files=["res://.godot/imported/Capsmall.ttf-8d72bd8b2c99a0e004e63cb34ba46648.fontdata"]
 
 [params]
 

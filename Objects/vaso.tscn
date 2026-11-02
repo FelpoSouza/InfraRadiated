@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://doq76xw86khob"]
+
+[ext_resource type="PackedScene" uid="uid://r7xty8g3tad5" path="res://Models/vaso.glb" id="1_o5nsa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71nl8"]
+size = Vector3(0.32369995, 0.30114746, 0.32763672)
+
+[node name="vaso" unique_id=188037998 instance=ExtResource("1_o5nsa")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=182922994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00038146973, 0.030456543, -0.0012207031)
+shape = SubResource("BoxShape3D_71nl8")

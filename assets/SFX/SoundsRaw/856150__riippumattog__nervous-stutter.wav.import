@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://2tyajp7udv00"
-path="res://.godot/imported/856150__riippumattog__nervous-stutter.wav-451e6509b02f693e4450d0782705aab6.sample"
+path="res://.godot/imported/856150__riippumattog__nervous-stutter.wav-3ce74fd7fa3f2233c15445df673b08c4.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/856150__riippumattog__nervous-stutter.wav"
-dest_files=["res://.godot/imported/856150__riippumattog__nervous-stutter.wav-451e6509b02f693e4450d0782705aab6.sample"]
+source_file="res://assets/SFX/SoundsRaw/856150__riippumattog__nervous-stutter.wav"
+dest_files=["res://.godot/imported/856150__riippumattog__nervous-stutter.wav-3ce74fd7fa3f2233c15445df673b08c4.sample"]
 
 [params]
 

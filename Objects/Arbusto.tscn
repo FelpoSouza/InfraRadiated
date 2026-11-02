@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bbwew1lpl0j31"]
+
+[ext_resource type="PackedScene" uid="uid://dtsv0os72jfom" path="res://Models/arbusto.glb" id="1_wrckw"]
+
+[node name="arbusto" unique_id=1377747314 instance=ExtResource("1_wrckw")]

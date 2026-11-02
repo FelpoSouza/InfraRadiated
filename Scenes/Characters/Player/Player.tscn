@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bjg7kpnd1mahq" path="res://Scenes/Characters/Player/Player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://ck04mh27ip2yl" path="res://Scenes/Characters/BaseCharacter.tscn" id="1_5dhau"]
-[ext_resource type="AudioStream" uid="uid://c1yy8dvfnrxu3" path="res://Assets/SFX/Character/Woosh/Woosh5.wav" id="5_ay8ch"]
+[ext_resource type="AudioStream" uid="uid://c1yy8dvfnrxu3" path="res://assets/SFX/Character/Woosh/Woosh5.wav" id="5_ay8ch"]
 [ext_resource type="PackedScene" uid="uid://dil78qu4qwuvg" path="res://Scenes/Items/Gun/Gun.tscn" id="5_ov5rv"]
 [ext_resource type="PackedScene" uid="uid://dhobh86kvkhp2" path="res://Scenes/UI/PlayerUserInterface/PlayerUserInterface.tscn" id="5_ryx5o"]
 [ext_resource type="Shader" uid="uid://lodk6470pmij" path="res://Resources/Shaders/screen_pixelazation_and_thermal.gdshader" id="6_ay8ch"]
 [ext_resource type="PackedScene" uid="uid://bgm3bn4n1okiv" path="res://Scenes/UI/PauseMenu/PauseMenu.tscn" id="6_tpg23"]
-[ext_resource type="AudioStream" uid="uid://daq5qjkhnp757" path="res://Assets/SFX/Character/Gunshots/Gunshot1.wav" id="6_xst4l"]
+[ext_resource type="AudioStream" uid="uid://daq5qjkhnp757" path="res://assets/SFX/Character/Gunshots/Gunshot1.wav" id="6_xst4l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sqvhx"]
 shader = ExtResource("6_ay8ch")

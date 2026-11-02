@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://qncuq2ddgkcv"]
 
-[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://Assets/Fonts/veteran typewriter.ttf" id="1_oac4r"]
+[ext_resource type="FontFile" uid="uid://ci8atkfeyr6ke" path="res://assets/Fonts/veteran typewriter.ttf" id="1_oac4r"]
 
 [sub_resource type="Gradient" id="Gradient_o2ta1"]
 offsets = PackedFloat32Array(0, 0.90654206)

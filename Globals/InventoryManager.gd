@@ -97,7 +97,7 @@ func consume_selected_item() -> void:
 func change_size(ammount: int):
 	MAX_ITEMS = ammount
 	
-	
+# para consumível direto	
 func use_selected_item() -> bool:
 	if selected_index < 0:
 		return false

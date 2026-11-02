@@ -42,8 +42,8 @@ func _process(_delta: float) -> void:
 	elif Input.is_action_just_pressed("inventory5"):
 		select_slot(4)
 	# trocar mais para frente, para evitar ação dupla do jogador	
-	elif Input.is_action_just_pressed("interact"):
-		InventoryManager.use_selected_item()
+	#elif Input.is_action_just_pressed("interact"):
+	#	InventoryManager.use_selected_item()
 
 
 func update_slots() -> void:

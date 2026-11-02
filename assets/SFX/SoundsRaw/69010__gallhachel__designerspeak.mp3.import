@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ceaeocj3qw3g0"
-path="res://.godot/imported/69010__gallhachel__designerspeak.mp3-2286938005784e5674214bea1983fe48.mp3str"
+path="res://.godot/imported/69010__gallhachel__designerspeak.mp3-d42c9f61dc72a91ec3106743585c9c30.mp3str"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/69010__gallhachel__designerspeak.mp3"
-dest_files=["res://.godot/imported/69010__gallhachel__designerspeak.mp3-2286938005784e5674214bea1983fe48.mp3str"]
+source_file="res://assets/SFX/SoundsRaw/69010__gallhachel__designerspeak.mp3"
+dest_files=["res://.godot/imported/69010__gallhachel__designerspeak.mp3-d42c9f61dc72a91ec3106743585c9c30.mp3str"]
 
 [params]
 

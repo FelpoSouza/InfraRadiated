@@ -86,7 +86,7 @@ func _process(_delta: float) -> void:
 #-------------------------------------------------------------------------
 # INTERAÇÃO
 #-------------------------------------------------------------------------
-func check_crosshair_interaction() -> void:
+func check_crosshair_interaction() -> Node:
 	if forward_ray_for_areas.is_colliding():
 		var target = forward_ray_for_areas.get_collider()
 		
@@ -94,7 +94,7 @@ func check_crosshair_interaction() -> void:
 			#crosshair.color = Color(0.91, 0.766, 0.0, 1.0)
 			crosshair.color = Color(0.0, 0.922, 0.0, 1.0)
 			is_facing_npc = true
-			return
+			return target
 	
 	is_facing_npc = false
 	
@@ -107,6 +107,37 @@ func check_crosshair_interaction() -> void:
 			#return
 	
 	crosshair.color = Color(1.0, 1.0, 1.0)
+	return null
+
+func item_interaction(item: ItemData) -> int:
+	if item.item_type == ItemData.ItemType.FREE_USE:
+		if item.use_free(self):
+			return 1 # retorna de imediato se item usado com sucesso 
+	if item.item_type == ItemData.ItemType.NPC_USE:
+		return 2
+	if item.item_type == ItemData.ItemType.OBJECT_USE:
+		return 3
+	#EXPANDIR
+	# Retorna 2 se NPC_USE, então no NPC use InventoryManager.use_selected_item()		
+	# Retorne 3 para uso em objeto		
+	return 0
+	
+func apply_to_npc(item: ItemData) -> void:
+	if forward_ray_for_areas.is_colliding():
+		var target = forward_ray_for_areas.get_collider()
+		
+		if target.is_in_group(Constants.NPC_GROUP_NAME) and target.has_method("show_dialog"):
+			item.use_npc(self, target)
+			#var forward_dir: Vector3 = -camera.global_transform.basis.z
+			#forward_dir.y = 0.0
+			#forward_dir = forward_dir.normalized()
+			
+			#camera_basis_before_dialogue = Basis.looking_at(forward_dir, Vector3.UP)
+			
+			#is_camera_locked_on_npc = true
+			
+			#look_at_npc_face(target)
+			#target.show_dialog()
 
 func look_at_npc_face(npc_node: Node3D) -> void:
 	var target_pos: Vector3 = npc_node.global_position
@@ -126,11 +157,17 @@ func look_at_npc_face(npc_node: Node3D) -> void:
 	var tween = create_tween()
 	tween.tween_property(camera, "global_transform:basis", target_transform.basis, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)	
 
-func try_talk_to_npc() -> void:
+func try_talk_to_npc(item: ItemData) -> void:
 	if forward_ray_for_areas.is_colliding():
 		var target = forward_ray_for_areas.get_collider()
 		
 		if target.is_in_group(Constants.NPC_GROUP_NAME) and target.has_method("show_dialog"):
+			if item != null:
+				if item.item_type == ItemData.ItemType.NPC_USE:
+					item.use_npc(self, target)
+					return #iniciar dialogo especial? 
+				# o dialago acima poderia ser chamado pelo "use_npc" especifico
+			
 			var forward_dir: Vector3 = -camera.global_transform.basis.z
 			forward_dir.y = 0.0
 			forward_dir = forward_dir.normalized()
@@ -151,7 +188,7 @@ func on_balloon_closed() -> void:
 #----------------------------------------
 # INTERAÇÃO GERAL 
 #----------------------------------------	
-func try_interact():
+func try_interact(item: ItemData):
 	#var object = forward_ray_for_interact.get_collider() #esse raio tambem rastreia InterPoints
 	#
 	#if object != null:
@@ -161,10 +198,13 @@ func try_interact():
 	#if object:
 		#if object.has_method("interact"):
 			#object.interact()
+	
 	if interactables.size() > 0 and selected_interactable_index >= 0 and selected_interactable_index < interactables.size():
 		var target = interactables[selected_interactable_index]
-		if target.has_method("interact"):
+		if target.has_method("interact") && item == null:
 			target.interact()
+		elif target.has_method("interact") && item.item_type == ItemData.ItemType.OBJECT_USE:
+			item.use_object(self, target)		
 
 func check_available_interactions() -> void:
 	if is_facing_npc:
@@ -227,10 +267,17 @@ func _unhandled_input(event: InputEvent) -> void:
 			selected_interactable_index = (selected_interactable_index + 1) % interactables.size()
 			
 	elif event.is_action_pressed("interact"):
-		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:
-			try_talk_to_npc()
+		var thisItem : ItemData = null 
+		if InventoryManager.selected_index >= 0 and InventoryManager.selected_index < InventoryManager.items.size():
+			thisItem = InventoryManager.items[InventoryManager.selected_index]
+		if thisItem != null:
+			if thisItem.item_type == ItemData.ItemType.FREE_USE:
+				thisItem.use_free(self)
+				return	# Uso de consumivel
+		if is_facing_npc and not DialogueSystemManager.is_dialogue_active:	
+				try_talk_to_npc(thisItem)
 		else:
-			try_interact()
+			try_interact(thisItem)
 	
 	if event.is_action_pressed("fire_gun") and is_gun_active:
 		fire_gun()

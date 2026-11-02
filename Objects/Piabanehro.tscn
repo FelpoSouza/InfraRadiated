@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://x2qf11a55lql"]
+
+[ext_resource type="PackedScene" uid="uid://b50r0yifwjc7s" path="res://Models/piabanehro.glb" id="1_2cw2q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_imupi"]
+size = Vector3(0.8033447, 1.3112793, 0.7055664)
+
+[node name="piabanehro" unique_id=732074945 instance=ExtResource("1_2cw2q")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=40424290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0021362305, -0.1505127, -0.23935175)
+shape = SubResource("BoxShape3D_imupi")

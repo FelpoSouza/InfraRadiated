@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dqrvbb1bpo3oa"]
+
+[ext_resource type="PackedScene" uid="uid://bb15pga2uy0qw" path="res://Models/estante.glb" id="1_ukf7v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptqjg"]
+size = Vector3(2.00885, 2.008667, 0.75250244)
+
+[node name="estante" unique_id=2086025965 instance=ExtResource("1_ukf7v")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=971763458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001373291, -0.0015258789, 0.01449585)
+shape = SubResource("BoxShape3D_ptqjg")

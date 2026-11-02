@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0l07u143yft6"
-path="res://.godot/imported/544676__clueless79__shotgun-02 - Copia.wav-dd7060136830ec36e1e7f711ac235a15.sample"
+path="res://.godot/imported/544676__clueless79__shotgun-02 - Copia.wav-0ab130665f5726a62182d4bf223e9cce.sample"
 
 [deps]
 
-source_file="res://Assets/SFX/SoundsRaw/544676__clueless79__shotgun-02 - Copia.wav"
-dest_files=["res://.godot/imported/544676__clueless79__shotgun-02 - Copia.wav-dd7060136830ec36e1e7f711ac235a15.sample"]
+source_file="res://assets/SFX/SoundsRaw/544676__clueless79__shotgun-02 - Copia.wav"
+dest_files=["res://.godot/imported/544676__clueless79__shotgun-02 - Copia.wav-0ab130665f5726a62182d4bf223e9cce.sample"]
 
 [params]
 
