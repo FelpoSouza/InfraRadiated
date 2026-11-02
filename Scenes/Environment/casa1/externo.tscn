@@ -592,16 +592,16 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 26.8548, 1.4929239, 8.9
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4.617079, 1.4929239, 28.532005)
 
 [node name="arvore4" parent="arvores" unique_id=1270186753 instance=ExtResource("13_ggc10")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 24.573616, 1.5686834, -33.061626)
+transform = Transform3D(0.30771384, 0, 0.3940967, 0, 0.5, 0, -0.3940967, 0, 0.30771384, 24.573616, 1.5686834, -33.061626)
 
 [node name="arvore5" parent="arvores" unique_id=1902865690 instance=ExtResource("13_ggc10")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 29.370455, 1.5686834, 29.190414)
+transform = Transform3D(0.021617861, 0, 0.49953246, 0, 0.5, 0, -0.49953246, 0, 0.021617861, 29.370455, 1.5686834, 29.190414)
 
 [node name="arvore6" parent="arvores" unique_id=392829834 instance=ExtResource("13_ggc10")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 33.64147, 1.5686834, -9.418243)
+transform = Transform3D(0.40047023, 0, 0.29937202, 0, 0.5, 0, -0.29937202, 0, 0.40047023, 33.64147, 1.5686834, -9.418243)
 
 [node name="arvore7" parent="arvores" unique_id=339189635 instance=ExtResource("13_ggc10")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -26.83271, 1.5686834, -44.389183)
+transform = Transform3D(0.4445525, 0, -0.2288516, 0, 0.5, 0, 0.2288516, 0, 0.4445525, -26.83271, 1.5686834, -44.389183)
 
 [node name="portas" parent="." unique_id=919608939 instance=ExtResource("11_b4dn8")]
 transform = Transform3D(1.7817155, 0, 0, 0, 1.5275552, 0, 5.06394e-14, 0, 1, -1.8351933, 0.8418894, 18.18181)
