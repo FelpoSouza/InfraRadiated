@@ -390,7 +390,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.99793, 4.7683716e-07, -13.
 
 [node name="teto2" parent="." unique_id=868583259 instance=ExtResource("30_5bfh5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.784724, 0, 3.5650845, -10.112914)
-visible = false
 
 [node name="armario2" parent="." unique_id=1305460435 instance=ExtResource("38_xf7o5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.7356539, 0.69225883, -11.743572)

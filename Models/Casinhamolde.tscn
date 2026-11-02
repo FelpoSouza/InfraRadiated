@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cgljn3djirnml"]
+
+[ext_resource type="PackedScene" uid="uid://ddl6ai6hr3u15" path="res://Models/casinhamolde.glb" id="1_xounm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pt26c"]
+size = Vector3(20.232971, 3.0825195, 9.26413)
+
+[node name="casinhamolde" unique_id=1411439716 instance=ExtResource("1_xounm")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=1259397254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.70584106, 0.5202637, -0.6429291)
+shape = SubResource("BoxShape3D_pt26c")

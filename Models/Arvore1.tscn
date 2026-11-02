@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bkn8bge0hyhh1"]
+
+[ext_resource type="PackedScene" uid="uid://bmy2qlbsvaial" path="res://Models/arvore1.glb" id="1_gycah"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jvu8o"]
+size = Vector3(2.7480469, 8.110474, 2.135498)
+
+[node name="arvore1" unique_id=2127919788 instance=ExtResource("1_gycah")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1566219169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107421875, 2.1348267, 0.0059814453)
+shape = SubResource("BoxShape3D_jvu8o")
